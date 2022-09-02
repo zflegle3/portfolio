@@ -19,7 +19,7 @@ function App() {
       </header>
 
       <div className="home">
-        <Clouds />
+        <Clouds xCount={20} yCount={10} type={"cloud-small"} randInterval={2000} delayInterval={5000} />
         <div className="home-content">
           <p>Zach</p>
           <p>Flegle</p>
