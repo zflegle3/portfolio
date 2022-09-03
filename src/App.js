@@ -1,6 +1,6 @@
 import './styles/App.css';
 import './styles/Clouds.css';
-// import './styles/Projects.scss';
+import './styles/Projects.scss';
 
 import Projects from "./components/Projects"
 import Clouds from "./components/Clouds"
@@ -19,7 +19,7 @@ function App() {
       </header>
 
       <div className="home">
-        <Clouds xCount={20} yCount={10} type={"cloud-small"} randInterval={2000} delayInterval={5000} />
+        {/* <Clouds xCount={40} yCount={10} xOffset={5} yOffset={5} type={"cloud-small"} randInterval={10} delayInterval={20000} /> */}
         <div className="home-content">
           <p>Zach</p>
           <p>Flegle</p>
@@ -27,7 +27,7 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="projects">
+      <div className="projects">
         <p>Featured Work</p>
         <Projects />
       </div>
@@ -42,7 +42,7 @@ function App() {
 
       <div className="contact">
         contract
-      </div> */}
+      </div>
 
     </div>
   );

@@ -1,25 +1,20 @@
 .clouds {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-
 }
 
 .cloud-small {
     display: flex;
-    width: 10%;
-    height: 10%;
-    border-radius: 30px;
+    border-radius: 50%;
     position: absolute;
     /* border: 1px dotted black; */
     transition-duration: 700ms;
     transition-property: background-color;
-    background-color: rgba(255,255,255,0.50);
 }
 
-
 .hide {
-    transition-duration: 700ms;
+    transition-duration: 10ms;
     transition-property: background-color;
     background-color: rgba(255,255,255,0);
 }
@@ -27,5 +22,5 @@
 .highlight {
     transition-duration: 700ms;
     transition-property: background-color;
-    background-color: rgba(195, 195, 195, 0.75);
+    background-color: rgba(255, 255, 255, 0.25);
 }

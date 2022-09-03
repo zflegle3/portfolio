@@ -6,6 +6,8 @@ function Clouds(props) {
     const [isActive, setIsActive] = useState(false);
     //props.xCount
     //props.yCount
+    //props.xOffset
+    //props.yOffset
     //props.type
     //props.randInterval
     //props.delayInterval
@@ -62,13 +64,21 @@ function Clouds(props) {
             let coords ={
                 left: i,
                 top: j,
+                d: Math.floor(Math.random()* 10)+10,
+                color: Math.floor(Math.random()* 55)+200,
             }
             cloudCoords.push(coords);
         }
     }
     console.log(cloudCoords);
     let cloudsAll = cloudCoords.map((cloud) => 
-        <div key={uuidv4()} className={`${props.type}`} id={`${props.type}-${cloud.top}-${cloud.left}`} onMouseEnter={hideCloud} onMouseLeave={showCloud}  style={{color:"blue",top:`${(cloud.top*5)}%`,left:`${(cloud.left*5)}%`}}></div>
+        <div key={uuidv4()} className={`${props.type}`} id={`${props.type}-${cloud.top}-${cloud.left}`} onMouseEnter={hideCloud} onMouseLeave={showCloud}  style={{
+            width:`${cloud.d}%`,
+            height:`${cloud.d}%`,
+            color:"blue",
+            top:`${(cloud.top*props.yOffset)}%`,
+            left:`${(cloud.left*props.xOffset)}%`,
+        }}></div>
     );
 
   return (
