@@ -1,4 +1,4 @@
-import { gsap } from "gsap";
+import {gsap} from "gsap";
 import React, { useState, useEffect, useRef } from 'react';
 
 
@@ -45,6 +45,7 @@ function Projects() {
 
         // Restart Animation
         // animate()
+        testAnimate()
         // start interal for slides back 
         // start = setInterval(() => slide("increase"), interval);
     }
@@ -103,8 +104,17 @@ function Projects() {
     // .from("p", {opacity: 0}, "-=0.3")
     // .from("h1", {opacity: 0, y: "30px"}, "-=0.3")
     // .from("button", {opacity: 0, y: "-40px"}, "-=0.8")
-    // // function to restart animation
+    // function to restart animation 
+
     // const animate = () => tl.restart();
+
+    const testAnimate = () => {
+        console.log("Animate");
+        gsap.from(".bg", {duration: 0.7, ease: "power2.inOut", x: "-100%", opacity: 0});
+        gsap.from(".fade-text", {duration: 0.5, delay: 1, ease: "power2.inOut", opacity: 0});
+        gsap.from(".project-btn", {duration: 0.5, delay: 1, ease: "power2.inOut", color: "blue"});
+        gsap.from(".slide-title", {duration: 1, delay: 0, ease: "power2.inOut", opacity: 0, y: "30px"});
+    }
 
     // function to update trailValue based on slide value
     const trailUpdate = (newVal) => {
@@ -115,7 +125,7 @@ function Projects() {
             newTrailVal = 1;
         } else if (newVal === 40) {
             newTrailVal = 2;
-        } else if (newVal === 60) {
+        } else if (newVal === 60) { 
             newTrailVal = 3;
         } else {
             newTrailVal = 4;
@@ -144,6 +154,7 @@ function Projects() {
         let trail = document.querySelector(".trail").querySelectorAll("div");
         // CLear interval
         resetTimeout();
+        testAnimate();
         // clearInterval(start)
         // remove active class from all trails
         trail.forEach(cur => cur.classList.remove("active"))
@@ -190,6 +201,7 @@ function Projects() {
         timeoutRef.current = setTimeout(
             () => slide("increase"), 6000
         );
+        // gsap.from(".bg", {duration: 0.6, ease: "power2.inOut", x: "-100%", opacity: 0});
     })
 
 
@@ -200,16 +212,16 @@ function Projects() {
             <div className="slider">
 
                 <div className="box1 box">
-                    <div class="bg"></div>
+                    <div class="bg"></div> 
 
                     <div className="details">
-                        <h1>I'm the first Box</h1>
-                        <p>
+                        <h1 class="slide-title">I'm the first Box</h1>
+                        <p class="fade-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                             diam, ac mattis orci pellentesque eget. 
                         </p>
-                        <button>Check Now</button>
+                        <button className="project-btn">Check Now</button>
                     </div>
 
                     <div className="illustration"><div className="inner"></div></div>
@@ -219,13 +231,13 @@ function Projects() {
                 <div className="box2 box">
                     <div className="bg"></div>
                     <div className="details">
-                        <h1>I'm the second Box</h1>
-                        <p>
+                        <h1 class="slide-title">I'm the second Box</h1>
+                        <p class="fade-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                             diam, ac mattis orci pellentesque eget. 
                         </p>
-                        <button>Check Now</button>
+                        <button className="project-btn">Check Now</button>
                     </div>
 
                     <div className="illustration"><div className="inner"></div></div>
@@ -234,13 +246,13 @@ function Projects() {
                 <div className="box3 box">
                     <div className="bg"></div>
                     <div className="details">
-                        <h1>I'm the third Box</h1>
-                        <p>
+                        <h1 class="slide-title">I'm the third Box</h1>
+                        <p class="fade-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                             diam, ac mattis orci pellentesque eget. 
                         </p>
-                        <button>Check Now</button>
+                        <button className="project-btn">Check Now</button>
                     </div>
 
                     <div className="illustration"><div className="inner"></div></div>
@@ -249,13 +261,13 @@ function Projects() {
                 <div className="box4 box">
                     <div className="bg"></div>
                     <div className="details">
-                        <h1>I'm the fourth Box</h1>
-                        <p>
+                        <h1 class="slide-title">I'm the fourth Box</h1>
+                        <p class="fade-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                             diam, ac mattis orci pellentesque eget. 
                         </p>
-                        <button>Check Now</button>
+                        <button className="project-btn">Check Now</button>
                     </div>
 
                     <div className="illustration"><div className="inner"></div></div>
@@ -264,13 +276,13 @@ function Projects() {
                 <div className="box5 box">
                     <div className="bg"></div>
                     <div className="details">
-                        <h1>I'm the fifth Box</h1>
-                        <p>
+                        <h1 class="slide-title">I'm the fifth Box</h1>
+                        <p class="fade-text">
                             Lorem ipsum dolor sit amet, consectetur adipiscing 
                             elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                             diam, ac mattis orci pellentesque eget. 
                         </p>
-                        <button>Check Now</button>
+                        <button className="project-btn">Check Now</button>
                     </div>
 
                     <div className="illustration"><div className="inner"></div></div>
