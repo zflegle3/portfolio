@@ -42,12 +42,16 @@ table {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+
 
 /* General Styles */
 * {
 	font-size: 10px;
 	--background-main: #6279B8;
-
+	font-family: 'Cabin', sans-serif;
 }
 
 .App {
@@ -55,9 +59,9 @@ table {
 	flex-direction: column;
 }
 
-.App > div {
+/* .App > div {
 	height: 85vh;
-}
+} */
 
 body {
 	background-color: var(--background-main);
@@ -65,12 +69,12 @@ body {
 
 /* Main Section Styles */
 
-.header {
+.nav-bar {
 	height: 5vh;
 	background-color: yellow;
 }
 
-.nav {
+.nav-bar-list {
 	display: flex;
 	flex-direction: row;
 	align-items: center;

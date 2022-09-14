@@ -32,9 +32,6 @@ function Projects() {
     }
 
 
-
-
-
     // Function to slide forward
     const slide = (condition) => {
         // Clear interval
@@ -208,7 +205,7 @@ function Projects() {
 
 
     return (
-        <div className="container"> 
+        <div  id="projects" className="container"> 
             <div className="slider">
 
                 <div className="box1 box">

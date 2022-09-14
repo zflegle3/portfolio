@@ -1,48 +1,42 @@
+import * as Scroll from 'react-scroll';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
 import './styles/App.css';
 import './styles/Clouds.css';
 import './styles/Projects.scss';
 
-import Projects from "./components/Projects"
+
 import Clouds from "./components/Clouds"
+import Perlin from "./components/Perlin"
+
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import About from "./components/About";
+import Skills from "./components/Skills"
+import Projects from "./components/Projects"
+import Contact from "./components/Contact";
+
 
 function App() {
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="header">
-        <ul className="nav">
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
-        </ul>
-      </header>
+      <Nav />
 
-      <div className="home">
-        {/* <Clouds xCount={40} yCount={10} xOffset={5} yOffset={5} type={"cloud-small"} randInterval={10} delayInterval={20000} /> */}
-        <div className="home-content">
-          <p>Zach</p>
-          <p>Flegle</p>
-          <p>Front End Developer</p>
-        </div>
-      </div>
+      <Home />
 
-      <div className="projects">
-        <p>Featured Work</p>
-        <Projects />
-      </div>
+      <About />
 
-      <div className="about">
-        about
-      </div>
+      <Skills />
 
-      <div className="skills">
-        skills
-      </div>
+      <Projects />
 
-      <div className="contact">
-        contract
-      </div>
+      <Contact />
 
     </div>
   );
