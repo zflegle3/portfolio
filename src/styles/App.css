@@ -49,9 +49,21 @@ table {
 
 /* General Styles */
 * {
+	scroll-behavior: smooth;
 	font-size: 10px;
 	--background-main: #6279B8;
 	font-family: 'Cabin', sans-serif;
+
+	--a-: #293241;
+	--b-: #3D5A80;
+	--c-: #98C1D9;
+	--d-: #E0FBFC;
+	--e-: #EE6C4D;
+
+	--text-dk: black;
+	--text-lt: white;
+
+
 }
 
 .App {
@@ -64,31 +76,15 @@ table {
 } */
 
 body {
-	background-color: var(--background-main);
+	background-color: var(--a-);
 }
 
 /* Main Section Styles */
 
-.nav-bar {
-	height: 5vh;
-	background-color: yellow;
-}
 
-.nav-bar-list {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
 
 .home {
-	background-image: url(../images/background.jpeg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	clip-path: polygon(100% 0, 100% 75%, 0% 100%, 0 100%, 0 0);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
+
 }
 
 .home-content {

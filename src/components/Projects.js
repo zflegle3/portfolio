@@ -1,5 +1,7 @@
 import {gsap} from "gsap";
 import React, { useState, useEffect, useRef } from 'react';
+import "../styles/Projects.css"
+
 
 
 
@@ -205,96 +207,99 @@ function Projects() {
 
 
     return (
-        <div  id="projects" className="container"> 
-            <div className="slider">
+        <div  id="projects" > 
+            <div className="container">     
+                <div className="slider">
 
-                <div className="box1 box">
-                    <div class="bg"></div> 
+                    <div className="box1 box">
+                        <div className="bg"></div> 
 
-                    <div className="details">
-                        <h1 class="slide-title">I'm the first Box</h1>
-                        <p class="fade-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button className="project-btn">Check Now</button>
+                        <div className="details">
+                            <h1 className="slide-title">I'm the first Box</h1>
+                            <p className="fade-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                                diam, ac mattis orci pellentesque eget. 
+                            </p>
+                            <button className="project-btn">Check Now</button>
+                        </div>
+
+                        <div className="illustration"><div className="inner"></div></div>
                     </div>
+                                    
 
-                    <div className="illustration"><div className="inner"></div></div>
-                </div>
-                                
-                
-                <div className="box2 box">
-                    <div className="bg"></div>
-                    <div className="details">
-                        <h1 class="slide-title">I'm the second Box</h1>
-                        <p class="fade-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button className="project-btn">Check Now</button>
+                    <div className="box2 box">
+                        <div className="bg"></div>
+                        <div className="details">
+                            <h1 className="slide-title">I'm the second Box</h1>
+                            <p className="fade-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                                diam, ac mattis orci pellentesque eget. 
+                            </p>
+                            <button className="project-btn">Check Now</button>
+                        </div>
+
+                        <div className="illustration"><div className="inner"></div></div>
                     </div>
+                                    
+                    <div className="box3 box">
+                        <div className="bg"></div>
+                        <div className="details">
+                            <h1 className="slide-title">I'm the third Box</h1>
+                            <p className="fade-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                                diam, ac mattis orci pellentesque eget. 
+                            </p>
+                            <button className="project-btn">Check Now</button>
+                        </div>
 
-                    <div className="illustration"><div className="inner"></div></div>
-                </div>
-                                
-                <div className="box3 box">
-                    <div className="bg"></div>
-                    <div className="details">
-                        <h1 class="slide-title">I'm the third Box</h1>
-                        <p class="fade-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button className="project-btn">Check Now</button>
+                        <div className="illustration"><div className="inner"></div></div>
                     </div>
+                                    
+                    <div className="box4 box">
+                        <div className="bg"></div>
+                        <div className="details">
+                            <h1 className="slide-title">I'm the fourth Box</h1>
+                            <p className="fade-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                                diam, ac mattis orci pellentesque eget. 
+                            </p>
+                            <button className="project-btn">Check Now</button>
+                        </div>
 
-                    <div className="illustration"><div className="inner"></div></div>
-                </div>
-                                
-                <div className="box4 box">
-                    <div className="bg"></div>
-                    <div className="details">
-                        <h1 class="slide-title">I'm the fourth Box</h1>
-                        <p class="fade-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button className="project-btn">Check Now</button>
+                        <div className="illustration"><div className="inner"></div></div>
                     </div>
+                                    
+                    <div className="box5 box">
+                        <div className="bg"></div>
+                        <div className="details">
+                            <h1 className="slide-title">I'm the fifth Box</h1>
+                            <p className="fade-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                elit. Integer lacinia dui lectus. Donec scelerisque ipsum
+                                diam, ac mattis orci pellentesque eget. 
+                            </p>
+                            <button className="project-btn">Check Now</button>
+                        </div>
 
-                    <div className="illustration"><div className="inner"></div></div>
-                </div>
-                                
-                <div className="box5 box">
-                    <div className="bg"></div>
-                    <div className="details">
-                        <h1 class="slide-title">I'm the fifth Box</h1>
-                        <p class="fade-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing 
-                            elit. Integer lacinia dui lectus. Donec scelerisque ipsum
-                            diam, ac mattis orci pellentesque eget. 
-                        </p>
-                        <button className="project-btn">Check Now</button>
+                        <div className="illustration"><div className="inner"></div></div>
                     </div>
-
-                    <div className="illustration"><div className="inner"></div></div>
+                                    
                 </div>
-                                
-            </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" className="prev" onClick={slideClick} id={"decrease"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"decrease"} d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" className="next" onClick={slideClick} id={"increase"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"increase"}d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
-            <div className="trail">
+                <svg xmlns="http://www.w3.org/2000/svg" className="prev" onClick={slideClick} id={"decrease"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"decrease"} d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" className="next" onClick={slideClick} id={"increase"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"increase"}d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
+                <div className="trail">
                     <div className="box1 active" onClick={clickCheck}>Tab 1</div>
                     <div className="box2" onClick={clickCheck}>Tab 2</div>
                     <div className="box3" onClick={clickCheck}>Tab 3</div>
                     <div className="box4" onClick={clickCheck}>Tab 4</div>
                     <div className="box5" onClick={clickCheck}>Tab 5</div>
+                </div>
+
             </div>
         </div>
     );

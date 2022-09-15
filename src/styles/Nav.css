@@ -1,0 +1,119 @@
+#nav-bar {
+	height: 5vh;
+	background-color: rgba(255,255,255,0.35);
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    transition: background-color 0.5s ease-in;
+
+}
+
+#nav-bar.hidden {
+    background-color: transparent;
+    border: none;
+    transition: background-color 0.5s ease-in;
+}
+
+#nav-bar a {
+    color: var(--text-lt);
+}
+
+#nav-bar.hidden a {
+    color: var(--text-dk);
+}
+
+#nav-bar a.selected {
+    color: yellow;
+    transition: 0.5s;
+}
+
+.nav-bar-list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    gap: 2rem;
+    padding-right: 2rem;
+} 
+
+a[id^="nav-link"] {
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+a[id^="nav-link"]:hover {
+    scale: 2;
+}
+/* 
+a[id^="nav-link"].selected, #nav-bar.hidden a.selected  {
+    color: yellow;
+    transition: 0.5s;
+} */
+
+
+
+/* All Scroll Listeners Styles */
+
+/* Nav Bar Listener */
+#top-of-site-pixel-anchor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 70vh;
+    left: 0px;
+    border: 2px solid red;
+    z-index: 100;
+}
+
+/* Section Selection Listener */
+/* #section-hide-about {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 1300px;
+    left: 0px;
+    border: 2px solid orange;
+    z-index: 100;
+} */
+
+
+div[id^="section-inc"] {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid blue;
+    z-index: 100;
+    color: white;
+    font-size: 1rem;
+}
+
+.inc-0 {
+    top: 65vh;
+    left: 0px;
+}
+
+.inc-1 {
+    top: 150vh;
+    left: 0px;
+}
+
+.inc-2 {
+    top: 235vh;
+    left: 0px;
+}
+
+.inc-3 {
+    top: 320vh;
+    left: 0px;
+}
+
+.inc-4 {
+    top: 405vh;
+    left: 0px;
+}
+
+
