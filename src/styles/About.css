@@ -1,6 +1,6 @@
 .about {
     height: 100vh;
-    background-color: var(--a-);
+    background-color: var(--bg-1);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,24 +29,24 @@
 .section-break {
     flex: 1 1;
     height: 1px;
-    background-color: var(--text-dk-1);
+    background-color: var(--text-a);
 }
 
 .about-title {
     font-size: 5rem;
-    color: var(--text-dk);
+    color: var(--text-a);
     padding: 1rem;
 }
 
 .skills-title {
     font-size: 2.5rem;
-    color: var(--text-dk);
+    color: var(--text-a);
     padding: 1rem;
 }
 
 .about-bio {
     font-size: 2rem;
-    color: var(--text-dk-1);
+    color: var(--text-b);
     padding: 1rem;
     line-height: 2.5rem;
 }
@@ -54,14 +54,14 @@
 .skill-label {
     font-size: 1.5rem;
     padding: 1rem;
-    color: var(--text-dk-1);
+    color: var(--text-b);
 }
 
 .skill-container {
     width: 100%;
     padding: 1rem;
     margin: 0rem 1rem 0rem 1rem;
-    background-color: var(--bg-ht);
+    background-color: var(--sh-dk);
     border-radius: 2rem;
     display: flex;
     flex-direction: row;
@@ -91,14 +91,14 @@
 .skill-item:hover .skill-title {
     /* font-size: 1.5rem;
     transition: font-size 0.2s; */
-    color: var(--text-ht);
+    color: var(--text-hl-a);
     transition: color 0.2s;
 }
 
 .skill-title {
     font-size: 1.5rem;
     padding: 0.3rem;
-    color: var(--text-dk-1);
+    color: var(--text-b);
 }
 
 .img{

@@ -1,6 +1,6 @@
 .home {
     height: 100vh;
-    background-color: var(--a-);
+    background-color: var(--bg-1);
 
     background-image: url(../images/background.jpeg);
 	background-repeat: no-repeat;
@@ -14,4 +14,14 @@
 
 .home-content {
 	z-index: 1;
+}
+
+.home-content p:nth-child(1) {
+	color: var(--text);
+}
+.home-content p:nth-child(2) {
+	color: var(--text);
+}
+.home-content p:nth-child(3) {
+	color: var(--text-b);
 }

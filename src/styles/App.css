@@ -60,15 +60,53 @@ table {
 	--d-: #E0FBFC;
 	--e-: #EE6C4D;
 
-	--text-dk: black;
-	--text-dk-1:rgba(3, 1, 49,1);
-	--text-lt: white;
-	--text-ht: rgba(194, 194, 194, 0.85);
-	/* --text-ht: blue; */
 
-	--bg-ht: rgba(255, 255, 255,0.15);
-	--bg-shdw: rgba(0, 0, 0,0.15);
+	/* ~~~~~~~~~~~~~
+	******Colors*****
+	~~~~~~~~~~~~~~~~*/
+	/* Blue */
+	--bl4: #B4C5E4;
+	--bl3: #3D52D5;
+	--bl2: #086788;
+	--bl1: #102B3F;
+	/* Grey (black to white) */
+	--bw4: #fff;
+	--bw3: #D6D9CE;
+	--bw2: #596475;
+	--bw4: black;
 
+	/* Orange */
+	--o3: #FA9500;
+	--o2: #EB6424;
+
+
+
+
+
+	/* Light Theme */
+	/* Backgrounds */
+	--bg-1: var(--bw3);
+	--bg-2: rgb(42, 50, 86); 
+	--bg-3: rgb(59, 70, 120); 
+	--bg-4: rgb(76, 90, 155); 
+	/* Main Titles & Headers */
+	--text: var(--bl1);
+	/* Sub Titles & Headers */
+	--text-a: var(--bl2); 
+	/* Content Text and small titles & headers */
+	--text-b: var(--bw2);
+	/* Highlight clickable */
+	--text-hl: var(--o2); 
+	/* Highlight display only */
+	--text-hl-a: black; 
+	/* Alerts & Notifications */
+	--al-rd: black;
+	--al-gr: black;
+	--al-yl: black;
+	--al-bl: black;
+	/* Shades */
+	--sh-dk: rgba(63, 63, 63, 0.15);
+	--sh-lt: rgba(255,255,255,0.35);
 
 }
 
@@ -82,7 +120,7 @@ table {
 } */
 
 body {
-	background-color: var(--a-);
+	background-color: var(--bg-1);
 }
 
 /* Main Section Styles */

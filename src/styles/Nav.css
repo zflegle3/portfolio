@@ -1,6 +1,6 @@
 #nav-bar {
 	height: 5vh;
-	background-color: rgba(255,255,255,0.35);
+	background-color: var(--sh-lt);
     position: fixed;
     width: 100vw;
     top: 0px;
@@ -19,28 +19,33 @@
 }
 
 #nav-bar a {
-    color: var(--text-lt);
+    color: var(--text-b);
     /* text-decoration: underline; */
 }
 
-#nav-bar.hidden a {
-    color: var(--text-dk);
+#nav-bar a:hover {
+    /* color: var(--text-hl); */
+    /* text-decoration: underline; */
 }
 
+/* #nav-bar.hidden a {
+    color: var(--text-dk);
+} */
+
 #nav-bar a.selected {
-    color: rgb(244, 230, 110);
+    color: var(--text-a);
     text-decoration: none;
-    background-image: linear-gradient(rgb(244, 230, 110), rgb(244, 230, 110));
+    background-image: linear-gradient(var(--text-a), var(--text-a));
     background-size: 100% 2px, 0 2px;
     background-position: 0px 100%, 100% 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.5s linear;
+    transition: background-size 0.5s ease-in;
 }
 
 #nav-bar.hidden a.selected {
-    color: rgb(130, 118, 6);
+    /* color: var(--text-hl); */
     text-decoration: none;
-    background-image: linear-gradient(rgb(130, 118, 6), rgb(130, 118, 6));
+    /* background-image: linear-gradient(var(--text-hl), var(--text-hl)); */
     background-size: 100% 2px, 0 2px;
     background-position: 0px 100%, 100% 100%;
     background-repeat: no-repeat;
@@ -148,38 +153,42 @@ div[id^="section-inc"] {
 /* Link Hover Effect */
 
 a {
-    color: #dfe5f3;
     text-decoration: none;
-    background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188));
-    background-size: 100% 2px, 0 2px;
-    background-position: 100% 100%, 0 100%;
+    /* background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)); */
+    background-size: 0 2px, 100% 2px;
+    background-position: 0 0, 100% 100%;
     background-repeat: no-repeat;
-    transition: background-size 0.3s linear;
+
   }
   
   a:hover {
-    background-size: 0 2px, 100% 2px;
+    background-image: linear-gradient(var(--text-hl), var(--text-hl));
+    /* color: var(--text-hl); */
+    background-size: 100% 2px, 0 2px;
+    transition: background-size 0.3s linear;
   }
 
 
 /* svg Hover Effect */
 #nav-bar svg {
-    fill: var(--text-lt);
+    fill: var(--text-b);
     transform: scale(1.3);
 }
 
 #nav-bar svg:hover {
-    fill: var(--text-dk);
+    fill: var(--text-hl);
+    transform: scale(1.5);
     transition: fill 0.3s;
 }
 
-#nav-bar.hidden svg{
+/* #nav-bar.hidden svg{
     fill: var(--text-dk);
-}
+} */
 
 #nav-bar.hidden svg:hover{
-    fill: var(--text-lt);
+    fill: var(--text-hl);
     transition: fill 0.3s;
+    cursor: pointer;
     
 }
 
