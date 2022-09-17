@@ -2,6 +2,9 @@ import {useState, useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
 import '../styles/Nav.css';
 
+import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
+import { ReactComponent as GithubSvg } from "../images/github.svg";
+
 
 
 function Nav(props) {
@@ -105,6 +108,15 @@ function Nav(props) {
 
     return (
         <div id="nav-bar" className={"nav-bar hidden"}>
+            <ul className="nav-bar-left">
+                <li>
+                    <GithubSvg/>
+                </li>
+                <li>
+                    <LinkedInSvg />
+                </li>
+                <li>Professional Link/Email</li>
+            </ul>
             <ul className="nav-bar-list">
                 {props.links.map((link) => 
                     <li key={uuidv4()}>

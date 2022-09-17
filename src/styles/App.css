@@ -61,7 +61,13 @@ table {
 	--e-: #EE6C4D;
 
 	--text-dk: black;
+	--text-dk-1:rgba(3, 1, 49,1);
 	--text-lt: white;
+	--text-ht: rgba(194, 194, 194, 0.85);
+	/* --text-ht: blue; */
+
+	--bg-ht: rgba(255, 255, 255,0.15);
+	--bg-shdw: rgba(0, 0, 0,0.15);
 
 
 }
@@ -105,14 +111,6 @@ body {
 .home-content p:nth-child(3) {
 	font-size: 4rem;
 }
-
-
-.about {
-	background-color: var(--background-main);
-	color: red;
-	height: 85vh;
-}
-
 
 .projects {
 	color: red;

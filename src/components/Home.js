@@ -1,8 +1,11 @@
-
 import '../styles/Home.css';
+
+import CloudsAll from "./CloudsAll"
+
 
 
 function Home() {
+
 
   return (
     <div id="home" className="home">
@@ -11,6 +14,8 @@ function Home() {
             <p>Flegle</p>
             <p>Front End Developer</p>
         </div>
+
+     <CloudsAll />
     </div>
   );
 }
