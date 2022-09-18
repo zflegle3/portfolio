@@ -14,7 +14,7 @@ import './styles/Projects.css';
 import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills";
+// import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -31,10 +31,6 @@ function App() {
     { id: "nav-link-about",
       text: "about",
       url: "#about",
-    },
-    { id: "nav-link-skills",
-      text: "skills",
-      url: "#skills",
     },
     { id: "nav-link-projects",
       text: "projects",
@@ -54,27 +50,28 @@ function App() {
 
   return (
     <div className="App">
-      <div id="top-of-site-pixel-anchor"></div>
-      <div id="section-inc-0" className='inc-0'>0</div>
-      <div id="section-inc-1" className='inc-1'>1</div>
-      <div id="section-inc-2" className='inc-2'>2</div>
-      <div id="section-inc-3" className='inc-3'>3</div>
-      <div id="section-inc-4" className='inc-4'>4</div>
+
 
       <Nav links={links}/>
 
       <Home />
+      <div className="backdrop-home"></div>
 
       <About />
-
-      <Skills />
+      <div className="backdrop-about"></div>
 
       <Projects />
 
       <Contact />
 
-      <Footer />
+      {/* <Footer /> */}
 
+      <div id="top-of-site-pixel-anchor"></div>
+      <div id="section-inc-0" className='inc-0'>0</div>
+      <div id="section-inc-1" className='inc-1'>1</div>
+      <div id="section-inc-2" className='inc-2'>2</div>
+      <div id="section-inc-3" className='inc-3'>3</div>
+      {/* <div id="section-inc-4" className='inc-4'>4</div> */}
 
     </div>
   );

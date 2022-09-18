@@ -1,7 +1,6 @@
 .home {
     height: 100vh;
     background-color: var(--bg-1);
-
     background-image: url(../images/background.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -24,4 +23,57 @@
 }
 .home-content p:nth-child(3) {
 	color: var(--text-b);
+}
+
+
+.link-container {
+	display: flex;
+	flex-direction: row;
+	/* justify-content: center; */
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 1rem;
+}
+
+.link-item-home {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.link-item-home p:nth-child(2) {
+	position: absolute;
+	top: 3rem;
+	/* padding-top: 0.5rem; */
+	font-size: 1.4rem;
+	color: var(--text-b);
+	visibility: hidden;
+	transition: transform 0.5s;
+}
+
+
+.link-svg-home {
+	height: 3.5rem;
+	width: 3.5rem;
+
+
+}
+.link-svg-home svg {
+	height: 100%;
+	width: 100%;
+	fill: var(--text-b);
+}
+
+.link-item-home:hover p:nth-child(2) {
+	color: var(--text-hl);
+	transform: translate(0rem, 1rem);
+	visibility: visible;
+	transition: transform 0.5s;
+}
+
+.link-item-home:hover svg {
+	fill: var(--text-hl);
+	transform: scale(1.2);
 }

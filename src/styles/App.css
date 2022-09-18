@@ -16,6 +16,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	vertical-align: baseline;
+	font-style: normal;  
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -86,7 +87,7 @@ table {
 	/* Light Theme */
 	/* Backgrounds */
 	--bg-1: var(--bw3);
-	--bg-2: rgb(42, 50, 86); 
+	--bg-2: var(--bw2); 
 	--bg-3: rgb(59, 70, 120); 
 	--bg-4: rgb(76, 90, 155); 
 	/* Main Titles & Headers */
@@ -113,6 +114,7 @@ table {
 .App {
 	display: flex;
 	flex-direction: column;
+	width: 100vw;
 }
 
 /* .App > div {
@@ -120,15 +122,28 @@ table {
 } */
 
 body {
-	background-color: var(--bg-1);
+	/* background-color: var(--o3); */
 }
 
 /* Main Section Styles */
 
-
-
-.home {
-
+.backdrop-home {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bg-1);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+.backdrop-about {
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--bg-2);
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	z-index: -1;
 }
 
 .home-content {

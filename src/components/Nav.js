@@ -10,7 +10,7 @@ import { ReactComponent as GithubSvg } from "../images/github.svg";
 function Nav(props) {
     //props.links
     // const [navClass, setNavClass] = useState(["nav-bar, hidden"])
-    const [linkSelections, setLinkSelections] = useState(["home","about","skills","projects","contact"]);
+    const [linkSelections, setLinkSelections] = useState(["home","about","projects","contact"]);
 
 
     const scrollClick = (e) => {
@@ -21,8 +21,8 @@ function Nav(props) {
         let navOffset = document.getElementById("nav-bar").offsetHeight;
         window.scrollTo({
             left: 0,
-            top: scrollLoc - navOffset,
-        })
+            top: scrollLoc-navOffset,
+        });
         // selectLink(e.target);
     }
 
@@ -99,7 +99,7 @@ function Nav(props) {
             sectionNext.observe(document.getElementById("section-inc-1"));
             sectionNext.observe(document.getElementById("section-inc-2"));
             sectionNext.observe(document.getElementById("section-inc-3"));
-            sectionNext.observe(document.getElementById("section-inc-4"));
+            // sectionNext.observe(document.getElementById("section-inc-4"));
         }
     });
 
