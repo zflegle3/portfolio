@@ -116,6 +116,11 @@ table {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
+	/* background-image: url(../images/background.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
 	
 	
 }
@@ -131,9 +136,9 @@ body {
 /* Main Section Styles */
 
 .backdrop-home {
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--bg-1);
+	/* width: 100vw;
+	height: 100vh; */
+	/* background-color: var(--bg-1); */
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -149,24 +154,6 @@ body {
 	z-index: -1;
 }
 
-.home-content {
-	position: absolute;
-	top: 20%;
-	left: 20%;
-	background-color: none;
-}
-
-.home-content p:nth-child(1) {
-	font-size: 10rem;
-
-}
-.home-content p:nth-child(2) {
-	font-size: 10rem;
-	padding-bottom: 2rem;
-}
-.home-content p:nth-child(3) {
-	font-size: 4rem;
-}
 
 .projects {
 	color: red;

@@ -19,7 +19,7 @@ function CloudSvg(props) {
     // let seedVal = Math.random()*10000;
     // console.log(seedVal);
     return (
-        <div onMouseEnter={tempHide} id="cloud-container-single" className="svg-clouds" style={{ top: `${props.top}%`, left : `${props.left}%`}} >
+        <div id="cloud-container-single" className="svg-clouds" style={{ top: `${props.top}%`, left : `${props.left}%`}} >
 
             <div className="base-layer">
                 <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-${props.id})`}}></div>

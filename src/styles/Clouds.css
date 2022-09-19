@@ -96,13 +96,8 @@
 
 
 #cloud-back {
-    /* position: absolute; */
-    /* background-color: black; */
-    /* top: 0;
-    left: 0; */
     height: 50%; 
     width: 83%;
-    /* filter: url(#filter-base); */
     box-shadow: 300px 300px 10px 40px rgba(215, 215, 215, 0.3);
 }
 
@@ -162,4 +157,49 @@
 
 
 
+
+
+/* Background Cloud */
+
+#cloud-container-single {
+    position: absolute;
+    top: 300px;
+    left: 300px;
+    width: 600px;
+    height: 200px;
+    /* border: 1px dotted red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+#cloud-base-bg {
+    position: absolute;
+    height: 100%; 
+    width: 100%;
+    box-shadow: 300px 300px 19px 40px rgba(255, 255, 255, 1);
+}
+
+
+#cloud-back-bg {
+    height: 50%; 
+    width: 83%;
+    box-shadow: 300px 300px 10px 40px rgba(215, 215, 215, 0.3);
+}
+
+#cloud-mid-bg {
+    width: 96%;
+    height: 10%;
+    box-shadow: 300px 300px 28px 30px rgba(66, 105, 146, 0.2);
+}
+
+#cloud-front-bg {
+    width: 50%;
+    height: 5%;
+    box-shadow: 300px 300px 30px 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: -20px;
+}
 

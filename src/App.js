@@ -61,12 +61,12 @@ function App() {
 
       <Nav links={links}/>
 
-      <div className="backdrop-home"></div>
+      {/* <div className="backdrop-home"></div> */}
       <Home />
 
 
       <About />
-      <div className="backdrop-about"></div>
+      {/* <div className="backdrop-about"></div> */}
 
       <ProjectsAll />
 

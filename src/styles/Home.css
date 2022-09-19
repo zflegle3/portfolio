@@ -1,35 +1,92 @@
-.home {
+#home {
     height: 100vh;
     background-color: var(--bg-1);
     background-image: url(../images/background.jpeg);
 	background-repeat: no-repeat;
 	background-size: cover;
-	clip-path: polygon(100% 0, 100% 75%, 0% 100%, 0 100%, 0 0);
+	/* clip-path: polygon(100% 0, 100% 75%, 0% 100%, 0 100%, 0 0); */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 }
+
+.home-next-link {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+}
+
+.home-next-link p {
+	color: var(--text);
+	font-size: 2rem;
+	padding-bottom: 1rem;
+}
+
+.home-next-link div {
+	height: 3rem;
+}
+
+.home-next-link svg {
+	fill: var(--text);
+	width: 100%;
+	height: 100%;
+}
+
+.home-next-link:hover {
+	background-color: var(--sh-dk);
+	border-top: 1px solid var(--sh-lt);
+	transition: all 0.3s;
+}
+
+.home-next-link:hover p {
+	color: var(--text-hl);
+	transition: all 0.3s;
+}
+
+
+.home-next-link:hover svg {
+	fill: var(--text-hl);
+	transition: all 0.3s;
+}
+
+
 
 .home-content {
-	z-index: 1;
+	position: relative;
+	/* z-index: 1; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 5rem 3rem 3rem 3rem;
+	/* border: 1px dotted red; */
 }
 
-.home-content p:nth-child(1) {
-	color: var(--text);
-}
 .home-content p:nth-child(2) {
+	font-size: 6rem;
 	color: var(--text);
+	z-index: 2;
 }
+
 .home-content p:nth-child(3) {
+	font-size: 3rem;
+	z-index: 2;
 	color: var(--text-a);
 }
 
 
 .link-container {
+	z-index: 2;
 	display: flex;
 	flex-direction: row;
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 	justify-content: space-between;
 	padding: 1rem;
@@ -40,12 +97,13 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
+	padding: 1rem;
 }
 
 .link-item-home p:nth-child(2) {
 	position: absolute;
-	top: 3rem;
+	bottom: 0;
 	/* padding-top: 0.5rem; */
 	font-size: 1.4rem;
 	color: var(--text-b);
@@ -57,14 +115,14 @@
 .link-svg-home {
 	height: 3.5rem;
 	width: 3.5rem;
-
-
 }
+
+
 .link-svg-home svg {
 	height: 100%;
 	width: 100%;
 	fill: var(--text-b);
-	transition: transform 0.3s;
+	transition: all 0.3s;
 }
 
 .link-item-home:hover p:nth-child(2) {
@@ -77,5 +135,104 @@
 .link-item-home:hover svg {
 	fill: var(--text-hl);
 	transform: scale(1.2);
-	transition: transform 0.3s;
+	transition: all 0.3s;
 }
+
+
+.load-bg {
+	height: 0%;
+	width: 0%;
+	opacity: 0%;
+	background-color: #fff;
+	z-index: 1;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+
+
+/* Page Load Animations */
+
+#banner-name {
+	animation: mainFade 5s ease-in;
+}
+
+
+@keyframes mainFade {
+	0% {
+		opacity: 0%;
+	}
+	20% {
+		opacity: 100%;
+	}
+}
+
+#banner-title, #banner-links {
+	animation: subFade  5s ease-in;
+}
+
+@keyframes subFade {
+	0% {
+		opacity: 0%;
+	}
+	20% {
+		opacity: 0%;
+	}
+	90% {
+		opacity: 100%;
+	}
+}
+
+#banner-bg {
+	animation: subFadeOut 5s ease-in;
+}
+
+@keyframes subFadeOut {
+	0% {
+		opacity: 100%;
+		height: 100%;
+		width: 100%;
+	}
+	25% {
+		opacity: 100%;
+	}
+	80% {
+		opacity: 0%;
+	}
+	99% {
+		height: 100%;
+		width: 100%;
+	}
+	100% {
+		height: 0%;
+		width: 0%;
+	}
+}
+
+#banner-link-next {
+	animation: slideFadeUp 6s ease-in;
+}
+
+@keyframes slideFadeUp {
+	0% {
+		opacity: 0%;
+		transform: translate(0rem,10rem);
+	}
+	90% {
+		opacity: 0%;
+		transform: translate(0rem,10rem);
+	}
+	100% {
+		/* opacity: 100%; */
+		transform: translate(0rem,0rem);
+	}
+	
+
+}
+
+
+
+
+
+
