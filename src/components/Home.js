@@ -32,7 +32,7 @@ function Home() {
         <div className="home-content">
             <CloudsBackSvg />
             <p id="banner-name">Zach Flegle</p>
-            <p id="banner-title">Developer</p>
+            <p id="banner-title">Software Developer</p>
             <div id="banner-links" className="link-container">
 
               <address>

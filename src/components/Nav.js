@@ -81,7 +81,7 @@ function Nav(props) {
           ) {
           let sectionNext = new IntersectionObserver(entries => {
             //remove selected elements from all 
-            if (entries[0].intersectionRatio === 1) {
+            if (entries[0].intersectionRatio > 0.75) {
                 if (entries[0].boundingClientRect.y > 0) {
                     console.log("switch selection");
                     console.log(entries, entries[0].boundingClientRect.y);
