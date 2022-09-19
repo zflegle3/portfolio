@@ -1,11 +1,22 @@
-import * as Scroll from 'react-scroll';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+// import * as Scroll from 'react-scroll';
+// import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import {useState, useEffect} from "react";
 
 import './styles/App.css';
 import './styles/Clouds.css';
-import './styles/Projects.scss';
-import './styles/Projects.css';
+// import './styles/Projects.scss';
+import './styles/ProjectsAll.css';
+
+import weatherAppImg  from "./images/project-images/weather-app-demo.png"
+
+//Import Scroll Magic?
+//debugIndicators?
+//gsapAnimation?
+
+//GSAP Libraries
+//Tween lite
+//Timeline Lite
+//CSS plugin
 
 
 // import Clouds from "./components/Clouds";
@@ -15,7 +26,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import About from "./components/About";
 // import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import ProjectsAll from "./components/ProjectsAll";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import React from 'react';
@@ -44,23 +55,20 @@ function App() {
 
 
 
-
-
-
-
   return (
     <div className="App">
 
 
       <Nav links={links}/>
 
-      <Home />
       <div className="backdrop-home"></div>
+      <Home />
+
 
       <About />
       <div className="backdrop-about"></div>
 
-      <Projects />
+      <ProjectsAll />
 
       <Contact />
 

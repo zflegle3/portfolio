@@ -21,7 +21,7 @@ function CloudsRow(props) {
 
     console.log(rowData);
 
-    let rowClouds = rowData.map((cloudData) => <CloudSvg left={cloudData.left} top={cloudData.top} seedVal={cloudData.seedVal} id={cloudData.id} />)
+    let rowClouds = rowData.map((cloudData) => <CloudSvg key={uuidv4()} left={cloudData.left} top={cloudData.top} seedVal={cloudData.seedVal} id={cloudData.id} />)
 
     // const hideCloud = (cloudEl) => {
 

@@ -71,10 +71,10 @@ table {
 	--bl2: #086788;
 	--bl1: #102B3F;
 	/* Grey (black to white) */
-	--bw4: #fff;
+	--bw4: rgb(126, 138, 155);
 	--bw3: #D6D9CE;
 	--bw2: #596475;
-	--bw4: black;
+	--bw1: black;
 
 	/* Orange */
 	--o3: #FA9500;
@@ -87,7 +87,7 @@ table {
 	/* Light Theme */
 	/* Backgrounds */
 	--bg-1: var(--bw3);
-	--bg-2: var(--bw2); 
+	--bg-2: var(--bw4); 
 	--bg-3: rgb(59, 70, 120); 
 	--bg-4: rgb(76, 90, 155); 
 	/* Main Titles & Headers */
@@ -108,6 +108,7 @@ table {
 	/* Shades */
 	--sh-dk: rgba(63, 63, 63, 0.15);
 	--sh-lt: rgba(255,255,255,0.35);
+	--sdw-a: rgba(0,0,0,0.55);
 
 }
 
@@ -115,6 +116,8 @@ table {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
+	
+	
 }
 
 /* .App > div {

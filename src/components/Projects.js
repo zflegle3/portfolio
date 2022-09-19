@@ -2,6 +2,9 @@ import {gsap} from "gsap";
 import React, { useState, useEffect, useRef } from 'react';
 import "../styles/Projects.css"
 
+import { ReactComponent as leftSvg } from "../images/left.svg";
+import { ReactComponent as rightSvg } from "../images/right.svg";
+
 
 
 
@@ -109,9 +112,9 @@ function Projects() {
 
     const testAnimate = () => {
         console.log("Animate");
-        gsap.from(".bg", {duration: 0.7, ease: "power2.inOut", x: "-100%", opacity: 0});
+        // gsap.from(".bg", {duration: 0.7, ease: "power2.inOut", x: "-100%", opacity: 0});
         gsap.from(".fade-text", {duration: 0.5, delay: 1, ease: "power2.inOut", opacity: 0});
-        gsap.from(".project-btn", {duration: 0.5, delay: 1, ease: "power2.inOut", color: "blue"});
+        gsap.from(".project-btn", {duration: 0.5, delay: 1, ease: "power2.inOut", opacity: 0});
         gsap.from(".slide-title", {duration: 1, delay: 0, ease: "power2.inOut", opacity: 0, y: "30px"});
     }
 
@@ -212,7 +215,7 @@ function Projects() {
                 <div className="slider">
 
                     <div className="box1 box">
-                        <div className="bg"></div> 
+                        <div id="background" className="bg"></div> 
 
                         <div className="details">
                             <h1 className="slide-title">I'm the first Box</h1>
@@ -221,7 +224,8 @@ function Projects() {
                                 elit. Integer lacinia dui lectus. Donec scelerisque ipsum
                                 diam, ac mattis orci pellentesque eget. 
                             </p>
-                            <button className="project-btn">Check Now</button>
+                            <button className="project-btn">Live Demo</button>
+                            <button className="project-btn">See Code</button>
                         </div>
 
                         <div className="illustration"><div className="inner"></div></div>
@@ -290,6 +294,7 @@ function Projects() {
                                     
                 </div>
 
+                {/* <leftSvg /> */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="prev" onClick={slideClick} id={"decrease"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"decrease"} d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(0 91) rotate(-90)" fill="#fff"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" className="next" onClick={slideClick} id={"increase"} width="56.898" height="91" viewBox="0 0 56.898 91"><path id={"increase"}d="M45.5,0,91,56.9,48.452,24.068,0,56.9Z" transform="translate(56.898) rotate(90)" fill="#fff"/></svg>
                 <div className="trail">

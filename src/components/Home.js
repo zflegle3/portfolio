@@ -13,8 +13,17 @@ import resumePdf from '../documents/z_flegle_resume.pdf';
 function Home() {
 
 
+
+  const translateText = (e) => {
+    console.log("translate");
+  }
+
+  // document.getElementById("home").onScroll(translateText());
+
+  window.onscroll = translateText();
+
   return (
-    <div id="home" className="home">
+    <div id="home" className="home" onScroll={translateText}>
         <div className="home-content">
             <p>Zach</p>
             <p>Flegle</p>
@@ -26,7 +35,7 @@ function Home() {
                   <div className="link-svg-home">
                     <EmailSvg />
                   </div>
-                  <p>zflegle3@gmail.com</p>
+                  <p>Email</p>
                 </a>
               </address>
 
@@ -34,21 +43,21 @@ function Home() {
                 <div className="link-svg-home">
                   <CvSvg />
                 </div>
-                <p>z_flegle_resume.pdf</p>
+                <p>Resume</p>
               </a>
 
               <a href="https://github.com/zflegle3" className="link-item-home">
                 <div className="link-svg-home">
                   <GithubSvg />
                 </div>
-                <p>github.com/zflegle3</p>
+                <p>GirHub</p>
               </a>
 
               <a href="https://www.linkedin.com/in/zach-flegle-185341a0/" className="link-item-home">
                 <div className="link-svg-home">
                   <LinkedInSvg />
                 </div>
-                <p>linkedin.com/in/zach-flegle-185341a0/</p>
+                <p>LinkedIn</p>
               </a>
 
             </div>

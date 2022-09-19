@@ -24,12 +24,14 @@ $grey: #B5B4B4;
     button {background-color: $LC;}
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 *,
 *:before,
 *:after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    font-family: 'Cabin', sans-serif;
 }
 
 
@@ -90,7 +92,7 @@ $grey: #B5B4B4;
         }
         
         .bg {
-            padding: 2rem;
+            padding: 3rem;
             background-color: rgba($black, .2);
             width: 55%;
             transform: skewX(7deg);
@@ -136,8 +138,9 @@ $grey: #B5B4B4;
             padding: 5rem;
             padding-left: 10rem;
             z-index: 100;
-            grid-column: 1 / span 1;
-            grid-row: 1 / -1;
+            // grid-column: 1 / span 1;
+            // grid-row: 1 / -1;
+            grid-area: 1/1/2/2;
 
             @media only screen and (max-width: 650px) {
                 grid-row: 2 / span 1;
@@ -148,8 +151,8 @@ $grey: #B5B4B4;
             }
             
             .slide-title {
-                font-size: 3.5rem;
-                font-weight: 500;
+                font-size: 5rem;
+                // font-weight: 500;
                 margin-bottom: .5rem;
             }
 
@@ -166,6 +169,8 @@ $grey: #B5B4B4;
             }
 
             .project-btn {
+                color: red;
+                opacity: 1;
                 padding: 1rem 3rem;
                 color: $white;
                 border-radius: 2rem;
@@ -227,7 +232,7 @@ $grey: #B5B4B4;
                 left: 0;
             }
 
-            &::after {transform: translate(4rem, -1rem);}
+            &::after {transform: translate(3rem, -1rem);}
             &::before {transform: translate(2rem, -2rem);}
         }
     }

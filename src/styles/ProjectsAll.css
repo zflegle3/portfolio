@@ -1,0 +1,118 @@
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 100vh; */
+    width: 100vw;
+    background-color: var(--bg-2);
+    padding: 2rem 0rem 0rem 0rem;
+
+    	/* clip-path: polygon(100% 0, 100% 0%, 0% 25%, 0 100%, 100% 100%); */
+}
+
+
+.project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 60rem;
+    padding: 3rem
+}
+
+#project-item {
+    display: flex;
+    flex-direction: row;
+    /* height: 50vh; */
+    width: 100%;
+}
+
+.project-item-a {
+
+}
+
+.project-item-b {
+    background-color: var(--sh-dk);
+}
+
+
+.project-img {
+    width: 40%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.project-content {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+}
+
+.project-content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* background-color: var(--sh-lt);
+    padding: 3rem;
+    border-radius: 2rem; */
+}
+
+.project-title {
+    font-size: 3.5rem;
+    color: var(--text-a);
+    padding-bottom: 2rem;
+}
+
+.project-desc {
+    font-size: 2rem;
+    color: var(--text-b);
+    padding-bottom: 1rem;
+    max-width: 60rem;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.project-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sh-dk);
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.project-btn p {
+    font-size: 1.5rem;
+    color: var(--text-a)
+}
+
+.project-btn:hover {
+    background-color: var(--sh-lt);
+    box-shadow: 3px 3px 5px var(--sdw-a);
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.project-btn:hover p {
+    color: var(--text-hl)
+}
+
+
