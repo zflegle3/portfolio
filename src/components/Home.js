@@ -77,7 +77,7 @@ function Home() {
 
         <div className="load-bg" id="banner-bg"></div>
 
-     {/* <CloudsAll /> */}
+     <CloudsAll />
     </div>
   );
 }

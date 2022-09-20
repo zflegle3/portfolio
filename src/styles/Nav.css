@@ -20,13 +20,16 @@
 }
 
 #nav-bar a {
+    display:inline-block;
+    position: relative;
     color: var(--text-b);
     /* text-decoration: underline; */
 }
 
 #nav-bar a:hover {
-    /* color: var(--text-hl); */
-    /* text-decoration: underline; */
+    color: var(--text-hl);
+    /* transform: translate(0rem, 0.5rem); */
+    transition: all 0.3s;
 }
 
 /* #nav-bar.hidden a {
@@ -36,10 +39,12 @@
 #nav-bar a.selected {
     color: var(--text-a);
     text-decoration: none;
+
     background-image: linear-gradient(var(--text-a), var(--text-a));
     background-size: 100% 2px, 0 2px;
     background-position: 0px 100%, 100% 100%;
     background-repeat: no-repeat;
+
     transition: background-size 0.5s ease-in;
 }
 
@@ -79,9 +84,7 @@ a[id^="nav-link"] {
     padding: 0.5rem;
 }
 
-a[id^="nav-link"]:hover {
-    scale: 2;
-}
+
 /* 
 a[id^="nav-link"].selected, #nav-bar.hidden a.selected  {
     color: yellow;
@@ -97,7 +100,7 @@ a[id^="nav-link"].selected, #nav-bar.hidden a.selected  {
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 70vh;
+    top: 100vh;
     left: 0px;
     border: 2px solid red;
     z-index: 100;
@@ -126,22 +129,22 @@ div[id^="section-inc"] {
 }
 
 .inc-0 {
-    top: 50vh;
+    top: 20vh;
     left: 0px;
 }
 
 .inc-1 {
-    top: 150vh;
+    top: 125vh;
     left: 0px;
 }
 
 .inc-2 {
-    top: 250vh;
+    top: 230vh;
     left: 0px;
 }
 
 .inc-3 {
-    top: 350vh;
+    top: 335vh;
     left: 0px;
 }
 

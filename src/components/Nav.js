@@ -15,7 +15,7 @@ function Nav(props) {
 
     const scrollClick = (e) => {
         e.preventDefault();
-        console.log("scroll to section");
+        // console.log("scroll to section");
         let target = e.target.getAttribute("href");
         let scrollLoc = document.querySelector(target).offsetTop;
         let navOffset = document.getElementById("nav-bar").offsetHeight;
@@ -25,15 +25,6 @@ function Nav(props) {
         });
         // selectLink(e.target);
     }
-
-    // const selectLink = (targetLink) => {
-    //     let allLinks = document.querySelectorAll("#nav-link");
-    //     for (let i=0; i<allLinks.length; i++) {
-    //         allLinks[i].classList = "";
-    //     };
-    //     targetLink.classList = "selected";
-    
-    // }
 
     const resetLinkSelect = () => {
         let allLinks = document.querySelectorAll("a[id^='nav-link']");
@@ -81,6 +72,7 @@ function Nav(props) {
           ) {
           let sectionNext = new IntersectionObserver(entries => {
             //remove selected elements from all 
+            console.log(entries[0]);
             if (entries[0].intersectionRatio > 0.75) {
                 if (entries[0].boundingClientRect.y > 0) {
                     console.log("switch selection");
@@ -92,7 +84,6 @@ function Nav(props) {
                     console.log("Select", entries[0].target.classList);
                     document.getElementById(`nav-link-${linkSelections[index]}`).classList.add("selected");
                 } 
-
             }
         }, options2);
             sectionNext.observe(document.getElementById("section-inc-0"));

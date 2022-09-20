@@ -55,30 +55,99 @@ table {
 	--background-main: #6279B8;
 	font-family: 'Cabin', sans-serif;
 
-	--a-: #293241;
-	--b-: #3D5A80;
-	--c-: #98C1D9;
-	--d-: #E0FBFC;
-	--e-: #EE6C4D;
+
+	--c-gray-900: #000000;
+	--c-gray-800: #1f1f1f;
+	--c-gray-700: #2e2e2e;
+	--c-gray-600: #313131;
+	--c-gray-500: #969593;
+	--c-gray-400: #a6a6a6;
+	--c-gray-300: #bdbbb7;
+	--c-gray-200: #f1f1f1;
+	--c-gray-100: #ffffff;
+
+	--c-green-500: #45ffbc;
+	--c-olive-500: #e3ffa8;
+
+	--c-white: var(--c-gray-100);
+
+	--c-text-primary: var(--c-gray-100);
+	--c-text-secondary: var(--c-gray-200);
+	--c-text-tertiary: var(--c-gray-500);
 
 
 	/* ~~~~~~~~~~~~~
 	******Colors*****
 	~~~~~~~~~~~~~~~~*/
 	/* Blue */
+	--bl6: #7EA8BE;
+	--bl5: #478aa1;
 	--bl4: #B4C5E4;
 	--bl3: #3D52D5;
 	--bl2: #086788;
 	--bl1: #102B3F;
 	/* Grey (black to white) */
+	--bw99: #ffffff;
+	--bw95: #f1f1f1;;
+	--bw5: #969593;;
 	--bw4: rgb(153, 165, 182);
 	--bw3: #D6D9CE;
 	--bw2: #596475;
+	--bw1-5: #2e2e2e;
 	--bw1: black;
+	--bw0: #2C1A1D;
 
 	/* Orange */
 	--o3: #FA9500;
 	--o2: #EB6424;
+
+	/*Green */
+	--g1: #45ffbc;;
+	--g2: #AABA9E;
+	--g3: #639A88;
+	--g4: #7CB518;
+	--g5: #2b3d38;
+
+	/*Red */
+	--r1: #684756;
+
+
+	/*Brown */
+	--b1: #96705B;
+
+	/* Yellow */
+	--y1: #FBB02D;
+
+
+	/* Dark Theme */
+	/* Backgrounds */
+	--bg-1: var(--c-gray-800);
+	--bg-2: var(--bw1-5); 
+	--bg-3: rgb(59, 70, 120); 
+	--bg-4: rgb(76, 90, 155); 
+	/* Main Titles & Headers */
+	--text: var(--g5);
+	/* Sub Titles & Headers */
+	--text-a: var(--g3); 
+	/* Content Text and small titles & headers */
+	--text-b: var(--bw5);
+	/* Highlight clickable */
+	--text-hl: var(--y1); 
+	/* Highlight display only */
+	--text-hl-a: var(--bw99);
+	/* Alerts & Notifications */
+	--al-rd: black;
+	--al-gr: black;
+	--al-yl: black;
+	--al-bl: black;
+	/* Shades */
+	--sh-dk: rgba(174, 174, 174, 0.15);
+	--sh-lt: rgba(124, 124, 124, 0.35);
+	--sdw-a: rgba(0,0,0,0.55);
+	/* Element Specific */
+	--nextLink-a: var(--bw99);
+
+
 
 
 
@@ -86,29 +155,33 @@ table {
 
 	/* Light Theme */
 	/* Backgrounds */
-	--bg-1: var(--bw3);
+	/* --bg-1: var(--bw3);
 	--bg-2: var(--bw4); 
 	--bg-3: rgb(59, 70, 120); 
-	--bg-4: rgb(76, 90, 155); 
+	--bg-4: rgb(76, 90, 155);  */
 	/* Main Titles & Headers */
-	--text: var(--bl1);
+	/* --text: var(--bl1); */
 	/* Sub Titles & Headers */
-	--text-a: var(--bl2); 
+	/* --text-a: var(--bl2);  */
 	/* Content Text and small titles & headers */
-	--text-b: var(--bw2);
+	/* --text-b: var(--bw2); */
 	/* Highlight clickable */
-	--text-hl: var(--o2); 
+	/* --text-hl: var(--o2);  */
 	/* Highlight display only */
-	--text-hl-a: black; 
+	/* --text-hl-a: black;  */
+
 	/* Alerts & Notifications */
-	--al-rd: black;
+	/* --al-rd: black;
 	--al-gr: black;
 	--al-yl: black;
-	--al-bl: black;
+	--al-bl: black; */
 	/* Shades */
-	--sh-dk: rgba(63, 63, 63, 0.15);
+	/* --sh-dk: rgba(63, 63, 63, 0.15);
 	--sh-lt: rgba(255,255,255,0.35);
-	--sdw-a: rgba(0,0,0,0.55);
+	--sdw-a: rgba(0,0,0,0.55); */
+
+
+
 
 }
 
@@ -116,11 +189,11 @@ table {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	/* background-image: url(../images/background.jpeg);
+	background-image: url(../images/bg-alt-3.jpeg);
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat; */
+	background-repeat: no-repeat;
 	
 	
 }
