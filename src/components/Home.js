@@ -1,8 +1,8 @@
 import '../styles/Home.css';
 
 import CloudsAll from "./CloudsAll";
-import CloudsBackSvg from "./CloudBackSvg";
 
+import CloudsBackSvg from "./CloudBackSvg";
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
@@ -10,29 +10,14 @@ import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
 import resumePdf from '../documents/z_flegle_resume.pdf';
 
-
-
 function Home() {
 
-
-
-  const translateText = (e) => {
-    console.log("translate");
-  }
-
-  // document.getElementById("home").onScroll(translateText());
-
-  // window.onscroll = translateText();
-
-
-
-
   return (
-    <div id="home" className="home" onScroll={translateText}>
+    <div id="home" className="home">
         <div className="home-content">
             <CloudsBackSvg />
             <p id="banner-name">Zach Flegle</p>
-            {/* <p id="banner-title">Developer</p> */}
+            <p id="banner-title">Developer</p>
             <div id="banner-links" className="link-container">
 
               <address>

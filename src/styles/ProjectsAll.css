@@ -3,14 +3,10 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* height: 100vh; */
     width: 100vw;
     background-color: var(--bg-1);
     padding: 2rem 0rem 0rem 0rem;
-
-    	/* clip-path: polygon(100% 0, 100% 0%, 0% 25%, 0 100%, 100% 100%); */
 }
-
 
 .project-header {
     display: flex;
@@ -24,12 +20,7 @@
 #project-item {
     display: flex;
     flex-direction: row;
-    /* height: 50vh; */
     width: 100%;
-}
-
-.project-item-a {
-
 }
 
 .project-item-a {
@@ -56,7 +47,6 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
-
 }
 
 .project-content-container {
@@ -64,9 +54,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    /* background-color: var(--sh-lt);
-    padding: 3rem;
-    border-radius: 2rem; */
 }
 
 .project-title {
@@ -77,6 +64,7 @@
 
 .project-desc {
     font-size: 2rem;
+    line-height: 2.5rem;
     color: var(--text-hl-a);
     padding-bottom: 1rem;
     max-width: 60rem;

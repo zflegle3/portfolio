@@ -4,6 +4,7 @@
     position: fixed;
     width: 100vw;
     top: 0px;
+    left: 0px;
     z-index: 10;
     display: flex;
     flex-direction: row;
@@ -23,18 +24,12 @@
     display:inline-block;
     position: relative;
     color: var(--text-b);
-    /* text-decoration: underline; */
 }
 
 #nav-bar a:hover {
     color: var(--text-hl);
-    /* transform: translate(0rem, 0.5rem); */
     transition: all 0.3s;
 }
-
-/* #nav-bar.hidden a {
-    color: var(--text-dk);
-} */
 
 #nav-bar a.selected {
     color: var(--text-a);
@@ -49,9 +44,7 @@
 }
 
 #nav-bar.hidden a.selected {
-    /* color: var(--text-hl); */
     text-decoration: none;
-    /* background-image: linear-gradient(var(--text-hl), var(--text-hl)); */
     background-size: 100% 2px, 0 2px;
     background-position: 0px 100%, 100% 100%;
     background-repeat: no-repeat;
@@ -59,6 +52,7 @@
 }
 
 .nav-bar-left {
+    flex-grow: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,7 +61,6 @@
     flex-direction: row;
     gap: 2rem;
     justify-content: flex-start;
-
 }
 
 .nav-bar-list {
@@ -85,13 +78,6 @@ a[id^="nav-link"] {
 }
 
 
-/* 
-a[id^="nav-link"].selected, #nav-bar.hidden a.selected  {
-    color: yellow;
-    transition: 0.5s;
-} */
-
-
 
 /* All Scroll Listeners Styles */
 
@@ -107,16 +93,6 @@ a[id^="nav-link"].selected, #nav-bar.hidden a.selected  {
 }
 
 /* Section Selection Listener */
-/* #section-hide-about {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 1300px;
-    left: 0px;
-    border: 2px solid orange;
-    z-index: 100;
-} */
-
 
 div[id^="section-inc"] {
     position: absolute;
@@ -148,30 +124,14 @@ div[id^="section-inc"] {
     left: 0px;
 }
 
-/* .inc-4 {
-    top: 405vh;
-    left: 0px;
-} */
-
-
 /* Link Hover Effect */
-
 a {
     text-decoration: none;
-    /* background-image: linear-gradient(rgb(176, 251, 188), rgb(176, 251, 188)); */
     background-size: 0 2px, 100% 2px;
     background-position: 0 0, 100% 100%;
     background-repeat: no-repeat;
 
 }
-
-a:hover {
-    /* background-image: linear-gradient(var(--text-hl), var(--text-hl)); */
-    /* color: var(--text-hl); */
-    /* background-size: 100% 2px, 0 2px;
-    transition: background-size 0.3s linear; */
-}
-
 
 /* svg Hover Effect */
 #nav-bar svg {
@@ -184,10 +144,6 @@ a:hover {
     transform: scale(1.5);
     transition: fill 0.3s;
 }
-
-/* #nav-bar.hidden svg{
-    fill: var(--text-dk);
-} */
 
 #nav-bar.hidden svg:hover{
     fill: var(--text-hl);
@@ -202,6 +158,7 @@ input[type=checkbox]{
 	height: 0;
 	width: 0;
 	visibility: hidden;
+    transition: 0.3s;
     
 }
 
@@ -215,6 +172,7 @@ input[type=checkbox]{
 	border-radius: 100px;
 	position: relative;
     /* border: 1px solid black; */
+    transition: 0.3s;
 }
 
 .tog-label:after {
@@ -226,26 +184,20 @@ input[type=checkbox]{
 	height: 2.6rem;
 	background: var(--text-b);
 	border-radius: 90px;
-    /* border: 1px solid black; */
 	transition: 0.3s;
 }
 
 .tog-input:checked + .tog-label {
 	background: var(--text);
+    transition: 0.3s;
 }
 
 .tog-input:checked + .tog-label:after {
 	left: calc(100% - 2px);
 	transform: translateX(-100%);
+    transition: 0.3s;
 }
 
 .tog-label:active:after {
-	width: 4rem;
+	width: 3rem;
 }
-
-/* body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-} */

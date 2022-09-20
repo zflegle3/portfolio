@@ -5,8 +5,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-
-	/* clip-path: polygon(100% 0, 100% 75%, 0% 100%, 0 100%, 0 0); */
 }
 
 
@@ -17,7 +15,6 @@
     align-items: flex-start;
     max-width: 600px;
     padding-top: 5rem;
-
 }
 
 
@@ -71,13 +68,7 @@
     justify-content: flex-start;
 }
 
-.skill-container svg {
-    /* transform: scale(3); */
-}
-
 .skill-item {
-    /* height: 3rem;
-    width: 3.5rem; */
     padding: 0.5rem 0.5rem 0rem 0.5rem;
     display: flex;
     flex-direction: column;
@@ -92,8 +83,6 @@
 }
 
 .skill-item:hover .skill-title {
-    /* font-size: 1.5rem;
-    transition: font-size 0.2s; */
     color: var(--text-hl-a);
     transition: color 0.2s;
 }
@@ -104,9 +93,6 @@
     color: var(--text-b);
 }
 
-.img{
-    width: rem;
-}
 
 .skill-item img {
     height: 3.5rem;

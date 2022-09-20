@@ -25,6 +25,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	
 }
 ol, ul {
 	list-style: none;
@@ -43,38 +44,21 @@ table {
 }
 
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
-
-
 
 
 /* General Styles */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+/* font-family: 'Cabin', sans-serif; */
+
+
 * {
+	margin: 0;
 	scroll-behavior: smooth;
 	font-size: 10px;
 	--background-main: #6279B8;
 	font-family: 'Cabin', sans-serif;
-
-
-	--c-gray-900: #000000;
-	--c-gray-800: #1f1f1f;
-	--c-gray-700: #2e2e2e;
-	--c-gray-600: #313131;
-	--c-gray-500: #969593;
-	--c-gray-400: #a6a6a6;
-	--c-gray-300: #bdbbb7;
-	--c-gray-200: #f1f1f1;
-	--c-gray-100: #ffffff;
-
-	--c-green-500: #45ffbc;
-	--c-olive-500: #e3ffa8;
-
-	--c-white: var(--c-gray-100);
-
-	--c-text-primary: var(--c-gray-100);
-	--c-text-secondary: var(--c-gray-200);
-	--c-text-tertiary: var(--c-gray-500);
-
 
 	/* ~~~~~~~~~~~~~
 	******Colors*****
@@ -101,13 +85,10 @@ table {
 	--bw1-5: #2e2e2e;
 	--bw1: black;
 	--bw0: #2C1A1D;
-
-
-
+	--bw0-5: #1f1f1f;
 	/* Orange */
 	--o3: #FA9500;
 	--o2: #EB6424;
-
 	/*Green */
 	--g1: #45ffbc;;
 	--g2: #AABA9E;
@@ -115,20 +96,16 @@ table {
 	--g4: #7CB518;
 	--g5: #2b3d38;
 	--g6: #064420;
-
 	/*Red */
 	--r1: #684756;
-
-
 	/*Brown */
 	--b1: #96705B;
-
 	/* Yellow */
 	--y1: #FBB02D;
 }
 
 :root{
-		/* Light Theme */
+	/* Light Theme */
 	/* Backgrounds */
 	--bg-1: var(--bw96);
 	--bg-2: var(--bw85); 
@@ -144,7 +121,6 @@ table {
 	--text-hl: var(--o2); 
 	/* Highlight display only */
 	--text-hl-a: black; 
-
 	/* Alerts & Notifications */
 	--al-rd: black;
 	--al-gr: black;
@@ -152,7 +128,7 @@ table {
 	--al-bl: black;
 	/* Shades */
 	--sh-dk: rgba(49, 49, 49,0.20);
-	--sh-lt: rgba(255,255,255,0.35);
+	--sh-lt: rgba(124, 124, 124, 0.35);
 	--sdw-a: rgba(0,0,0,0.55);
 	/* Element Specific */
 	--nextLink-a: var(--bw99);
@@ -162,16 +138,12 @@ table {
 	background-size: cover;
 	background-repeat: no-repeat;
 
-	--light: #d8dbe0;
-	--dark: #28292c;
-	--link: rgb(27, 129, 112);
-	--link-hover: rgb(24, 94, 82);
 }
 
 [data-theme="dark"] {
 	/* Dark Theme */
 	/* Backgrounds */
-	--bg-1: var(--c-gray-800);
+	--bg-1: var(--bw0-5);
 	--bg-2: var(--bw1-5); 
 	--bg-3: rgb(59, 70, 120); 
 	--bg-4: rgb(76, 90, 155); 
@@ -192,7 +164,7 @@ table {
 	--al-bl: black;
 	/* Shades */
 	--sh-dk: rgba(174, 174, 174, 0.15);
-	--sh-lt: rgba(124, 124, 124, 0.35);
+	--sh-lt: rgba(124, 124, 124, 0.45);
 	--sdw-a: rgba(0,0,0,0.55);
 	/* Element Specific */
 	--nextLink-a: var(--bw99);
@@ -207,49 +179,10 @@ table {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-
-
-
-	/* -webkit-font-smootthing: antialiased; */
+	overflow-x: hidden;
+	position: relative;
 }
 
-
-
-
-/* .App > div {
-	height: 85vh;
-} */
-
-body {
-	/* background-color: var(--o3); */
-}
-
-/* Main Section Styles */
-
-.backdrop-home {
-	/* width: 100vw;
-	height: 100vh; */
-	/* background-color: var(--bg-1); */
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-.backdrop-about {
-	width: 100vw;
-	height: 100vh;
-	background-color: var(--bg-2);
-	position: absolute;
-	top: 100vh;
-	left: 0;
-	z-index: -1;
-}
-
-
-.projects {
-	color: red;
-	height: 85vh;
-}
 
 
 

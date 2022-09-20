@@ -1,17 +1,8 @@
-import '../styles/About.css';
-import {useState, useEffect} from "react";
-
-
 function CloudBackSvg(props) {
     // props.left
     // props.top
     // props.seedVal
     // props.id
-
-    const [cloudStats, setCloudStats] = useState({
-
-    })
-
 
     return (
         <div id="cloud-background" className="cloud-background">

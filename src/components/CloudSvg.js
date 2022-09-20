@@ -11,16 +11,6 @@ function CloudSvg(props) {
     //     height: 100/4
     // }
 
-
-    // const tempHide = (e) => {
-    //     console.log(e);
-    //     e.target.classList.add("hide-cloud");
-    //     setTimeout(() => {e.target.classList.remove("hide-cloud")}, 9000)
-    // }
-
-
-    // let seedVal = Math.random()*10000;
-    // console.log(seedVal);
     return (
         <div id="cloud-container-single" className={`svg-cloud-${props.cloudData.id}`} style={{ top:`${props.cloudData.top}%`, left:`${props.cloudData.left}%`, height : `${props.cloudData.height}%`, width : `${props.cloudData.width}%`}} >
 

@@ -1,12 +1,10 @@
 import {useState, useEffect} from "react";
 
-import CloudsRow from "./CloudsRow"
+// import CloudsRow from "./CloudsRow"
 import CloudSvg from "./CloudSvg"
 
 
-
 function CloudsAll(props) {
-    const [selectedCloud, setSelectedCloud] = useState(-1);
     const[randFactor, setRandFactor] = useState(5)
     const[cloudData, setCloudData] = useState([
         // {   id: 0,
@@ -83,35 +81,21 @@ function CloudsAll(props) {
 
     const hideCloud = () => {
         let index = Math.floor(Math.random() * (3 + 1))
-        // console.log(index);
         let cloudSelected = document.querySelector(`.svg-cloud-${index}`);
-        // console.log(cloudSelected);
         cloudSelected.classList.toggle("hide-cloud")
 
     }
 
 
     useEffect(() => {
-        // console.log(`initializing interval`);
         const interval = setInterval(() => {
           hideCloud();
         }, 7000);
       
         return () => {
-        //   console.log(`clearing interval`);
           clearInterval(interval);
         };
       }, []);
-
-
-
-
-
-    
-    
-
-    console.log(cloudData);
-
 
     return (
         <div className="cloud-array">
@@ -126,16 +110,13 @@ function CloudsAll(props) {
             {/* <CloudSvg cloudData={cloudData[7]}/> */}
             <CloudSvg cloudData={cloudData[2]}/>
             <CloudSvg cloudData={cloudData[3]}/>
+
+            
             {/* <CloudsRow rowIndex={0} rowQty={3} heightFactor={15}/> */}
-
             {/* <CloudsRow rowIndex={1} rowQty={4} heightFactor={15}/> */}
-
             {/* <CloudsRow rowIndex={2} rowQty={3} heightFactor={15}/> */}
-
             {/* <CloudsRow rowIndex={3} rowQty={4} heightFactor={15}/> */}
-
             {/* <CloudsRow rowIndex={4} rowQty={3} heightFactor={15}/> */}
- 
             {/* <CloudsRow rowIndex={5} rowQty={4} heightFactor={10}/> */}
         </div>
 
