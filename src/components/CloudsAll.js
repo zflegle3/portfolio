@@ -83,22 +83,22 @@ function CloudsAll(props) {
 
     const hideCloud = () => {
         let index = Math.floor(Math.random() * (3 + 1))
-        console.log(index);
+        // console.log(index);
         let cloudSelected = document.querySelector(`.svg-cloud-${index}`);
-        console.log(cloudSelected);
+        // console.log(cloudSelected);
         cloudSelected.classList.toggle("hide-cloud")
 
     }
 
 
     useEffect(() => {
-        console.log(`initializing interval`);
+        // console.log(`initializing interval`);
         const interval = setInterval(() => {
           hideCloud();
         }, 7000);
       
         return () => {
-          console.log(`clearing interval`);
+        //   console.log(`clearing interval`);
           clearInterval(interval);
         };
       }, []);

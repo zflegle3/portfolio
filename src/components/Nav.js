@@ -9,6 +9,7 @@ import { ReactComponent as GithubSvg } from "../images/github.svg";
 
 function Nav(props) {
     //props.links
+    //props.switchTheme
     // const [navClass, setNavClass] = useState(["nav-bar, hidden"])
     const [linkSelections, setLinkSelections] = useState(["home","about","projects","contact"]);
 
@@ -100,13 +101,10 @@ function Nav(props) {
     return (
         <div id="nav-bar" className={"nav-bar hidden"}>
             <ul className="nav-bar-left">
-                <li>
-                    <GithubSvg/>
-                </li>
-                <li>
-                    <LinkedInSvg />
-                </li>
-                <li>Professional Link/Email</li>
+                <div id="theme-toggle" class = 'toggle-switch'>
+                    <input onClick={props.switchTheme} className="tog-input" type="checkbox" id="switch" />
+                    <label className="tog-label" for="switch">Toggle</label>
+                </div>
             </ul>
             <ul className="nav-bar-list">
                 {props.links.map((link) => 

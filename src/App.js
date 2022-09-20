@@ -6,17 +6,8 @@ import './styles/App.css';
 import './styles/Clouds.css';
 // import './styles/Projects.scss';
 import './styles/ProjectsAll.css';
-
 import weatherAppImg  from "./images/project-images/weather-app-demo.png"
-
-//Import Scroll Magic?
-//debugIndicators?
-//gsapAnimation?
-
-//GSAP Libraries
-//Tween lite
-//Timeline Lite
-//CSS plugin
+import useLocalStorage from "use-local-storage";
 
 
 // import Clouds from "./components/Clouds";
@@ -33,6 +24,9 @@ import React from 'react';
 
 
 function App() {
+
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
   const [links, setLinks] = useState([
     { id: "nav-link-home",
@@ -53,13 +47,23 @@ function App() {
     },
   ])
 
+  const switchTheme = (e) => {
+    // e.preventDefault();
+    let togSwitch = document.getElementById("theme-toggle");
+    console.log(togSwitch);
+    togSwitch.classList.toggle("light-mode")
+    console.log("switching theme");
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+  }
+
 
 
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
 
 
-      <Nav links={links}/>
+      <Nav links={links} switchTheme={switchTheme}/>
 
       {/* <div className="backdrop-home"></div> */}
       <Home />

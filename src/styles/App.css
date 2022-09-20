@@ -80,6 +80,7 @@ table {
 	******Colors*****
 	~~~~~~~~~~~~~~~~*/
 	/* Blue */
+	--bl7: #A2BCE0;
 	--bl6: #7EA8BE;
 	--bl5: #478aa1;
 	--bl4: #B4C5E4;
@@ -89,6 +90,10 @@ table {
 	/* Grey (black to white) */
 	--bw99: #ffffff;
 	--bw95: #f1f1f1;;
+	--bw96: #ecf0f1;
+	--bw90:#bdbbb7;
+	--bw85: #FBF0DF;
+	--bw10: #313131;
 	--bw5: #969593;;
 	--bw4: rgb(153, 165, 182);
 	--bw3: #D6D9CE;
@@ -96,6 +101,8 @@ table {
 	--bw1-5: #2e2e2e;
 	--bw1: black;
 	--bw0: #2C1A1D;
+
+
 
 	/* Orange */
 	--o3: #FA9500;
@@ -107,6 +114,7 @@ table {
 	--g3: #639A88;
 	--g4: #7CB518;
 	--g5: #2b3d38;
+	--g6: #064420;
 
 	/*Red */
 	--r1: #684756;
@@ -117,8 +125,50 @@ table {
 
 	/* Yellow */
 	--y1: #FBB02D;
+}
 
+:root{
+		/* Light Theme */
+	/* Backgrounds */
+	--bg-1: var(--bw96);
+	--bg-2: var(--bw85); 
+	--bg-3: rgb(59, 70, 120); 
+	--bg-4: rgb(76, 90, 155); 
+	/* Main Titles & Headers */
+	--text: var(--bl1);
+	/* Sub Titles & Headers */
+	--text-a: var(--bl2); 
+	/* Content Text and small titles & headers */
+	--text-b: var(--bw10);
+	/* Highlight clickable */
+	--text-hl: var(--o2); 
+	/* Highlight display only */
+	--text-hl-a: black; 
 
+	/* Alerts & Notifications */
+	--al-rd: black;
+	--al-gr: black;
+	--al-yl: black;
+	--al-bl: black;
+	/* Shades */
+	--sh-dk: rgba(49, 49, 49,0.20);
+	--sh-lt: rgba(255,255,255,0.35);
+	--sdw-a: rgba(0,0,0,0.55);
+	/* Element Specific */
+	--nextLink-a: var(--bw99);
+	background-image: url(../images/background.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	--light: #d8dbe0;
+	--dark: #28292c;
+	--link: rgb(27, 129, 112);
+	--link-hover: rgb(24, 94, 82);
+}
+
+[data-theme="dark"] {
 	/* Dark Theme */
 	/* Backgrounds */
 	--bg-1: var(--c-gray-800);
@@ -126,7 +176,7 @@ table {
 	--bg-3: rgb(59, 70, 120); 
 	--bg-4: rgb(76, 90, 155); 
 	/* Main Titles & Headers */
-	--text: var(--g5);
+	--text: var(--g6);
 	/* Sub Titles & Headers */
 	--text-a: var(--g3); 
 	/* Content Text and small titles & headers */
@@ -146,57 +196,25 @@ table {
 	--sdw-a: rgba(0,0,0,0.55);
 	/* Element Specific */
 	--nextLink-a: var(--bw99);
-
-
-
-
-
-
-
-	/* Light Theme */
-	/* Backgrounds */
-	/* --bg-1: var(--bw3);
-	--bg-2: var(--bw4); 
-	--bg-3: rgb(59, 70, 120); 
-	--bg-4: rgb(76, 90, 155);  */
-	/* Main Titles & Headers */
-	/* --text: var(--bl1); */
-	/* Sub Titles & Headers */
-	/* --text-a: var(--bl2);  */
-	/* Content Text and small titles & headers */
-	/* --text-b: var(--bw2); */
-	/* Highlight clickable */
-	/* --text-hl: var(--o2);  */
-	/* Highlight display only */
-	/* --text-hl-a: black;  */
-
-	/* Alerts & Notifications */
-	/* --al-rd: black;
-	--al-gr: black;
-	--al-yl: black;
-	--al-bl: black; */
-	/* Shades */
-	/* --sh-dk: rgba(63, 63, 63, 0.15);
-	--sh-lt: rgba(255,255,255,0.35);
-	--sdw-a: rgba(0,0,0,0.55); */
-
-
-
-
+	background-image: url(../images/bg-alt-3.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 .App {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	background-image: url(../images/bg-alt-3.jpeg);
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	
-	
+
+
+
+	/* -webkit-font-smootthing: antialiased; */
 }
+
+
+
 
 /* .App > div {
 	height: 85vh;

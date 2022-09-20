@@ -6,8 +6,9 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Project from "./Project";
 
-import weatherAppImg from "../images/project-images/weather-app-demo.png"
+import weatherAppImg from "../images/project-images/weather-app.png"
 import battleshipAppImg from "../images/project-images/battleship.png"
+import todoAppImg from "../images/project-images/to-do-app.png"
 
 function ProjectsAll(props) {
     // const [linkSelections, setLinkSelections] = useState(["home","about","projects","contact"]);
@@ -37,7 +38,7 @@ function ProjectsAll(props) {
       desc: "A to do list application to allow users to sign in using their google account, to create new tasks or projects, to display all tasks or sort by project, and to update tasks as they are completed",
       codeUrl: "https://github.com/zflegle3/to-do-list",
       demoUrl: "https://zflegle3.github.io/to-do-list/",
-      imgSrc: weatherAppImg,
+      imgSrc: todoAppImg,
       imgAlt: "to-do project demo image",
     },
       ])
