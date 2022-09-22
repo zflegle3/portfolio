@@ -17,19 +17,36 @@
     padding: 3rem
 }
 
-#project-item {
+
+div[id*="project-item"]{
     display: flex;
     flex-direction: row;
     width: 100%;
+    /* visibility: hidden; */
 }
 
 .project-item-a {
-    background-color: var(--sh-dk);
+
+}
+
+.project-item-a .project-img {
+    transform: translate(-100vw);
+}
+.project-item-a .project-title {
+    transform: translate(100vw);
+}
+
+.project-item-b .project-img {
+    transform: translate(100vw);
+}
+
+.project-item-b .project-title {
+    transform: translate(-100vw);
 }
 
 
 .project-img {
-    width: 40%;
+    height: 60vh;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -41,7 +58,7 @@
 }
 
 .project-content {
-    width: 60%;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,12 +85,14 @@
     color: var(--text-hl-a);
     padding-bottom: 1rem;
     max-width: 60rem;
+    visibility: hidden;
 }
 
 .project-links {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    visibility: hidden;
 }
 
 .project-btn {
@@ -102,5 +121,98 @@
 .project-btn:hover p {
     color: var(--text-hl)
 }
+
+
+
+/* Project Listeners */
+
+div[id*='proj-listener'] {
+    height: 10px;
+    width: 10px;
+    border: 2px solid orange;
+}
+
+.pl-0 {
+    position: absolute;
+    top: 250vh;
+    left: 0px;
+}
+
+.pl-1 {
+    position: absolute;
+    top: 310vh;
+    left: 0px;
+}
+
+.pl-2 {
+    position: absolute;
+    top: 370vh;
+    left: 0px;
+}
+
+.pl-3 {
+    position: absolute;
+    top: 420vh;
+    left: 0px;
+}
+
+.pt {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    top: 45vh;
+    border: 1px solid orchid;
+}
+
+
+/* Project Animations */
+
+div[id*="project-item"].display{
+    /* visibility: visible; */
+}
+
+
+/* div[id*="project-item"].display .project-img {
+    opacity: 1;
+    transition: all 0.5s;
+} */
+
+div[id*="project-item"].display .project-links  {
+    visibility: visible;
+	animation: fadeIn 2s ease-in;
+}
+
+div[id*="project-item"].display .project-desc  {
+    visibility: visible;
+	animation: fadeIn 2s ease-in;
+}
+
+div[id*="project-item"].display img  {
+
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+    50% {
+        opacity: 0;
+    }
+	100% {
+		opacity: 1;
+	}
+}
+
+div[id*="project-item"].display .project-img {
+    transform: translate(0vw);
+    transition: all 0.5s;
+}
+
+div[id*="project-item"].display .project-title {
+    transform: translate(0vw);
+    transition: all 0.5s;
+}
+
+
 
 

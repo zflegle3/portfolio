@@ -64,7 +64,7 @@ function Nav(props) {
             //remove selected elements from all 
             if (entries[0].intersectionRatio > 0.75) {
                 if (entries[0].boundingClientRect.y > 0) {
-                    resetLinkSelect()
+                    resetLinkSelect(); // removes class from all links
                     let idSplit = entries[0].target.id.split("-");
                     let index = Number(idSplit[2]);
                     document.getElementById(`nav-link-${linkSelections[index]}`).classList.add("selected");
