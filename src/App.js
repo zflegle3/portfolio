@@ -16,7 +16,7 @@ import React from 'react';
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
   const [links, setLinks] = useState([
     { id: "nav-link-home",
       text: "home",
@@ -37,14 +37,16 @@ function App() {
   ])
 
   const switchTheme = (e) => {
-    let togSwitch = document.getElementById("theme-toggle");
-    togSwitch.classList.toggle("light-mode")
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
+    console.log("switch theme");
+    let app = document.querySelector(".App");
+    // togSwitch.classList.toggle("light-mode");
+    // const newTheme = theme === "light" ? "dark" : "light";
+    // setTheme(newTheme);
+    app.classList.toggle("darkMode");
   }
 
   return (
-    <div className="App" data-theme={theme}>
+    <div className="App">
       <Nav links={links} switchTheme={switchTheme}/>
       <Home />
       <About />

@@ -3,7 +3,6 @@ import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
-import resumePdf from '../documents/z_flegle_resume.pdf';
 
 
 function Contact() {
@@ -27,13 +26,13 @@ function Contact() {
           </a>
         </address>
 
-        <a href={resumePdf} className="link-item">
+        {/* <a href={resumePdf} className="link-item">
           <div className="link-svg">
             <CvSvg />
           </div>
           <p>Resume:</p>
           <p>z_flegle_resume.pdf</p>
-        </a>
+        </a> */}
 
 
         <a href="https://github.com/zflegle3" className="link-item">

@@ -131,10 +131,11 @@ div[id*="project-item"]{
 div[id*='proj-listener'] {
     height: 10px;
     width: 10px;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     position: absolute;
     top: 25vh;
     left: 0px;
+    visibility: hidden;
 }
 
 /* .pl-0 {

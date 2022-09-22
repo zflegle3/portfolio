@@ -44,19 +44,12 @@ table {
 }
 
 
-
-
-/* General Styles */
-
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 /* font-family: 'Cabin', sans-serif; */
 
-
 @media only screen and (max-width: 600px) {
-	/* Mobile */
-
-
+	/* Mobile Styles */
 	* {
 		/* Font Sizes */
 		--font-xl: 6rem;
@@ -68,8 +61,7 @@ table {
 		--font-xs: 1.2rem;
 	}
 
-
-
+	/* Nav Styles */
 	#nav-bar {
 		bottom: 0px;
 		background-color: var(--sh-mobile);
@@ -96,7 +88,7 @@ table {
 		top: -10vh;
 	}
 
-	/* Theme Toggle  */
+	/* Color Theme Toggle  */
 	.tog-label {
 		width: 4rem;
 		height: 2rem;
@@ -119,22 +111,17 @@ table {
 		transition: 0.3s;
 	}
 
-	/* About Styles Desktop  */
+	/* About Styles */
 	.about-container {
 		width: 100%;
 		padding: 2rem;
 	}
 
-	.skill-container {
-		/* width: 100%; */
-	}
 
 	/* Project styles */
 	#projects {
-		/* width: 100%; */
 		padding: 2rem;
 	} 
-
 
 	.project-header {
 		width: 100%;
@@ -146,21 +133,11 @@ table {
 
 	div[id*="project-item"]{
 		flex-direction: column;
-		/* Move Listener positions down */
 	}
 
 	div[id*="project-item"].project-item-a {
 		flex-direction: column-reverse;
 	}
-
-	.project-img {
-		/* width: 50vw; */
-	}
-	/*Project Animation Listeners */
-
-
-
-
 
 	/* Contact styles */
 	#contact {
@@ -180,11 +157,7 @@ table {
 		--font-s: 2rem;
 		--font-xs: 1.6rem;
 		--pad-ab: 2rem;
-
-
-		--pad-ab: 5rem;
 	}
-
 
 	/* Nav Bar Sizes Desktop */
 	#nav-bar {
@@ -209,7 +182,7 @@ table {
 		top: 100vh;
 	}
 
-	/* Theme Toggle  */
+	/* Color Theme Toggle */
 	.tog-label {
 		width: 6rem;
 		height: 3rem;
@@ -245,9 +218,12 @@ table {
 
 	/* Project styles */
 	#projects {
-		/* padding: 2rem; */
 		width: 100vw;
 	} 
+
+	.project-content-container {
+		padding: 2rem;
+	}
 
 	.project-header {
 		min-width: 60rem;
@@ -257,33 +233,23 @@ table {
 
 	div[id*="project-item"]{
 		flex-direction: row;
-		/* width: 100%; */
-		/* visibility: hidden; */
 	}
 
 	.project-img {
 		height: 60vh;
 	}
 
-	/*Project Animation Listeners */
-
-
-	
-
 	/* Contact styles */
 	#contact {
 		height: 100vh;
 	} 
-
 }
-
 
 
 * {
 	margin: 0;
 	scroll-behavior: smooth;
 	font-size: 10px;
-	--background-main: #6279B8;
 	font-family: 'Cabin', sans-serif;
 
 	/* ~~~~~~~~~~~~~
@@ -330,7 +296,7 @@ table {
 	--y1: #FBB02D;
 }
 
-:root{
+.App{
 	/* Light Theme */
 	/* Backgrounds */
 	--bg-1: var(--bw96);
@@ -364,10 +330,9 @@ table {
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
 }
 
-[data-theme="dark"] {
+.App.darkMode {
 	/* Dark Theme */
 	/* Backgrounds */
 	--bg-1: var(--bw0-5);

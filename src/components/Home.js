@@ -8,7 +8,6 @@ import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
-import resumePdf from '../documents/z_flegle_resume.pdf';
 
 function Home() {
 
@@ -30,12 +29,12 @@ function Home() {
                 </a>
               </address>
 
-              <a href={resumePdf} className="link-item-home">
+              {/* <a href={resumePdf} className="link-item-home">
                 <div className="link-svg-home">
                   <CvSvg />
                 </div>
                 <p>Resume</p>
-              </a>
+              </a> */}
 
               <a href="https://github.com/zflegle3" className="link-item-home">
                 <div className="link-svg-home">
