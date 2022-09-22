@@ -145,6 +145,7 @@
 #banner-name {
 	position: relative;
 	animation: mainFade 5s ease-in;
+	text-align : center;
 }
 
 @keyframes mainFade {

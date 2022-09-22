@@ -14,6 +14,7 @@ function Home() {
 
   return (
     <div id="home" className="home">
+        <div id="section-inc-0" className='inc-0'>0</div>
         <div className="home-content">
             <CloudsBackSvg />
             <p id="banner-name">Zach Flegle</p>

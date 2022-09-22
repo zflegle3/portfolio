@@ -1,16 +1,16 @@
 #nav-bar {
 	height: 5vh;
-	background-color: var(--sh-lt);
+	/* background-color: var(--sh-lt); */
     position: fixed;
     width: 100vw;
-    top: 0px;
+    /* top: 0px; */
     left: 0px;
     z-index: 10;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     transition: background-color 0.5s ease-in;
-    padding: 0.5rem 0rem 0.5rem 0rem;
+    /* padding: 0.5rem 0rem 0.5rem 0rem; */
     border-bottom: 1px solid var(--sh-lt);
 }
 
@@ -52,11 +52,11 @@
 }
 
 .nav-bar-left {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -67,8 +67,8 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-    gap: 2rem;
-    padding-right: 8rem;
+    /* gap: 2rem;
+    padding-right: 8rem; */
 } 
 
 a[id^="nav-link"] {
@@ -86,7 +86,7 @@ a[id^="nav-link"] {
     position: absolute;
     width: 10px;
     height: 10px;
-    top: 100vh;
+    /* top: 100vh; */
     left: 0px;
     border: 2px solid red;
     z-index: 100;
@@ -110,17 +110,17 @@ div[id^="section-inc"] {
 }
 
 .inc-1 {
-    top: 125vh;
+    top: 20vh;
     left: 0px;
 }
 
 .inc-2 {
-    top: 230vh;
+    top: 20vh;
     left: 0px;
 }
 
 .inc-3 {
-    top: 335vh;
+    top: 10vh;
     left: 0px;
 }
 
@@ -154,6 +154,10 @@ a {
 
 
 /* Color Theme Toggle */
+#theme-toggle {
+    display: flex;
+}
+
 input[type=checkbox]{
 	height: 0;
 	width: 0;
@@ -165,8 +169,8 @@ input[type=checkbox]{
 .tog-label {
 	cursor: pointer;
 	text-indent: -9999px;
-	width: 6rem;
-	height: 3rem;
+	/* width: 6rem;
+	height: 3rem; */
 	background: var(--nextLink-a);
 	display: block;
 	border-radius: 100px;
@@ -178,10 +182,10 @@ input[type=checkbox]{
 .tog-label:after {
 	content: '';
 	position: absolute;
-	top: 2px;
+	/* top: 2px;
 	left: 2px;
 	width: 2.6rem;
-	height: 2.6rem;
+	height: 2.6rem; */
 	background: var(--text-b);
 	border-radius: 90px;
 	transition: 0.3s;
@@ -193,11 +197,11 @@ input[type=checkbox]{
 }
 
 .tog-input:checked + .tog-label:after {
-	left: calc(100% - 2px);
+	/* left: calc(100% - 2px);
 	transform: translateX(-100%);
-    transition: 0.3s;
+    transition: 0.3s; */
 }
 
 .tog-label:active:after {
-	width: 3rem;
+	/* width: 3rem; */
 }

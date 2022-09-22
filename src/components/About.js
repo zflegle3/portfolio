@@ -27,6 +27,7 @@ function About() {
 
   return (
     <div id="about" className="about">
+        <div id="section-inc-1" className='inc-1'>1</div>
         <div id="about-container" className="about-container"> 
           <div className='section-header'>
             <p className="about-title">About</p>
@@ -77,10 +78,10 @@ function About() {
               <p className="skill-title">Sass</p>
             </div>
 
-            <div className="skill-item">
+            {/* <div className="skill-item">
               <img src={gsapImg} alt="html logo"></img>
               <p className="skill-title">gsap</p>
-            </div>
+            </div> */}
           </div>
 
 

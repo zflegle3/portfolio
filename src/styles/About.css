@@ -1,5 +1,6 @@
 .about {
-    height: 85vh;
+    position: relative;
+    /* height: 85vh; */
     background-color: var(--bg-1);
     display: flex;
     flex-direction: row;
@@ -13,8 +14,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    max-width: 600px;
-    padding: var(--pad-ab);
+    /* max-width: 600px; */
+    /* padding: var(--pad-ab); */
 }
 
 
@@ -57,9 +58,9 @@
 }
 
 .skill-container {
-    width: 100%;
-    padding: 1rem;
-    margin: 0rem 1rem 0rem 1rem;
+    /* width: 100%; */
+    /* padding: 1rem; */
+    /* margin: 0rem 1rem 0rem 1rem; */
     background-color: var(--sh-dk);
     border-radius: 2rem;
     display: flex;
@@ -67,10 +68,12 @@
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    /* overflow-wrap: normal; */
 }
 
 .skill-item {
-    padding: 0.5rem 0.5rem 0rem 0.5rem;
+    /* padding: 0.5rem 0.5rem 0rem 0.5rem; */
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

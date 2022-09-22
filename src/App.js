@@ -51,10 +51,10 @@ function App() {
       <ProjectsAll />
       <Contact />
       <div id="top-of-site-pixel-anchor"></div>
-      <div id="section-inc-0" className='inc-0'>0</div>
-      <div id="section-inc-1" className='inc-1'>1</div>
-      <div id="section-inc-2" className='inc-2'>2</div>
-      <div id="section-inc-3" className='inc-3'>3</div>
+      {/* <div id="section-inc-0" className='inc-0'>0</div> */}
+      {/* <div id="section-inc-1" className='inc-1'>1</div> */}
+      {/* <div id="section-inc-2" className='inc-2'>2</div> */}
+      {/* <div id="section-inc-3" className='inc-3'>3</div> */}
     </div>
   );
 }

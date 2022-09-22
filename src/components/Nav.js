@@ -13,10 +13,21 @@ function Nav(props) {
         let target = e.target.getAttribute("href");
         let scrollLoc = document.querySelector(target).offsetTop;
         let navOffset = document.getElementById("nav-bar").offsetHeight;
-        window.scrollTo({
-            left: 0,
-            top: scrollLoc-navOffset,
-        });
+        let screenW = window.innerWidth;
+        console.log(screenW);
+        if (screenW > 600) {
+            window.scrollTo({
+                left: 0,
+                top: scrollLoc-navOffset,
+            });
+
+        } else {
+            window.scrollTo({
+                left: 0,
+                top: scrollLoc,
+            });
+        }
+
     }
 
     const resetLinkSelect = () => {
@@ -81,12 +92,12 @@ function Nav(props) {
 
     return (
         <div id="nav-bar" className={"nav-bar hidden"}>
-            <ul className="nav-bar-left">
+            <div className="nav-bar-left">
                 <div id="theme-toggle" className = 'toggle-switch'>
                     <input onClick={props.switchTheme} className="tog-input" type="checkbox" id="switch" />
                     <label className="tog-label" htmlFor="switch">Toggle</label>
                 </div>
-            </ul>
+            </div>
             <ul className="nav-bar-list">
                 {props.links.map((link) => 
                     <li key={uuidv4()}>
