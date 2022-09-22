@@ -11,6 +11,12 @@ import { ReactComponent as NextSvg } from "../images/next.svg";
 
 function Home() {
 
+  console.log(window.screen.width);
+  let cloudElements;
+  if (window.screen.width > 800) {
+    cloudElements = <CloudsAll />;
+  }
+
   return (
     <div id="home" className="home">
         <div id="section-inc-0" className='inc-0'>0</div>
@@ -62,7 +68,7 @@ function Home() {
 
         <div className="load-bg" id="banner-bg"></div>
 
-     <CloudsAll />
+      {cloudElements}
     </div>
   );
 }
