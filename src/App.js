@@ -3,7 +3,6 @@ import useLocalStorage from "use-local-storage";
 
 //Styles
 import './styles/App.css';
-import './styles/Mobile.css';
 import './styles/Clouds.css';
 import './styles/ProjectsAll.css';
 

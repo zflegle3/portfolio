@@ -15,7 +15,7 @@
 }
 
 .contact-title {
-    font-size: 5rem;
+    font-size: var(--font-l);
     color: var(--text-a);
     padding: 1rem;
 }
@@ -29,14 +29,14 @@
 }
 
 .link-item p:nth-child(2) {
-    font-size: 2rem;
+    font-size: var(--font-s);
     padding-left: 0.5rem;
     color: var(--text-b);
 
 }   
 
 .link-item p:nth-child(3) {
-    font-size: 2rem;
+    font-size: var(--font-s);
     padding-left: 1rem;
     color: var(--text-b);
     transition: 0.3s;

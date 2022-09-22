@@ -72,7 +72,7 @@
 } 
 
 a[id^="nav-link"] {
-    font-size: 2rem;
+    font-size: var(--font-s);
     text-decoration: none;
     padding: 0.5rem;
 }
@@ -101,7 +101,7 @@ div[id^="section-inc"] {
     border: 2px solid blue;
     z-index: 100;
     color: white;
-    font-size: 1rem;
+    font-size: var(--font-xs);
 }
 
 .inc-0 {

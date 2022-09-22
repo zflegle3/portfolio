@@ -5,11 +5,12 @@ import Project from "./Project";
 import weatherAppImg from "../images/project-images/weather-app.png"
 import battleshipAppImg from "../images/project-images/bs.png"
 import todoAppImg from "../images/project-images/to-do-app.png"
-import waldoAppGif from "../images/project-images/waldo_test2.gif"
+import waldoImg from "../images/project-images/waldo_.gif"
 
 function ProjectsAll(props) {
     const [projectDataAll, setProjectDataAll] = useState([
         { id: "project-item-0",
+        imgId: "project-img-0",
         class: "project-item-a",
         title: "Live Weather App",
         desc: "A live weather application built using OpenWeather API to display the current weather conditions at the location searched.",
@@ -19,6 +20,7 @@ function ProjectsAll(props) {
         imgAlt: "weather app project demo image",
       },
         { id: "project-item-1",
+        imgId: "project-img-1",
         class: "project-item-b",
         title: "Battleship Game App",
         desc: "A game application that plays battleship against a computer AI. This project was built using Jest, JavaScript, CSS and HTML in order to practice Test Driven Development(TDD).",
@@ -28,6 +30,7 @@ function ProjectsAll(props) {
         imgAlt: "battleship project demo image",
       },
       { id: "project-item-2",
+      imgId: "project-img-2",
       class: "project-item-a",
       title: "To Do List App",
       desc: "A to do list application to keep track of projects and tasks. This application built with React and Firebase, allows users to sign in using their google account, create new tasks, organize tasks by project, and to update tasks as they are completed.",
@@ -37,12 +40,13 @@ function ProjectsAll(props) {
       imgAlt: "to-do project demo image",
       },
       { id: "project-item-3",
+      imgId: "project-img-3",
       class: "project-item-b",
       title: "Where's Waldo Phototagging App",
       desc: "A Where's Waldo game built using React, Firestore Database, and CSS.",
       codeUrl: "https://github.com/zflegle3/where-is-waldo",
       demoUrl: "https://zflegle3.github.io/where-is-waldo/",
-      imgSrc: waldoAppGif,
+      imgSrc: waldoImg,
       imgAlt: "where's waldo project demo image",
       },
     ]);

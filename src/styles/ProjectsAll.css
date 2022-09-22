@@ -13,14 +13,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    min-width: 60rem;
+    /* min-width: 60rem; */
     padding: 3rem
 }
 
 
 div[id*="project-item"]{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     width: 100%;
     /* visibility: hidden; */
 }
@@ -74,13 +74,13 @@ div[id*="project-item"]{
 }
 
 .project-title {
-    font-size: 3.5rem;
+    font-size: var(--font-ml);
     color: var(--text-a);
     padding-bottom: 2rem;
 }
 
 .project-desc {
-    font-size: 2rem;
+    font-size: var(--font-s);
     line-height: 2.5rem;
     color: var(--text-hl-a);
     padding-bottom: 1rem;
@@ -107,7 +107,7 @@ div[id*="project-item"]{
 }
 
 .project-btn p {
-    font-size: 1.5rem;
+    font-size: var(--font-xs);
     color: var(--text-a)
 }
 
@@ -211,6 +211,12 @@ div[id*="project-item"].display .project-img {
 div[id*="project-item"].display .project-title {
     transform: translate(0vw);
     transition: all 0.5s;
+}
+
+
+/* Project Hover Animation */
+.project-image-3:hover {
+    content:url(../images/project-images/waldo_.gif);
 }
 
 

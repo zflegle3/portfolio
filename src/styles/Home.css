@@ -23,7 +23,7 @@
 
 .home-next-link p {
 	color: var(--nextLink-a);
-	font-size: 2rem;
+	font-size: var(--font-s);
 	padding-bottom: 1rem;
 	transition: all 0.3s;
 }
@@ -60,7 +60,7 @@
 }
 
 .home-content p:nth-child(2) {
-	font-size: 6rem;
+	font-size: var(--font-xl);
 	color: var(--text);
 	z-index: 2;
 	padding: 1rem;
@@ -69,7 +69,7 @@
 
 
 .home-content p:nth-child(3) {
-	font-size: 3rem;
+	font-size: var(--font-m);
 	z-index: 2;
 	color: var(--text-a);
 }
@@ -97,7 +97,7 @@
 .link-item-home p:nth-child(2) {
 	position: absolute;
 	top: 1.5rem;
-	font-size: 1.6rem;
+	font-size: var(--font-xs);
 	color: var(--text-b);
 	visibility: hidden;
 	transition: transform 0.5s;
