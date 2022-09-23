@@ -52,10 +52,10 @@ table {
 	/* Mobile Styles */
 	* {
 		/* Font Sizes */
-		--font-xl: 6rem;
-		--font-l: 4rem;
-		--font-ml: 3.5rem;
-		--font-m: 3rem;
+		--font-xl: 3rem;
+		--font-l: 2.5rem;
+		--font-ml: 2.5rem;
+		--font-m: 2rem;
 		--font-ms: 2rem;
 		--font-s: 1.6rem;
 		--font-xs: 1.2rem;
@@ -109,6 +109,11 @@ table {
 		left: calc(100% - 0.1rem);
 		transform: translateX(-100%);
 		transition: 0.3s;
+	}
+	
+	/* Home Styles */
+	.home-content {
+		padding: 0rem;
 	}
 
 	/* About Styles */
@@ -203,6 +208,11 @@ table {
 		left: calc(100% - 2px);
 		transform: translateX(-100%);
 		transition: 0.3s;
+	}
+
+	/* Home Styles Desktop  */
+	.home-content {
+		padding: 5rem 3rem 3rem 3rem;
 	}
 
 	/* About Styles Desktop  */
