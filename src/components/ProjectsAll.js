@@ -5,7 +5,7 @@ import Project from "./Project";
 import weatherAppImg from "../images/project-images/weather-app.png"
 import battleshipAppImg from "../images/project-images/bs.png"
 import todoAppImg from "../images/project-images/to-do-app.png"
-import waldoImg from "../images/project-images/waldo_.gif"
+import waldoImg from "../images/project-images/waldo.png"
 
 function ProjectsAll(props) {
     const [projectDataAll, setProjectDataAll] = useState([

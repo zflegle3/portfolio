@@ -21,6 +21,7 @@
 }
 
 .link-item {
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -36,6 +37,7 @@
 }   
 
 .link-item p:nth-child(3) {
+    will-change: transform;
     font-size: var(--font-s);
     padding-left: 1rem;
     color: var(--text-b);

@@ -14,7 +14,7 @@ function Nav(props) {
         let scrollLoc = document.querySelector(target).offsetTop;
         let navOffset = document.getElementById("nav-bar").offsetHeight;
         let screenW = window.innerWidth;
-        console.log(screenW);
+        // console.log(screenW);
         if (screenW > 600) {
             window.scrollTo({
                 left: 0,
@@ -93,10 +93,10 @@ function Nav(props) {
     return (
         <div id="nav-bar" className={"nav-bar hidden"}>
             <div className="nav-bar-left">
-                <div id="theme-toggle" className = 'toggle-switch'>
+                {/* <div id="theme-toggle" className = 'toggle-switch'>
                     <input onClick={props.switchTheme} className="tog-input" type="checkbox" id="switch" />
                     <label className="tog-label" htmlFor="switch">Toggle</label>
-                </div>
+                </div> */}
             </div>
             <ul className="nav-bar-list">
                 {props.links.map((link) => 

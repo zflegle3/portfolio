@@ -59,6 +59,8 @@ table {
 		--font-ms: 2rem;
 		--font-s: 1.6rem;
 		--font-xs: 1.2rem;
+
+		z-index: 0;
 	}
 
 	/* Nav Styles */
@@ -218,7 +220,7 @@ table {
 	.tog-input:checked + .tog-label:after {
 		left: calc(100% - 2px);
 		transform: translateX(-100%);
-		transition: 0.3s;
+		transition: transform 0.3s;
 	}
 
 	/* Home Styles Desktop  */

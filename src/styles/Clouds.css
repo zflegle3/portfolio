@@ -15,6 +15,7 @@
 }
 
 #cloud-container-single {
+    will-change: opacity;
     position: absolute;
     display: flex;
     flex-direction: column;

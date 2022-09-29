@@ -89,7 +89,7 @@ a[id^="nav-link"] {
     /* top: 100vh; */
     left: 0px;
     /* border: 2px solid red; */
-    z-index: 100;
+    /* z-index: 100; */
     visibility: hidden;
 }
 
@@ -100,7 +100,7 @@ div[id^="section-inc"] {
     width: 10px;
     height: 10px;
     /* border: 2px solid blue; */
-    z-index: 100;
+    /* z-index: 100; */
     color: white;
     font-size: var(--font-xs);
     visibility: hidden;

@@ -9,6 +9,7 @@
 }
 
 .home-next-link {
+    will-change: transform, opacity; 
 	position: absolute;
 	bottom: 0px;
 	width: 100%;
@@ -50,6 +51,7 @@
 }
 
 .home-content {
+	/* z-index: 2; */
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -94,6 +96,8 @@
 }
 
 .link-item-home p:nth-child(2) {
+	/* z-index: 101; */
+	will-change: transform, opacity;
 	position: absolute;
 	top: 1.5rem;
 	font-size: var(--font-xs);
