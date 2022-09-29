@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio-22/static/css/main.418aeaec.css",
-    "main.js": "/portfolio-22/static/js/main.bf56c3f6.js",
-    "static/media/waldo_.gif": "/portfolio-22/static/media/waldo_.a071994e28f2fd108eb0.gif",
+    "main.css": "/portfolio-22/static/css/main.f33060db.css",
+    "main.js": "/portfolio-22/static/js/main.b2a31ab2.js",
     "static/media/bg-alt-3.jpeg": "/portfolio-22/static/media/bg-alt-3.bd05ca65d39c28d13797.jpeg",
+    "static/media/waldo.png": "/portfolio-22/static/media/waldo.1eac744aefccec1b1dc5.png",
     "static/media/background.jpeg": "/portfolio-22/static/media/background.b9c669af5e3e60b0d094.jpeg",
     "static/media/bootstrap.png": "/portfolio-22/static/media/bootstrap.74639664fdc9d7968597.png",
     "static/media/to-do-app.png": "/portfolio-22/static/media/to-do-app.eb7838098b71b1626404.png",
@@ -29,11 +29,11 @@
     "index.html": "/portfolio-22/index.html",
     "static/media/javascript.svg": "/portfolio-22/static/media/javascript.b879f838faf1cb951d1c2230fd933a39.svg",
     "static/media/linkedin.svg": "/portfolio-22/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
-    "main.418aeaec.css.map": "/portfolio-22/static/css/main.418aeaec.css.map",
-    "main.bf56c3f6.js.map": "/portfolio-22/static/js/main.bf56c3f6.js.map"
+    "main.f33060db.css.map": "/portfolio-22/static/css/main.f33060db.css.map",
+    "main.b2a31ab2.js.map": "/portfolio-22/static/js/main.b2a31ab2.js.map"
   },
   "entrypoints": [
-    "static/css/main.418aeaec.css",
-    "static/js/main.bf56c3f6.js"
+    "static/css/main.f33060db.css",
+    "static/js/main.b2a31ab2.js"
   ]
 }
