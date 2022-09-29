@@ -78,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: 0.3s;
+    transition: transform 0.3s;
 }
 
 .skill-item:hover {
@@ -87,8 +87,8 @@
 }
 
 .skill-item:hover .skill-title {
-    color: var(--text-hl-a);
-    transition: color 0.2s;
+    /* color: var(--text-hl-a);
+    transition: color 0.2s; */
 }
 
 .skill-title {

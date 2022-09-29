@@ -18,14 +18,13 @@
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
-	transition: all 0.3s;
 }
 
 .home-next-link p {
 	color: var(--nextLink-a);
 	font-size: var(--font-s);
 	padding-bottom: 1rem;
-	transition: all 0.3s;
+	transition: color 0.3s;
 }
 
 .home-next-link div {
@@ -36,18 +35,18 @@
 	fill: var(--nextLink-a);
 	width: 100%;
 	height: 100%;
-	transition: all 0.3s;
+	transition: fill 0.3s;
 }
 
 .home-next-link:hover p {
 	color: var(--text-hl);
-	transition: all 0.3s;
+	transition: color 0.3s;
 }
 
 
 .home-next-link:hover svg {
 	fill: var(--text-hl);
-	transition: all 0.3s;
+	transition: fill 0.3s;
 }
 
 .home-content {
@@ -56,7 +55,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* padding: 5rem 3rem 3rem 3rem; */
+	padding: 5rem 3rem 3rem 3rem;
 }
 
 .home-content p:nth-child(2) {
@@ -98,34 +97,33 @@
 	position: absolute;
 	top: 1.5rem;
 	font-size: var(--font-xs);
-	color: var(--text-b);
-	visibility: hidden;
-	transition: transform 0.5s;
+	color: var(--text-hl);
+	opacity: 0;
+	transition: transform 0.5s, opacity 0.5s;
 }
 
 .link-svg-home {
-	height: var(--font-ml);
-	width: var(--font-ml);
+	height: 3.5rem;
+	width: 3.5rem;
 }
 
 .link-svg-home svg {
 	height: 100%;
 	width: 100%;
 	fill: var(--text-b);
-	transition: all 0.3s;
+	transition: transform 0.3s, fill 0.3s;
 }
 
 .link-item-home:hover p:nth-child(2) {
-	color: var(--text-hl);
 	transform: translate(0rem, 1rem);
-	visibility: visible;
-	transition: transform 0.5s;
+	opacity: 1;
+	transition: transform 0.5s, opacity 0.5s;
 }
 
 .link-item-home:hover svg {
 	fill: var(--text-hl);
 	transform: scale(1.2);
-	transition: all 0.3s;
+	transition: transform 0.3s, fill 0.3s;
 }
 
 
@@ -250,9 +248,3 @@
 		transform: translate(0rem,0rem);
 	}
 }
-
-
-
-
-
-

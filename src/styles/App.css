@@ -48,7 +48,7 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 /* font-family: 'Cabin', sans-serif; */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 	/* Mobile Styles */
 	* {
 		/* Font Sizes */
@@ -81,6 +81,16 @@ table {
 		/* padding: 1rem; */
 	} 
 
+	/* Home Styles */
+	.home-content {
+		background: rgba(255, 255, 255,0.75);
+		/* background: var(--sh-mobile); */
+		border: 1px solid var(--text-b);
+		padding: 2rem;
+		border-radius: 3rem;
+		box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	}
+
 	#banner-link-next {
 		visibility: hidden;
 	}
@@ -108,13 +118,9 @@ table {
 	.tog-input:checked + .tog-label:after {
 		left: calc(100% - 0.1rem);
 		transform: translateX(-100%);
-		transition: 0.3s;
+		transition: transform 0.3s;
 	}
 	
-	/* Home Styles */
-	.home-content {
-		padding: 0rem;
-	}
 
 	/* About Styles */
 	.about-container {
@@ -149,9 +155,14 @@ table {
 		height: 100vh;
 		padding: 2rem;
 	} 
+
+	.App #home {
+		background: linear-gradient(var(--text-a), var(--bg-1));
+	}
+
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
 	* {
 		/* Font Sizes */
 		--font-xl: 6rem;
@@ -253,6 +264,20 @@ table {
 	#contact {
 		height: 100vh;
 	} 
+
+	.App #home {
+		background-image: url(../images/background.jpeg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.App.darkMode #home {
+		background-image: url(../images/bg-alt-3.jpeg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
 }
 
 
@@ -335,12 +360,14 @@ table {
 	--sh-mobile: rgba(124, 124, 124, 0.95);
 	/* Element Specific */
 	--nextLink-a: var(--bw99);
-	background-image: url(../images/background.jpeg);
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	/* background-image: url(../images/background.jpeg); */
+	/* background-attachment: fixed; */
+	/* background-position: center; */
+	/* background-size: 100%;
+	background-repeat: no-repeat; */
 }
+
+
 
 .App.darkMode {
 	/* Dark Theme */
@@ -371,11 +398,11 @@ table {
 	--sh-mobile: rgba(49, 49, 49,0.95);
 	/* Element Specific */
 	--nextLink-a: var(--bw99);
-	background-image: url(../images/bg-alt-3.jpeg);
+	/* background-image: url(../images/bg-alt-3.jpeg);
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; */
 }
 
 .App {
@@ -390,5 +417,6 @@ table {
 
 
   
+
 
 

@@ -17,11 +17,17 @@ function Home() {
     cloudElements = <CloudsAll />;
   }
 
+  let cloudBg;
+  if (window.screen.width > 800) {
+    cloudBg = <CloudsBackSvg />;
+  }
+
   return (
     <div id="home" className="home">
         <div id="section-inc-0" className='inc-0'>0</div>
         <div className="home-content">
-            <CloudsBackSvg />
+            {cloudBg}
+            {/* <CloudsBackSvg /> */}
             <p id="banner-name">Zach Flegle</p>
             <p id="banner-title">Developer</p>
             <div id="banner-links" className="link-container">

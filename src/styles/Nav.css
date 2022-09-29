@@ -28,7 +28,7 @@
 
 #nav-bar a:hover {
     color: var(--text-hl);
-    transition: all 0.3s;
+    transition: color 0.3s;
 }
 
 #nav-bar a.selected {
@@ -136,7 +136,7 @@ a {
 }
 
 /* svg Hover Effect */
-#nav-bar svg {
+/* #nav-bar svg {
     fill: var(--text-b);
     transform: scale(1.3);
 }
@@ -152,7 +152,7 @@ a {
     transition: fill 0.3s;
     cursor: pointer;
     
-}
+} */
 
 
 /* Color Theme Toggle */
@@ -164,7 +164,7 @@ input[type=checkbox]{
 	height: 0;
 	width: 0;
 	visibility: hidden;
-    transition: 0.3s;
+    /* transition: 0.3s; */
     
 }
 
@@ -178,7 +178,7 @@ input[type=checkbox]{
 	border-radius: 100px;
 	position: relative;
     /* border: 1px solid black; */
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .tog-label:after {
@@ -190,12 +190,12 @@ input[type=checkbox]{
 	height: 2.6rem; */
 	background: var(--text-b);
 	border-radius: 90px;
-	transition: 0.3s;
+	transition:  0.3s;
 }
 
 .tog-input:checked + .tog-label {
 	background: var(--text);
-    transition: 0.3s;
+    /* transition: 0.3s; */
 }
 
 .tog-input:checked + .tog-label:after {

@@ -105,7 +105,8 @@ div[id*="project-item"]{
     background-color: var(--sh-dk);
     padding: 1rem;
     border-radius: 1rem;
-    transition: all 0.3s;
+    box-shadow: 3px 3px 5px var(--sdw-a);
+    transition: transform 0.3s;
 }
 
 .project-btn p {
@@ -115,9 +116,8 @@ div[id*="project-item"]{
 
 .project-btn:hover {
     background-color: var(--sh-lt);
-    box-shadow: 3px 3px 5px var(--sdw-a);
     transform: scale(1.1);
-    transition: all 0.3s;
+    transition: transform 0.3s;
 }
 
 .project-btn:hover p {
@@ -185,12 +185,12 @@ div[id*="project-item"].display{
 
 div[id*="project-item"].display .project-links  {
     visibility: visible;
-	animation: fadeIn 2s ease-in;
+	animation: fadeIn 1s ease-in;
 }
 
 div[id*="project-item"].display .project-desc  {
     visibility: visible;
-	animation: fadeIn 2s ease-in;
+	animation: fadeIn 1s ease-in;
 }
 
 div[id*="project-item"].display img  {
@@ -211,19 +211,14 @@ div[id*="project-item"].display img  {
 
 div[id*="project-item"].display .project-img {
     transform: translate(0vw);
-    transition: all 0.5s;
+    transition: transform 0.5s;
 }
 
 div[id*="project-item"].display .project-title {
     transform: translate(0vw);
-    transition: all 0.5s;
+    transition: transform 0.5s;
 }
 
-
-/* Project Hover Animation */
-.project-image-3:hover {
-    content:url(../images/project-images/waldo_.gif);
-}
 
 
 
