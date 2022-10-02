@@ -192,6 +192,7 @@
 
 
 #banner-title, #banner-links {
+	will-change: animation;
 	animation: subFade  5s ease-in;
 }
 

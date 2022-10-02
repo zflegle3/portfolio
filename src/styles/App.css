@@ -60,7 +60,9 @@ table {
 		--font-s: 1.6rem;
 		--font-xs: 1.2rem;
 
-		z-index: 0;
+		--nav-gap: 1rem;
+
+		/* z-index: 0; */
 	}
 
 	/* Nav Styles */
@@ -84,14 +86,6 @@ table {
 	} 
 
 	/* Home Styles */
-	.home-content {
-		background: rgba(255, 255, 255,0.75);
-		/* background: var(--sh-mobile); */
-		border: 1px solid var(--text-b);
-		padding: 2rem;
-		border-radius: 3rem;
-		box-shadow: 3px 3px 5px rgba(0,0,0,.25);
-	}
 
 	#banner-link-next {
 		visibility: hidden;
@@ -162,6 +156,10 @@ table {
 		background: linear-gradient(var(--text-a), var(--bg-1));
 	}
 
+	.App #contact {
+		background: linear-gradient(var(--bg-1), var(--text-a));
+	}
+
 }
 
 @media only screen and (min-width: 800px) {
@@ -175,6 +173,7 @@ table {
 		--font-s: 2rem;
 		--font-xs: 1.6rem;
 		--pad-ab: 2rem;
+		--nav-gap: 2rem;
 	}
 
 	/* Nav Bar Sizes Desktop */
@@ -315,6 +314,9 @@ table {
 	--bw1: black;
 	--bw0: #2C1A1D;
 	--bw0-5: #1f1f1f;
+	/* Brown  */
+	--br1: #645244;
+	--br2: #cbb89d;
 	/* Orange */
 	--o3: #FA9500;
 	--o2: #EB6424;

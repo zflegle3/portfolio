@@ -8,7 +8,9 @@
     height: 100vh;
 }
 
-.cloud-array div {}
+.cloud-array div {
+
+}
 
 .cloud {
     border-radius: 50%;

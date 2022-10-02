@@ -2,11 +2,14 @@ import {useState, useEffect} from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 import '../styles/Nav.css';
+import { ReactComponent as LightOutSvg } from "../images/light-fill.svg";
+import { ReactComponent as DarkOutSvg } from "../images/dark-out.svg";
 
 function Nav(props) {
     //props.links
     //props.switchTheme
     const [linkSelections, setLinkSelections] = useState(["home","about","projects","contact"]);
+    
 
     const scrollClick = (e) => {
         e.preventDefault();
@@ -89,10 +92,34 @@ function Nav(props) {
         }
     });
 
+    const switchTheme = (e) => {
+        let themeBtns = document.querySelectorAll(".nav-btn");
+        for (let i=0; i< themeBtns.length; i++) {
+            // themeBtns[i]className.remove("selected");
+            let selected = themeBtns[i];
+            selected.classList.remove("selected");
+            console.log(selected);
+        };;
+        e.target.classList.add("selected");
+        console.log(e.target.classList);
+        let app = document.querySelector(".App");
+        if (e.target.id === "light") {
+            app.classList.remove("darkMode");
+        } else {
+            app.classList.add("darkMode")
+        }
+    }
+
 
     return (
         <div id="nav-bar" className={"nav-bar hidden"}>
             <div className="nav-bar-left">
+                <button id="light" className="nav-btn" onClick={switchTheme}>
+                    <LightOutSvg id="light"  className="light-svg" onClick={e=> e.stopPropagation() }/>
+                </button>
+                <button id="dark" className="nav-btn" onClick={switchTheme}>
+                    <DarkOutSvg id="dark" className="dark-svg" fill='red' onClick={e=> e.stopPropagation()}/>
+                </button>
                 {/* <div id="theme-toggle" className = 'toggle-switch'>
                     <input onClick={props.switchTheme} className="tog-input" type="checkbox" id="switch" />
                     <label className="tog-label" htmlFor="switch">Toggle</label>
