@@ -17,7 +17,6 @@ function Nav(props) {
         let scrollLoc = document.querySelector(target).offsetTop;
         let navOffset = document.getElementById("nav-bar").offsetHeight;
         let screenW = window.innerWidth;
-        // console.log(screenW);
         if (screenW > 600) {
             window.scrollTo({
                 left: 0,
@@ -98,10 +97,8 @@ function Nav(props) {
             // themeBtns[i]className.remove("selected");
             let selected = themeBtns[i];
             selected.classList.remove("selected");
-            console.log(selected);
         };;
         e.target.classList.add("selected");
-        console.log(e.target.classList);
         let app = document.querySelector(".App");
         if (e.target.id === "light") {
             app.classList.remove("darkMode");

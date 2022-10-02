@@ -60,6 +60,7 @@ table {
 		--font-s: 1.6rem;
 		--font-xs: 1.2rem;
 
+		--proj-pad: 0rem;
 		--nav-gap: 1rem;
 
 		/* z-index: 0; */
@@ -174,6 +175,7 @@ table {
 		--font-xs: 1.6rem;
 		--pad-ab: 2rem;
 		--nav-gap: 2rem;
+		--proj-pad: 3rem;
 	}
 
 	/* Nav Bar Sizes Desktop */

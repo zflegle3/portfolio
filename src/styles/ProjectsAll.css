@@ -28,7 +28,7 @@ div[id*="project-item"]{
     /* flex-direction: row; */
     /* width: 100%; */
     /* visibility: hidden; */
-    padding: 3rem;
+    padding: var(--proj-pad);
 }
 
 .project-item-a {
