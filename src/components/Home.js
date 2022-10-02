@@ -57,7 +57,7 @@ function Home() {
                 <p>LinkedIn</p>
               </a>
             </div>
-
+            <CloudsBackSvg />
         </div>
 
         <a id="banner-link-next"className="home-next-link" href="#about">

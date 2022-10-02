@@ -147,6 +147,7 @@
 	position: relative;
 	animation: mainFade 5s ease-in;
 	text-align : center;
+	will-change: animation;
 }
 
 @keyframes mainFade {
