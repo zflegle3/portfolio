@@ -88,6 +88,10 @@ table {
 
 	/* Home Styles */
 
+	.home-content {
+		padding: 1rem;
+	}
+
 	#banner-link-next {
 		visibility: hidden;
 	}
