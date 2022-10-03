@@ -12,17 +12,10 @@ import { ReactComponent as NextSvg } from "../images/next.svg";
 function Home() {
 
 
-  let backgroundHome = "";
-  if (window.screenX > 800) {
-    console.log(window.screenX);
-    backgroundHome = <CloudsAll />;
-  }
-
   return (
     <div id="home" className="home">
         <div id="section-inc-0" className='inc-0'>0</div>
         <div className="home-content">
-            <CloudsBackSvg />
             <p id="banner-name">Zach Flegle</p>
             <p id="banner-title">Developer</p>
             <div id="banner-links" className="link-container">
@@ -35,13 +28,6 @@ function Home() {
                   <p>Email</p>
                 </a>
               </address>
-
-              {/* <a href={resumePdf} className="link-item-home">
-                <div className="link-svg-home">
-                  <CvSvg />
-                </div>
-                <p>Resume</p>
-              </a> */}
 
               <a href="https://github.com/zflegle3" className="link-item-home">
                 <div className="link-svg-home">
@@ -69,7 +55,7 @@ function Home() {
 
         <div className="load-bg" id="banner-bg"></div>
 
-     {backgroundHome}
+     <CloudsAll />
     </div>
   );
 }

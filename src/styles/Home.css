@@ -59,7 +59,7 @@
 	align-items: center;
 }
 
-.home-content p:nth-child(2) {
+.home-content p:nth-child(1) {
 	font-size: var(--font-xl);
 	color: var(--text);
 	z-index: 2;
@@ -68,7 +68,7 @@
 }
 
 
-.home-content p:nth-child(3) {
+.home-content p:nth-child(2) {
 	font-size: var(--font-m);
 	z-index: 2;
 	color: var(--text-a);
@@ -98,7 +98,7 @@
 	/* z-index: 101; */
 	will-change: transform, opacity;
 	position: absolute;
-	top: 1.5rem;
+	bottom: 0rem;
 	font-size: var(--font-xs);
 	color: var(--text-hl);
 	opacity: 0;
@@ -118,7 +118,7 @@
 }
 
 .link-item-home:hover p:nth-child(2) {
-	transform: translate(0rem, 1rem);
+	transform: translate(0rem, 1.25rem);
 	opacity: 1;
 	transition: transform 0.5s, opacity 0.5s;
 }
