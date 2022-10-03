@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio-22/static/css/main.9f8a59ad.css",
-    "main.js": "/portfolio-22/static/js/main.d32c0f74.js",
+    "main.js": "/portfolio-22/static/js/main.f61fc3c3.js",
     "static/media/bg-alt-3.jpeg": "/portfolio-22/static/media/bg-alt-3.bd05ca65d39c28d13797.jpeg",
     "static/media/waldo.png": "/portfolio-22/static/media/waldo.93fe7884edcf848ace2c.png",
     "static/media/background.jpeg": "/portfolio-22/static/media/background.b9c669af5e3e60b0d094.jpeg",
     "static/media/bootstrap.png": "/portfolio-22/static/media/bootstrap.74639664fdc9d7968597.png",
-    "static/media/to-do-app.png": "/portfolio-22/static/media/to-do-app.eb7838098b71b1626404.png",
+    "static/media/to-do-app.png": "/portfolio-22/static/media/to-do-app.2322018680cb5c2ac170.png",
     "static/media/weather-app.png": "/portfolio-22/static/media/weather-app.a5046161d0c4a5c51095.png",
     "static/media/gsap.png": "/portfolio-22/static/media/gsap.f1e3e34a737bc395dcaa.png",
     "static/media/bs.png": "/portfolio-22/static/media/bs.01c7fc0badc7cfd75d5d.png",
@@ -32,10 +32,10 @@
     "static/media/javascript.svg": "/portfolio-22/static/media/javascript.b879f838faf1cb951d1c2230fd933a39.svg",
     "static/media/linkedin.svg": "/portfolio-22/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
     "main.9f8a59ad.css.map": "/portfolio-22/static/css/main.9f8a59ad.css.map",
-    "main.d32c0f74.js.map": "/portfolio-22/static/js/main.d32c0f74.js.map"
+    "main.f61fc3c3.js.map": "/portfolio-22/static/js/main.f61fc3c3.js.map"
   },
   "entrypoints": [
     "static/css/main.9f8a59ad.css",
-    "static/js/main.d32c0f74.js"
+    "static/js/main.f61fc3c3.js"
   ]
 }
