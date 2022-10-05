@@ -13,9 +13,12 @@ function CloudSvg(props) {
         let revealCloud = setTimeout(function(){e.target.classList.remove("hide-cloud")},5000);
     };
 
-    let totWidth = window.innerWidth; //check support for safari/Firefox/mobile
-    let totHeight = window.innerHeight; //check support for safari/Firefox/mobile
+    let totWidth = window.screen.width; //check support for safari/Firefox/mobile
+    let totHeight = window.screen.height; //check support for safari/Firefox/mobile
     let offset = 10;
+    if (totWidth < 800) {
+        offset = 30;
+    }
     //5% offset vertically &horizontally added to boxshadow and layer offsets to compensate for overlap conditions
 
     return (

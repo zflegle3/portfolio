@@ -49,7 +49,7 @@
   .svg-cloud-7 {
     animation: float 40s linear 10s infinite;
   }
-  
+
   @keyframes float {
     from {
       transform: translateX(0vw);
@@ -58,6 +58,20 @@
       transform: translateX(150vw);
     }
   }
+  
+
+  @media only screen and (max-width: 800px) {
+    @keyframes float {
+      from {
+        transform: translateX(0vw);
+      }
+      to {
+        transform: translateX(250vw);
+      }
+    }
+  }
+
+
   
   #cloud-container-single.hide-cloud {
     opacity: 0;

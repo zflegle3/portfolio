@@ -8,7 +8,7 @@ function CloudBackSvg(props) {
         <div id="cloud-background" className="cloud-background">
 
             <div className="base-layer" style={{top: `-500px`, left:`-500px`}}>
-                <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-bg)`, boxShadow: `500px 500px 100px 20px rgba(255, 255, 255, 1)`}}></div>
+                <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-bg)`, boxShadow: `500px 500px 100px 70px rgba(255, 255, 255, 1)`}}></div>
             </div>
 
             {/* <div className="back-layer" style={{top: `-500px`, left:`-500px`}}>

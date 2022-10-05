@@ -12,6 +12,7 @@ import { ReactComponent as NextSvg } from "../images/next.svg";
 function Home() {
 
 
+
   return (
     <div id="home" className="home">
         <div id="section-inc-0" className='inc-0'>0</div>
@@ -44,7 +45,6 @@ function Home() {
               </a>
             </div>
 
-            <CloudsBackSvg />
         </div>
 
         <a id="banner-link-next"className="home-next-link" href="#about">

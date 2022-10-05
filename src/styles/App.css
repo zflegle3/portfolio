@@ -90,6 +90,7 @@ table {
 
 	.home-content {
 		/* padding: 1rem; */
+		background-color: transparent;
 	}
 
 	#banner-link-next {
@@ -237,6 +238,7 @@ table {
 	/* Home Styles Desktop  */
 	.home-content {
 		/* padding: 5rem 3rem 3rem 3rem; */
+		background-color: #ffffff;
 	}
 
 	/* About Styles Desktop  */
