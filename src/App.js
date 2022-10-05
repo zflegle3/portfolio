@@ -1,4 +1,4 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 import useLocalStorage from "use-local-storage";
 
 //Styles
@@ -13,6 +13,11 @@ import About from "./components/About";
 import ProjectsAll from "./components/ProjectsAll";
 import Contact from "./components/Contact";
 import React from 'react';
+
+//GSAP
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -39,9 +44,6 @@ function App() {
   const switchTheme = (e) => {
     console.log("switch theme");
     let app = document.querySelector(".App");
-    // togSwitch.classList.toggle("light-mode");
-    // const newTheme = theme === "light" ? "dark" : "light";
-    // setTheme(newTheme);
     app.classList.toggle("darkMode");
   }
 

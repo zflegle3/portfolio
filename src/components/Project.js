@@ -32,10 +32,6 @@ function Project(props) {
             }
         }, options2);
             sectionNext.observe(document.getElementById(`proj-listener-${props.projectData.id}`));
-            // sectionNext.observe(document.getElementById("proj-listener-1"));
-            // sectionNext.observe(document.getElementById("proj-listener-2"));
-            // sectionNext.observe(document.getElementById("proj-listener-3"));
-  
         }
     });
 
