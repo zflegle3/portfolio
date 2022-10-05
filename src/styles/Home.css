@@ -93,24 +93,6 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 	font-size: var(--font-l);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .home-content p:nth-child(2) {
 	font-size: var(--font-m);
 	z-index: 2;
@@ -124,8 +106,11 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	gap: 1rem;
 	align-items: center;
 	justify-content: space-between;
+	overflow: hidden;
+	padding-bottom: 1rem;
 }
 
 .link-item-home {
@@ -154,6 +139,7 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 }
 
 .link-svg-home svg {
+	transform:  translateY(-100px);
 	height: 100%;
 	width: 100%;
 	fill: var(--text-b);
@@ -161,15 +147,13 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 }
 
 .link-item-home:hover p:nth-child(2) {
-	transform: translate(0rem, 1.25rem);
+	transform: translate(0rem, 1.5rem);
 	opacity: 1;
 	transition: transform 0.5s, opacity 0.5s;
 }
 
 .link-item-home:hover svg {
 	fill: var(--text-hl);
-	/* transform: scale(1.2);
-	transition: transform 0.3s, fill 0.3s; */
 }
 
 
@@ -186,72 +170,6 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 
 
 /* Page Load Animations */
-#banner-name {
-	position: relative;
-	animation: mainFade 5s ease-in;
-	text-align : center;
-	will-change: animation;
-}
-
-@keyframes mainFade {
-	0% {
-		opacity: 0%;
-	}
-	20% {
-		opacity: 100%;
-	}
-}
-
-/* #banner-name:after, #banner-name:before {
-	content:"";
-	position: absolute;
-	height: 3px;
-	width: 100%;
-	background-color: var(--text-a);
-	animation: lineSlide 2s ease-in;
-}
-
-#banner-name:after {
-	left: 0;
-	bottom: -10px;
-}
-
-#banner-name:before {
-	right: 0;
-	top: -10px;
-}
-
-@keyframes lineSlide {
-	0% {
-		transform: scale(0,0);
-	}
-	25% {
-		transform: scale(0,1);
-	} 
-	75% {
-		transform: scale(0,1)
-	}
-} */
-
-
-#banner-title, #banner-links {
-	will-change: animation;
-	animation: subFade  5s ease-in;
-}
-
-@keyframes subFade {
-	0% {
-		opacity: 0%;
-	}
-	20% {
-		opacity: 0%;
-	}
-	90% {
-		opacity: 100%;
-	}
-}
-
-
 .App {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;

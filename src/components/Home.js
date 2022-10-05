@@ -43,6 +43,22 @@ function Home() {
   },[]);
 
 
+  useEffect(() => {
+    console.log("links in");
+    // gsap.timeline()
+    // gsap.from(".link-svg-home svg", {y:160, stagger:0.1, duration:0.8, ease:"back"})
+    gsap.to(".link-svg-home svg", {
+      y:0, 
+      duration:0.5, 
+      delay: 1,
+      stagger: {
+        each: 0.2
+      }
+    })
+
+  },[]);
+
+
 
   return (
     <div id="home" className="home">
