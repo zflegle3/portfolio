@@ -18,6 +18,7 @@ function ProjectsAll(props) {
       demoUrl: "https://zflegle3.github.io/to-do-list/",
       imgSrc: todoAppImg,
       imgAlt: "to-do project demo image",
+      tech: ["React", "Firebase Authentication", "Firebase Cloud Firestore","SASS" ]
       },
       { id: "3",
       // imgId: "project-img-3",
@@ -28,6 +29,7 @@ function ProjectsAll(props) {
       demoUrl: "https://zflegle3.github.io/where-is-waldo/",
       imgSrc: waldoImg,
       imgAlt: "where's waldo project demo image",
+      tech: ["React", "Firebase Cloud Firestore","CSS" ]
       },
       { id: "0",
       // imgId: "project-img-0",
@@ -38,6 +40,7 @@ function ProjectsAll(props) {
       demoUrl: "https://zflegle3.github.io/weather-app/",
       imgSrc: weatherAppImg,
       imgAlt: "weather app project demo image",
+      tech: ["React", "Firebase Authentication", "Firebase Cloud Firestore","SASS" ]
     },
       { id: "1",
       // imgId: "project-img-1",
@@ -48,6 +51,7 @@ function ProjectsAll(props) {
       demoUrl: "https://zflegle3.github.io/battleship/",
       imgSrc: battleshipAppImg,
       imgAlt: "battleship project demo image",
+      tech: ["React", "Firebase Authentication", "Firebase Cloud Firestore","SASS" ]
     },
     ]);
 

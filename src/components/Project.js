@@ -3,6 +3,10 @@ import {useState, useEffect} from "react";
 function Project(props) {
     //props.projectData
 
+    let projTech = props.projectData.tech.map((techItem) => 
+        <p>{techItem}</p>
+    );
+
 
     useEffect(() => { //Section Selection Styling
         let options2 = {
@@ -33,7 +37,11 @@ function Project(props) {
             // sectionNext.observe(document.getElementById("proj-listener-3"));
   
         }
-      });
+    });
+
+
+
+    
 
     if (props.projectData.class === "project-item-a") {
         return (
@@ -44,16 +52,34 @@ function Project(props) {
 
                 <div className="project-content">
                     <div className="project-content-container">
-                        <p className="project-title">{props.projectData.title}</p>
-                        <p className="project-desc">{props.projectData.desc}</p>
-                        <div className="project-links">
-                            <a className="project-btn" href={props.projectData.demoUrl}>
-                                <p>Live Demo</p>
-                            </a>
-                            <a className="project-btn" href={props.projectData.codeUrl}>
-                                <p>See Code</p>
-                            </a>
+                        <div className="project-header">
+                            <p className="project-title">{props.projectData.title}</p>
+                            <div className="project-links">
+                                <a className="project-btn" href={props.projectData.demoUrl}>
+                                    <p>Live Demo</p>
+                                </a>
+                                <a className="project-btn" href={props.projectData.codeUrl}>
+                                    <p>See Code</p>
+                                </a>
+                            </div>
                         </div>
+
+
+       
+
+                        <p className="project-desc">{props.projectData.desc}</p>
+
+                        <div className="project-tech">
+                            <div className='section-header'>
+                                <p className="skills-title">Technologies</p>
+                                {/* <div className="section-break"></div> */}
+                            </div>
+                            <div className="tech-list">
+                                {projTech}
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -66,7 +92,7 @@ function Project(props) {
                 <div className="project-content">
                     <div className="project-content-container">
                         <p className="project-title">{props.projectData.title}</p>
-                        <p className="project-desc">{props.projectData.desc}</p>
+
                         <div className="project-links">
                             <a className="project-btn" href={props.projectData.demoUrl}>
                                 <p>Live Demo</p>
@@ -75,6 +101,20 @@ function Project(props) {
                                 <p>See Code</p>
                             </a>
                         </div>
+
+                        <p className="project-desc">{props.projectData.desc}</p>
+
+                        <div className="project-tech">
+                            <div className='section-header'>
+                                <p className="skills-title">Technologies</p>
+                                <div className="section-break"></div>
+                            </div>
+                            <div className="tech-list">
+                                {projTech}
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
