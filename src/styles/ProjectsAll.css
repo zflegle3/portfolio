@@ -1,13 +1,10 @@
 #projects {
-
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /* width: 100vw; */
     background-color: var(--bg-1);
-    /* padding: 2rem 0rem 0rem 0rem; */
 }
 
 .project-header {
@@ -15,8 +12,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* min-width: 60rem; */
-    /* padding: 3rem */
 }
 
 
@@ -27,9 +22,6 @@ div[id*="project-item"]{
     gap: 2rem;
     align-items: center;
     margin-bottom: 8rem;
-    /* flex-direction: row; */
-    /* width: 100%; */
-    /* visibility: hidden; */
     padding: var(--proj-pad);
 }
 
@@ -40,29 +32,37 @@ img[class*="project-img"] {
 }
 
 .project-item-a img {
+    /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(-100vw);
     box-shadow: -1rem 1rem 0rem var(--text-a);
 }
-.project-item-a .project-title {
+.project-item-a div[class*="project-header"] {
+    /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(100vw);
 }
 
 .project-item-b img {
+    /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(100vw);
     box-shadow: 1rem 1rem 0px var(--text-a);
 }
 
-.project-item-b .project-title {
+.project-item-b div[class*="project-header"] {
+    /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(-100vw);
 }
 
+div[class*="project-details"] {
+    /* INITIAL CONDITION FOR ANIMATION */
+    opacity: 0;
+}
+
+
 .project-content {
-    /* flex-grow: 1; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 4rem; */
 }
 
 .project-content-container {
@@ -77,7 +77,7 @@ img[class*="project-img"] {
     justify-content: flex-start;
 }
 
-.project-title {
+p[class*="project-title"] {
     font-size: var(--font-ml);
     color: var(--text-a);
     padding: 1rem;
@@ -89,7 +89,7 @@ img[class*="project-img"] {
     color: var(--text-b);
     padding: 1rem;
     max-width: 60rem;
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .project-tech {
@@ -117,7 +117,7 @@ img[class*="project-img"] {
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    visibility: hidden;
+    /* visibility: hidden; */
     padding: 1rem;
 }
 
@@ -158,40 +158,6 @@ img[class*="project-img"] {
 
 /* Project Listeners */
 
-div[id*='proj-listener'] {
-    height: 10px;
-    width: 10px;
-    /* border: 2px solid orange; */
-    position: absolute;
-    top: 25vh;
-    left: 0px;
-    visibility: hidden;
-}
-
-/* .pl-0 {
-    position: absolute;
-    top: 25vh;
-    left: 0px;
-}
-
-.pl-1 {
-    position: absolute;
-    top: 100vh;
-    left: 0px;
-}
-
-.pl-2 {
-    position: absolute;
-    top: 175vh;
-    left: 0px;
-}
-
-.pl-3 {
-    position: absolute;
-    top: 325vh;
-    left: 0px;
-} */
-
 .pt {
     height: 100px;
     width: 100%;
@@ -208,7 +174,7 @@ div[id*='proj-listener'] {
     transition: all 0.5s;
 } */
 
-div[id*="project-item"].display .project-links  {
+/* div[id*="project-item"].display .project-links  {
     visibility: visible;
 	animation: fadeIn 1s ease-in;
 }
@@ -237,8 +203,8 @@ div[id*="project-item"].display img  {
 	100% {
 		opacity: 1;
 	}
-}
-
+} */
+/* 
 div[id*="project-item"].display img {
     transform: translate(0vw);
     transition: transform 0.5s;
@@ -247,7 +213,7 @@ div[id*="project-item"].display img {
 div[id*="project-item"].display .project-title {
     transform: translate(0vw);
     transition: transform 0.5s;
-}
+} */
 
 
 

@@ -67,12 +67,6 @@ function ProjectsAll(props) {
             <Project projectData={projectDataAll[1]}/>
             <Project projectData={projectDataAll[2]}/>
             <Project projectData={projectDataAll[3]}/>
-
-            {/* <div id="proj-listener-0" className='pl-0'>0</div>
-            <div id="proj-listener-1" className='pl-1'>1</div>
-            <div id="proj-listener-2" className='pl-2'>2</div>
-            <div id="proj-listener-3" className='pl-3'>3</div>  */}
-            {/* <div id="proj-target" className='pt'></div> */}
         </div>
 
     );

@@ -123,7 +123,7 @@ function Nav(props) {
                 start: "bottom 100px",
                 end: "bottom top",
                 // id: "about-section",
-                markers: true,
+                // markers: true,
                 onEnter: () => showNav(),
                 onEnterBack: () => hideNav(),
             })
