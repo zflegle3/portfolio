@@ -5,6 +5,11 @@ import '../styles/Nav.css';
 import { ReactComponent as LightOutSvg } from "../images/light-fill.svg";
 import { ReactComponent as DarkOutSvg } from "../images/dark-out.svg";
 
+//GSAP
+import gsap from "gsap";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 function Nav(props) {
     //props.links
     //props.switchTheme
@@ -22,74 +27,29 @@ function Nav(props) {
                 left: 0,
                 top: scrollLoc-navOffset,
             });
-
         } else {
             window.scrollTo({
                 left: 0,
                 top: scrollLoc,
             });
         }
-
     }
 
-    const resetLinkSelect = () => {
-        let allLinks = document.querySelectorAll("a[id^='nav-link']");
-        for (let i=0; i<allLinks.length; i++) {
-            allLinks[i].classList = "";
-        };
+    const resetLink = (linkId) => {
+        document.getElementById(`nav-link-${linkId}`).classList = "";
     }
 
-    useEffect(() => { //Nav "hidden" styling
-        let options = {
-            root: document.querySelector('#scrollArea'),
-            rootMargin: '0px',
-            threshold: 1.0,
-        };
-        if (
-            "IntersectionObserver" in window &&
-            "IntersectionObserverEntry" in window &&
-            "intersectionRatio" in window.IntersectionObserverEntry.prototype
-          ) {
-          let observer = new IntersectionObserver(entries => {
-            if (entries[0].boundingClientRect.y < 0) {
-                document.getElementById("nav-bar").classList.remove("hidden");
-            } else {
-                document.getElementById("nav-bar").classList.add("hidden");
-            }
-        }, options);
-            observer.observe(document.getElementById("top-of-site-pixel-anchor"));
-        };
-    });
+    const selectLink = (linkId) => {
+        document.getElementById(`nav-link-${linkId}`).classList.add("selected");
+    }
 
+    const hideNav = () => {
+        document.getElementById("nav-bar").classList.remove("contrast")
+    }
 
-    useEffect(() => { //Section Selection Styling
-        let options2 = {
-            root: document.querySelector('#scrollArea'),
-            rootMargin: '0px',
-            threshold: 1.0,
-          }
-        if (
-            "IntersectionObserver" in window &&
-            "IntersectionObserverEntry" in window &&
-            "intersectionRatio" in window.IntersectionObserverEntry.prototype
-          ) {
-          let sectionNext = new IntersectionObserver(entries => {
-            //remove selected elements from all 
-            if (entries[0].intersectionRatio > 0.75) {
-                if (entries[0].boundingClientRect.y > 0) {
-                    resetLinkSelect(); // removes class from all links
-                    let idSplit = entries[0].target.id.split("-");
-                    let index = Number(idSplit[2]);
-                    document.getElementById(`nav-link-${linkSelections[index]}`).classList.add("selected");
-                } 
-            }
-        }, options2);
-            sectionNext.observe(document.getElementById("section-inc-0"));
-            sectionNext.observe(document.getElementById("section-inc-1"));
-            sectionNext.observe(document.getElementById("section-inc-2"));
-            sectionNext.observe(document.getElementById("section-inc-3"));
-        }
-    });
+    const showNav = () => {
+        document.getElementById("nav-bar").classList.add("contrast")
+    }
 
     const switchTheme = (e) => {
         let themeBtns = document.querySelectorAll(".nav-btn");
@@ -107,9 +67,74 @@ function Nav(props) {
         }
     }
 
+    useEffect(() => {
+
+        ScrollTrigger.create({
+            trigger: "#home",
+            start: "top center",
+            end: "bottom center",
+            // id: "about-section",
+            // markers: true,
+            onEnter: () => selectLink("home"),
+            onLeave: () => resetLink("home"),
+            onEnterBack: () => selectLink("home"),
+            onLeaveBack: () => resetLink("home"),
+        })
+
+        ScrollTrigger.create({
+            trigger: "#about",
+            start: "top center",
+            end: "bottom center",
+            // id: "about-section",
+            // markers: true,
+            onEnter: () => selectLink("about"),
+            onLeave: () => resetLink("about"),
+            onEnterBack: () => selectLink("about"),
+            onLeaveBack: () => resetLink("about"),
+        })
+
+        ScrollTrigger.create({
+            trigger: "#projects",
+            start: "top center",
+            end: "bottom center",
+            // id: "about-section",
+            // markers: true,
+            onEnter: () => selectLink("projects"),
+            onLeave: () => resetLink("projects"),
+            onEnterBack: () => selectLink("projects"),
+            onLeaveBack: () => resetLink("projects"),
+        })
+
+        ScrollTrigger.create({
+            trigger: "#contact",
+            start: "top center",
+            end: "bottom center",
+            // id: "about-section",
+            // markers: true,
+            onEnter: () => selectLink("contact"),
+            onLeave: () => resetLink("contact"),
+            onEnterBack: () => selectLink("contact"),
+            onLeaveBack: () => resetLink("contact"),
+        })
+
+        if (window.screen.width > 800) {//Desktop
+            ScrollTrigger.create({
+                trigger: "#home",
+                start: "bottom 100px",
+                end: "bottom top",
+                // id: "about-section",
+                markers: true,
+                onEnter: () => showNav(),
+                onEnterBack: () => hideNav(),
+            })
+        } else {
+            showNav();
+        }
+    },[]);
+
 
     return (
-        <div id="nav-bar" className={"nav-bar hidden"}>
+        <div id="nav-bar" className={"nav-bar"}>
             <div className="nav-bar-left">
                 <button id="light" className="nav-btn" onClick={switchTheme}>
                     <LightOutSvg id="light"  className="light-svg" onClick={e=> e.stopPropagation() }/>
@@ -117,10 +142,6 @@ function Nav(props) {
                 <button id="dark" className="nav-btn" onClick={switchTheme}>
                     <DarkOutSvg id="dark" className="dark-svg" fill='red' onClick={e=> e.stopPropagation()}/>
                 </button>
-                {/* <div id="theme-toggle" className = 'toggle-switch'>
-                    <input onClick={props.switchTheme} className="tog-input" type="checkbox" id="switch" />
-                    <label className="tog-label" htmlFor="switch">Toggle</label>
-                </div> */}
             </div>
             <ul className="nav-bar-list">
                 {props.links.map((link) => 

@@ -186,7 +186,6 @@ table {
 	/* Nav Bar Sizes Desktop */
 	#nav-bar {
 		top: 0px;
-		background-color: var(--sh-lt);
 		padding: 0.5rem 0rem 0.5rem 0rem;
 		justify-content: space-between;
 	}
