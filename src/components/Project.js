@@ -39,9 +39,8 @@ function Project(props) {
         return (
             <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
                 <div id={`proj-listener-${props.projectData.id}`} className={`pl-${props.projectData.id}`}>0</div>
-                <div className="project-img" >
-                    <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
-                </div>
+
+                <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
 
                 <div className="project-content">
                     <div className="project-content-container">
@@ -79,9 +78,7 @@ function Project(props) {
                     </div>
                 </div>
 
-                <div className="project-img" >
                 <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
-                </div>
 
             </div>
         );

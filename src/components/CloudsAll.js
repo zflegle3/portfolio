@@ -2,125 +2,22 @@ import {useState, useEffect} from "react";
 
 // import CloudsRow from "./CloudsRow"
 import CloudSvg from "./CloudSvg"
+import CloudsBackSvg from "./CloudBackSvg";
 
 
 function CloudsAll(props) {
-    const[randFactor, setRandFactor] = useState(5)
-    const[cloudData, setCloudData] = useState([
-        // {   id: 0,
-        //     top: 0 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/3)*0,
-        //     width: 100/3,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // },
-        // {   id: 1,
-        //     top: 0 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/3)*1,
-        //     width: 100/3,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // },
-        // {   id: 2,
-        //     top: 0 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/3)*2,
-        //     width: 100/3,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // },
-        // {   id: 3,
-        //     top: (100/4) + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/4)*0,
-        //     width: 100/4,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // },
-        {   id: 0,
-            top: (100/4) + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            left: (100/4)*1,
-            width: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            height: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            seedVal: Math.random()*10000,
-        },
-        {   id: 1,
-            top: (100/4) + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            left: (100/4)*2,
-            width: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            height: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            seedVal: Math.random()*10000,
-        },
-        // {   id: 6,
-        //     top: (100/4) + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/4)*3,
-        //     width: 100/4,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // },
-        // {   id: 7,
-        //     top: (100/4)*2 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-        //     left: (100/4)*0,
-        //     width: 100/4,
-        //     height: 100/4,
-        //     seedVal: Math.random()*10000,
-        // }
-        {   id: 2,
-            top: (100/4)*2 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            left: (100/4)*1,
-            width: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            height: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            seedVal: Math.random()*10000,
-        },
-        {   id: 3,
-            top: (100/4)*2 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            left: (100/4)*2,
-            width: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            height: 100/4 + Math.floor(Math.random() * (randFactor*2 + 1) - randFactor),
-            seedVal: Math.random()*10000,
-        },
-    ])
-
-    const hideCloud = () => {
-        let index = Math.floor(Math.random() * (3 + 1))
-        let cloudSelected = document.querySelector(`.svg-cloud-${index}`);
-        cloudSelected.classList.toggle("hide-cloud")
-
-    }
-
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-          hideCloud();
-        }, 7000);
-      
-        return () => {
-          clearInterval(interval);
-        };
-      }, []);
-
     return (
-        <div className="cloud-array">
-
-            {/* <CloudSvg cloudData={cloudData[0]}/>
-            <CloudSvg cloudData={cloudData[1]}/>
-            <CloudSvg cloudData={cloudData[2]}/>
-            <CloudSvg cloudData={cloudData[3]}/> */}
-            <CloudSvg cloudData={cloudData[0]}/>
-            <CloudSvg cloudData={cloudData[1]}/>
-            {/* <CloudSvg cloudData={cloudData[6]}/> */}
-            {/* <CloudSvg cloudData={cloudData[7]}/> */}
-            <CloudSvg cloudData={cloudData[2]}/>
-            <CloudSvg cloudData={cloudData[3]}/>
-
-            
-            {/* <CloudsRow rowIndex={0} rowQty={3} heightFactor={15}/> */}
-            {/* <CloudsRow rowIndex={1} rowQty={4} heightFactor={15}/> */}
-            {/* <CloudsRow rowIndex={2} rowQty={3} heightFactor={15}/> */}
-            {/* <CloudsRow rowIndex={3} rowQty={4} heightFactor={15}/> */}
-            {/* <CloudsRow rowIndex={4} rowQty={3} heightFactor={15}/> */}
-            {/* <CloudsRow rowIndex={5} rowQty={4} heightFactor={10}/> */}
+        <div className='cloud-container'>
+            <CloudSvg n={1} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={20} widthVal={35} leftVal={0} topVal={0} />
+            <CloudSvg n={2} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={15} leftVal={0} topVal={5} />
+            <CloudSvg n={3} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25} leftVal={0} topVal={15} />
+            <CloudSvg n={4} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={20} widthVal={35} leftVal={0} topVal={25} />
+            <CloudSvg n={5} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={25} leftVal={0} topVal={35} />
+            <CloudSvg n={6} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25} leftVal={0} topVal={45} />
+            <CloudSvg n={7} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25} leftVal={0} topVal={55} />
+            <CloudsBackSvg />
         </div>
-
-    );
+      );
 }
 
 export default CloudsAll;

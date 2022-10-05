@@ -1,54 +1,63 @@
-import '../styles/About.css';
-
-
 
 function CloudSvg(props) {
-    // props.cloudData
-    // {   id: 1,
-    //     top: 0 ,
-    //     left: 0,
-    //     width: 100/3,
-    //     height: 100/4
-    // }
+    //props.n (id)
+    //props.seedVal
+    //props.heightVal
+    //props.widthVal
+    //props.leftVal
+    //props.topVal
+
+    const hideCloud = (e) => {
+        console.log(e.target)
+        e.target.classList.add("hide-cloud");
+        let revealCloud = setTimeout(function(){e.target.classList.remove("hide-cloud")},5000);
+    };
+
+    let totWidth = window.innerWidth; //check support for safari/Firefox/mobile
+    let totHeight = window.innerHeight; //check support for safari/Firefox/mobile
+    let offset = 10;
+    //5% offset vertically &horizontally added to boxshadow and layer offsets to compensate for overlap conditions
 
     return (
-        <div id="cloud-container-single" className={`svg-cloud-${props.cloudData.id}`} style={{ top:`${props.cloudData.top}%`, left:`${props.cloudData.left}%`, height : `${props.cloudData.height}%`, width : `${props.cloudData.width}%`}} >
+        //Cloud Container DIV
+        //
+        <div onMouseEnter={hideCloud} id="cloud-container-single" className={`svg-cloud-${props.n}`} style={{ top:`${props.topVal}%`, left:`${-props.widthVal-offset}%`, height : `${props.heightVal}%`, width : `${props.widthVal}%`}} >
 
-            <div className="base-layer">
-                <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-${props.cloudData.id})`}}></div>
+            <div className="base-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>
+                <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-${props.n})`, boxShadow: `${((props.widthVal+offset)/100)*totWidth}px ${((props.heightVal+offset)/100)*totHeight}px 100px 0px rgba(255, 255, 255, 1)`}}></div>
             </div>
 
-            <div className="back-layer">
-                <div className="cloud" id="cloud-back" style={{ filter: `url(#filter-back-${props.cloudData.id})`}}></div>
+            <div className="back-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>
+                <div className="cloud" id="cloud-back" style={{ filter: `url(#filter-back-${props.n})`, boxShadow: `${((props.widthVal+offset)/100)*totWidth}px ${((props.heightVal+offset)/100)*totHeight}px 100px 0px rgba(215, 215, 215, 0.3)`}}></div>
             </div>
 
-            <div className="mid-layer">
-                <div className="cloud" id="cloud-mid" style={{ filter: `url(#filter-mid-${props.cloudData.id})`}}></div>
+            <div className="mid-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>
+                <div className="cloud" id="cloud-mid" style={{ filter: `url(#filter-mid-${props.n})` , boxShadow: `${((props.widthVal+offset)/100)*totWidth}px ${((props.heightVal+offset)/100)*totHeight}px 100px 0px rgba(66, 105, 146, 0.2)` }}></div>
             </div>
 
-            <div className="front-layer">
-                <div className="cloud" id="cloud-front"style={{ filter: `url(#filter-front-${props.cloudData.id})`}}></div>
+            <div className="front-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>
+                <div className="cloud" id="cloud-front"style={{ filter: `url(#filter-front-${props.n})` , boxShadow: `${((props.widthVal+offset)/100)*totWidth}px ${((props.heightVal+offset)/100)*totHeight}px 100px 0px rgba(0, 0, 0, 0.4)`}}></div>
             </div> 
 
-            <svg width="0" height="0" id={props.cloudData.id}> 
-                    <filter id={`filter-base-${props.cloudData.id}`}>
-                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="5" seed={props.cloudData.seedVal} />     
-                        <feDisplacementMap  in="SourceGraphic" scale="120" />
+            <svg width="0" height="0" id={props.n}> 
+                    <filter id={`filter-base-${props.n}`}>
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed={props.seedVal} />     
+                        <feDisplacementMap  in="SourceGraphic" scale="250" />
                     </filter>
 
-                    <filter id={`filter-back-${props.cloudData.id}`}>
-                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed={props.cloudData.seedVal} />     
-                        <feDisplacementMap  in="SourceGraphic" scale="120" />
+                    <filter id={`filter-back-${props.n}`}>
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed={props.seedVal} />     
+                        <feDisplacementMap  in="SourceGraphic" scale="250" />
                     </filter>
 
-                    <filter id={`filter-mid-${props.cloudData.id}`}>
-                        <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed={props.cloudData.seedVal}/>
-                        <feDisplacementMap  in="SourceGraphic" scale="120" />
+                    <filter id={`filter-mid-${props.n}`}>
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed={props.seedVal}/>
+                        <feDisplacementMap  in="SourceGraphic" scale="250" />
                     </filter>
 
-                    <filter id={`filter-front-${props.cloudData.id}`}>
-                        <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="4" seed={props.cloudData.seedVal}/>
-                        <feDisplacementMap  in="SourceGraphic" scale="50" />
+                    <filter id={`filter-front-${props.n}`}>
+                        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="4" seed={props.seedVal}/>
+                        <feDisplacementMap  in="SourceGraphic" scale="250" />
                     </filter>
             </svg>
         </div>

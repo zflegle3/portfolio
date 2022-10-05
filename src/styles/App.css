@@ -52,7 +52,7 @@ table {
 	/* Mobile Styles */
 	* {
 		/* Font Sizes */
-		--font-xl: 3rem;
+		--font-xl: 4rem;
 		--font-l: 2.5rem;
 		--font-ml: 2.5rem;
 		--font-m: 2rem;
@@ -89,7 +89,7 @@ table {
 	/* Home Styles */
 
 	.home-content {
-		padding: 1rem;
+		/* padding: 1rem; */
 	}
 
 	#banner-link-next {
@@ -190,6 +190,12 @@ table {
 		justify-content: space-between;
 	}
 
+	#nav-bar.hidden {
+		background-color: transparent;
+		border: none;
+		transition: background-color 0.5s ease-in;
+	}
+
 	.nav-bar-left {
 		flex-grow: 1;
 		padding-left: 2rem;
@@ -230,7 +236,7 @@ table {
 
 	/* Home Styles Desktop  */
 	.home-content {
-		padding: 5rem 3rem 3rem 3rem;
+		/* padding: 5rem 3rem 3rem 3rem; */
 	}
 
 	/* About Styles Desktop  */
@@ -294,7 +300,6 @@ table {
 	scroll-behavior: smooth;
 	font-size: 10px;
 	font-family: 'Cabin', sans-serif;
-
 	/* ~~~~~~~~~~~~~
 	******Colors*****
 	~~~~~~~~~~~~~~~~*/

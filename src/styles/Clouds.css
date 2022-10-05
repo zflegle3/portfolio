@@ -1,24 +1,21 @@
 
-/* Cloud Containers */
-.cloud-array {
-    z-index: -0;
+  .cloud-container {
+    z-index: 0;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100%;
     height: 100vh;
-}
-
-.cloud-array div {
-
-}
-
-.cloud {
-    border-radius: 50%;
-}
-
-#cloud-container-single {
-    will-change: opacity;
+    width: 100vw; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #cloud-container-single {
+    will-change: opacity; 
+    will-change: transform;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -26,18 +23,49 @@
     align-items: center;
     opacity: 1;
     transition: opacity 3s;
-}
-
-#cloud-container-single.hide-cloud {
+    /* border: 1px solid black; */
+  }
+  
+  /* Animations */
+  /* Adjust duration & delay  to create natural variation & feel*/
+  .svg-cloud-1 {
+    animation: float 30s linear 0s infinite;
+  }
+  .svg-cloud-2 {
+    animation: float 65s linear 15s infinite;
+  }
+  .svg-cloud-3 {
+    animation: float 50s linear 0s infinite;
+  }
+  .svg-cloud-4 {
+    animation: float 35s linear 15s infinite;
+  }
+  .svg-cloud-5 {
+    animation: float 55s linear 10s infinite;
+  }
+  .svg-cloud-6 {
+    animation: float 45s linear 30s infinite;
+  }
+  .svg-cloud-7 {
+    animation: float 40s linear 10s infinite;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translateX(0vw);
+    }
+    to {
+      transform: translateX(150vw);
+    }
+  }
+  
+  #cloud-container-single.hide-cloud {
     opacity: 0;
-    transition: opacity 3s;
-}
-
-
-/* Base Layer */
-.base-layer {
-    top: -300px;
-    left: -300px;
+    transition: opacity 1s;
+  }
+  
+  /* Base Layer */
+  .base-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -45,24 +73,16 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-}
-
-#cloud-base {
+  }
+  
+  #cloud-base {
     position: absolute;
-    /* background-color: black; */
-    /* top: 0;
-    left: 0; */
     height: 100%; 
     width: 100%;
-    /* filter: url(#filter-base); */
-    box-shadow: 300px 300px 19px 40px rgba(255, 255, 255, 1);
-}
-
-
-/* Back Layer */
-.back-layer {
-    top: -300px;
-    left: -300px;
+  }
+  
+  /* Back Layer */
+  .back-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -70,19 +90,16 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-}
-
-#cloud-back {
+  }
+  
+  #cloud-back {
     height: 50%; 
     width: 83%;
-    box-shadow: 300px 300px 10px 40px rgba(215, 215, 215, 0.3);
-}
-
-
-/* Mid Layer */
-.mid-layer {
-    top: -300px;
-    left: -300px;
+  }
+  
+  
+  /* Mid Layer */
+  .mid-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -90,19 +107,15 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-}
-
-#cloud-mid {
+  }
+  
+  #cloud-mid {
     width: 96%;
     height: 30%;
-    box-shadow: 300px 300px 28px 30px rgba(66, 105, 146, 0.2);
-}
-
-
-/* Front Layer */
-.front-layer {
-    top: -300px;
-    left: -300px;
+  }
+  
+  /* Front Layer */
+  .front-layer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -110,44 +123,21 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-}
-
-#cloud-front {
+  }
+  
+  #cloud-front {
     width: 80%;
     height: 20%;
     box-shadow: 300px 300px 30px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: -20px;
-}
+  }
 
 
-/* Background Cloud */
-#cloud-background {
-    z-index: 1;
-}
-
-#cloud-base-bg {
+  #cloud-background {
     position: absolute;
-    height: 100%; 
-    width: 100%;
-    box-shadow: 300px 300px 19px 40px rgba(255, 255, 255, 1);
-}
-
-#cloud-back-bg {
-    height: 50%; 
-    width: 83%;
-    box-shadow: 300px 300px 10px 40px rgba(215, 215, 215, 0.3);
-}
-
-#cloud-mid-bg {
-    width: 96%;
-    height: 10%;
-    box-shadow: 300px 300px 28px 30px rgba(66, 105, 146, 0.2);
-}
-
-#cloud-front-bg {
-    width: 50%;
-    height: 5%;
-    box-shadow: 300px 300px 30px 20px rgba(0, 0, 0, 0.4);
-    margin-bottom: -20px;
-}
-
+    /* z-index: 1; */
+    width: 450px;
+    height: 350px;
+    overflow: visible;
+  }
+  

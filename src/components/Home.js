@@ -43,6 +43,7 @@ function Home() {
                 <p>LinkedIn</p>
               </a>
             </div>
+
             <CloudsBackSvg />
         </div>
 
@@ -53,9 +54,7 @@ function Home() {
           </div>
         </a>
 
-        <div className="load-bg" id="banner-bg"></div>
-
-     <CloudsAll />
+        <CloudsAll />
     </div>
   );
 }
