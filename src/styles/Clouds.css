@@ -150,8 +150,8 @@
   #cloud-background {
     position: absolute;
     /* z-index: 1; */
-    width: 450px;
-    height: 350px;
+    width: 500px;
+    height: 150px;
     overflow: visible;
   }
   

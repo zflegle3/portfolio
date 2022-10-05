@@ -8,7 +8,6 @@ function CloudSvg(props) {
     //props.topVal
 
     const hideCloud = (e) => {
-        console.log(e.target)
         e.target.classList.add("hide-cloud");
         let revealCloud = setTimeout(function(){e.target.classList.remove("hide-cloud")},5000);
     };
@@ -19,8 +18,8 @@ function CloudSvg(props) {
     if (totWidth < 800) {
         offset = 30;
     }
-    //5% offset vertically &horizontally added to boxshadow and layer offsets to compensate for overlap conditions
-
+    //Offset vertically &horizontally added to boxshadow and layer offsets to compensate for overlap conditions
+   
     return (
         //Cloud Container DIV
         //
