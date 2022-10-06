@@ -1,10 +1,12 @@
+//Styles
 import '../styles/Contact.css';
+//Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
+//Docs
 import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
-
 
 function Contact() {
 

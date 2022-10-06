@@ -22,7 +22,6 @@ function CloudSvg(props) {
    
     return (
         //Cloud Container DIV
-        //
         <div onMouseEnter={hideCloud} id="cloud-container-single" className={`svg-cloud-${props.n}`} style={{ top:`${props.topVal}%`, left:`${-props.widthVal-offset}%`, height : `${props.heightVal}%`, width : `${props.widthVal}%`}} >
 
             <div className="base-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>

@@ -1,10 +1,12 @@
-import {useState, useEffect} from "react";
+//React
+import {useEffect} from "react";
+//UUID
 import { v4 as uuidv4 } from 'uuid';
-
+//Styles
 import '../styles/Nav.css';
+//Components
 import { ReactComponent as LightOutSvg } from "../images/light-fill.svg";
 import { ReactComponent as DarkOutSvg } from "../images/dark-out.svg";
-
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -12,9 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Nav(props) {
     //props.links
-    //props.switchTheme
-    const [linkSelections, setLinkSelections] = useState(["home","about","projects","contact"]);
-    
+    //props.switchTheme  
 
     const scrollClick = (e) => {
         e.preventDefault();
@@ -54,7 +54,6 @@ function Nav(props) {
     const switchTheme = (e) => {
         let themeBtns = document.querySelectorAll(".nav-btn");
         for (let i=0; i< themeBtns.length; i++) {
-            // themeBtns[i]className.remove("selected");
             let selected = themeBtns[i];
             selected.classList.remove("selected");
         };;
@@ -73,7 +72,6 @@ function Nav(props) {
             trigger: "#home",
             start: "top center",
             end: "bottom center",
-            // id: "about-section",
             // markers: true,
             onEnter: () => selectLink("home"),
             onLeave: () => resetLink("home"),
@@ -85,7 +83,6 @@ function Nav(props) {
             trigger: "#about",
             start: "top center",
             end: "bottom center",
-            // id: "about-section",
             // markers: true,
             onEnter: () => selectLink("about"),
             onLeave: () => resetLink("about"),
@@ -97,7 +94,6 @@ function Nav(props) {
             trigger: "#projects",
             start: "top center",
             end: "bottom center",
-            // id: "about-section",
             // markers: true,
             onEnter: () => selectLink("projects"),
             onLeave: () => resetLink("projects"),
@@ -109,7 +105,6 @@ function Nav(props) {
             trigger: "#contact",
             start: "top center",
             end: "bottom center",
-            // id: "about-section",
             // markers: true,
             onEnter: () => selectLink("contact"),
             onLeave: () => resetLink("contact"),
@@ -117,12 +112,11 @@ function Nav(props) {
             onLeaveBack: () => resetLink("contact"),
         })
 
-        if (window.screen.width > 800) {//Desktop
+        if (window.screen.width > 800) {
             ScrollTrigger.create({
                 trigger: "#home",
                 start: "bottom 100px",
                 end: "bottom top",
-                // id: "about-section",
                 // markers: true,
                 onEnter: () => showNav(),
                 onEnterBack: () => hideNav(),

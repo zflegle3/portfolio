@@ -1,11 +1,5 @@
-import {useState, useEffect, useRef} from "react";
-
+// Styles
 import '../styles/About.css';
-
-import { ReactComponent as GithubSvg } from "../images/gh.svg";
-import { ReactComponent as CssSvg } from "../images/css.svg";
-import { ReactComponent as JestSvg } from "../images/javascript.svg";
-
 // PNGs
 // import htmlImg from "../images/html.png";
 // import cssImg from "../images/css.png";
@@ -23,8 +17,6 @@ import { ReactComponent as JestSvg } from "../images/javascript.svg";
 // import ghImg from "../images/github.png";
 // import npmImg from "../images/npm.png";
 // import jestImg from "../images/jest.png";
-// import zachImg from "../images/zach.jpeg"
-
 //WebPs
 import htmlImg from "../images/webps/html.webp";
 import cssImg from "../images/webps/css.webp";
@@ -42,52 +34,13 @@ import wpImg from "../images/webps/webpack.webp";
 import ghImg from "../images/webps/github.webp";
 import npmImg from "../images/webps/npm.webp";
 import jestImg from "../images/webps/jest.webp";
-
 //GSAP
 import gsap from "gsap";
-import {ScrollTrigger, TimelineLite} from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
 function About() {
-
-  let vw = window.screen.width;
-  useEffect(() => {
-    //Title Slide on Scroll Animation
-
-    // if (vw > 800) {
-    //   gsap.to(".bio-image",{
-    //     scrollTrigger: {
-    //       trigger: "#about",
-    //       start: "top center",
-    //       end: "bottom top",
-    //       markers: true,
-    //       // scrub: 1,
-    //     },
-    //     duration: 1.5,
-    //     y: 0,
-    //     ease: "bounce.out",
-    //   });
-    // }
-
-
-    // gsap.to(".bio-image",{
-    //   scrollTrigger: {
-    //     trigger: "#about",
-    //     start: "top center",
-    //     end: "bottom top",
-    //     markers: true,
-    //     scrub: 1,
-    //   },
-    //   x: 0,
-    //   ease: "none",
-    //   duration: 1.5,
-    // });
-
-  },[]);
-
-
-
 
   return (
     <div id="about" className="about">
@@ -114,7 +67,8 @@ function About() {
               Full Stack JavaScript curriculum.
               </p>
               <p className="about-bio">
-              I am actively looking for front end development positions. Please take a look at my projects and feel free to reach out using my contact info below. 
+              I am actively looking for front end development positions. Please take a look at 
+              my projects and feel free to reach out using my contact info below. 
               </p>
             </div>
 
@@ -169,7 +123,6 @@ function About() {
             </div>
           </div>
 
-
           <p className="skill-label">Back End</p>
           <div className="skill-container">
 
@@ -194,7 +147,6 @@ function About() {
                 <p className="skill-title">Firebase</p>
             </div>
 
-
           </div>
 
           <p className="skill-label">Miscellaneous</p>
@@ -207,7 +159,6 @@ function About() {
             </div>
 
             <div className="skill-item">
-                {/* <GithubSvg /> */}
                 <img src={ghImg} alt="html logo"></img>
                 <p className="skill-title">Github</p>
             </div>

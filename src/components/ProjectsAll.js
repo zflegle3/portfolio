@@ -1,20 +1,19 @@
-import {useState, useEffect} from "react";
-
+//React
+import {useState} from "react";
+//Components
 import Project from "./Project";
-
 // PNGs
 // import weatherAppImg from "../images/project-images/weather-app.png"
 // import battleshipAppImg from "../images/project-images/bs.png"
 // import todoAppImg from "../images/project-images/to-do-app.png"
 // import waldoImg from "../images/project-images/waldo.png"
-
 //WebPs
 import weatherAppImg from "../images/webps/weather-app.webp"
 import battleshipAppImg from "../images/webps/bs.webp"
 import todoAppImg from "../images/webps/to-do-app.webp"
 import waldoImg from "../images/webps/waldo.webp"
 
-function ProjectsAll(props) {
+function ProjectsAll() {
     const [projectDataAll, setProjectDataAll] = useState([
       { id: "0",
       // imgId: "project-img-2",
@@ -61,7 +60,6 @@ function ProjectsAll(props) {
       tech: ["JavaScript", "HTML", "CSS","SASS","Npm","Webpack","Jest"]
     },
     ]);
-
 
     return (
         <div id="projects">

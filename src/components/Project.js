@@ -1,9 +1,10 @@
-import {useState, useEffect} from "react";
+//React
+import { useEffect } from "react";
+//UUID
 import { v4 as uuidv4 } from 'uuid';
-
+//Components
 import { ReactComponent as GithubSvg } from "../images/github2.svg";
 import { ReactComponent as LinkSvg } from "../images/link.svg";
-
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -16,14 +17,6 @@ function Project(props) {
         <p key={uuidv4()}>{techItem}</p>
     );
 
-    const fadeIn = () => {
-        // console.log(`project-details-${props.projectData.id}`);
-        let details = document.querySelector(`project-details-${props.projectData.id}`);
-        // console.log(details);
-    }
-
-    let vw = window.screen.width;
-    // console.log(vw);
     useEffect(() => {
         //image slide in
         gsap.to(`.project-img-${props.projectData.id}`, {
@@ -58,7 +51,6 @@ function Project(props) {
                 // markers: true,
                 toggleActions: "play none none none",
             },
-
             duration: 0.5,
             delay: 1,
             opacity: 1,

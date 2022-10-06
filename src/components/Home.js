@@ -1,17 +1,16 @@
+// React
+import { useEffect } from "react";
+// Styles
 import '../styles/Home.css';
-import {useState, useEffect, useRef} from "react";
-
+// Components
 import CloudsAll from "./CloudsAll";
-
-import CloudsBackSvg from "./CloudBackSvg";
+//Images & Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
 import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
-
-
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -19,13 +18,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
 
-  // let vh = window.screen.height;
   let vw = window.screen.width;
-  // console.log(vw,vh);
-
 
   useEffect(() => {
-
     //Title Text Animation
     gsap.timeline({repeat:-1, repeatDelay: 0})
       .from(".v-slides", {y:0, duration:1, ease:"back", delay: 2})
@@ -33,10 +28,7 @@ function Home() {
       .to(".v-slides", {y:-200, duration:1, ease:"back", delay: 2})
       .to(".v-slides", {y:-300, duration:1, ease:"back", delay: 2})
       .to(".v-slides", {y:-400, duration:1, ease:"back", delay: 2})
-    //   .to(".v-slides", {y:-50, duration:1, ease:"back"})
-
   },[]);
-
 
   useEffect(() => {
     //Title Link Animation
@@ -49,13 +41,11 @@ function Home() {
         each: 0.2
       }
     })
-
   },[]);
 
 
   useEffect(() => {
     //Title Slide on Scroll Animation
-
     if (vw > 800) {
       gsap.to("#cloud-background",{
         scrollTrigger: {
@@ -86,7 +76,6 @@ function Home() {
       })
     }
   },[]);
-
 
 
   return (

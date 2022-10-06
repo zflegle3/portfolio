@@ -1,16 +1,12 @@
-import {useState, useEffect} from "react";
 
-// import CloudsRow from "./CloudsRow"
+//Components
 import CloudSvg from "./CloudSvg"
 import CloudsBackSvg from "./CloudBackSvg";
 
-
-function CloudsAll(props) {
-
+function CloudsAll() {
     let titleBg;
     let mobileW = 2;
-    console.log(window.screen.width);
-    if (window.screen.width > 800) {//Desktop
+    if (window.screen.width > 800) {//Cloud Background on Desktop only
         titleBg = <CloudsBackSvg />
         mobileW = 1;
     }
