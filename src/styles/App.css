@@ -51,22 +51,23 @@ table {
 @media only screen and (max-width: 800px) {
 	/* Mobile Styles */
 	* {
-		/* Font Sizes */
+		/* Font Sizes Mobile */
 		--font-xl: 4rem;
 		--font-l: 2.5rem;
 		--font-ml: 2.5rem;
 		--font-m: 2rem;
 		--font-ms: 2rem;
 		--font-s: 1.6rem;
-		--font-xs: 1.2rem;
+		--font-xs: 1.5rem;
 
 		--proj-pad: 0rem;
 		--nav-gap: 1rem;
+		--skill-pad: 0rem;
 
 		/* z-index: 0; */
 	}
 
-	/* Nav Styles */
+	/* Nav Styles Mobile */
 	#nav-bar {
 		bottom: 0px;
 		background-color: var(--sh-mobile);
@@ -86,7 +87,7 @@ table {
 		/* padding: 1rem; */
 	} 
 
-	/* Home Styles */
+	/* Home Styles Mobile */
 
 	.home-content {
 		/* padding: 1rem; */
@@ -100,7 +101,7 @@ table {
 		top: -10vh;
 	}
 
-	/* Color Theme Toggle  */
+	/* Color Theme Toggle Mobile  */
 	.tog-label {
 		width: 4rem;
 		height: 2rem;
@@ -124,14 +125,17 @@ table {
 	}
 	
 
-	/* About Styles */
+	/* About Styles Mobile */
 	.about-container {
 		width: 100%;
 		padding: 2rem;
 	}
 
+	.about-content-all {
+		flex-direction: column;
+	}
 
-	/* Project styles */
+	/* Project styles Mobile */
 	#projects {
 		padding: 2rem;
 	} 
@@ -144,6 +148,10 @@ table {
 		padding: 2rem 0rem 1rem 0rem;
 	}
 
+	img[class*="project-img"] {
+		width: 100vw;
+	}
+
 	div[id*="project-item"]{
 		flex-direction: column;
 	}
@@ -152,7 +160,17 @@ table {
 		flex-direction: column-reverse;
 	}
 
-	/* Contact styles */
+	.project-links {
+		flex-direction: column;
+	}
+
+	.tech-list {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+
+	/* Contact styles Mobile */
 	#contact {
 		height: 100vh;
 		padding: 2rem;
@@ -170,7 +188,7 @@ table {
 
 @media only screen and (min-width: 800px) {
 	* {
-		/* Font Sizes */
+		/* Font Sizes Desktop */
 		--font-xl: 6rem;
 		--font-l: 5rem;
 		--font-ml: 3.5rem;
@@ -181,6 +199,7 @@ table {
 		--pad-ab: 2rem;
 		--nav-gap: 2rem;
 		--proj-pad: 3rem;
+		--skill-pad: 1rem;
 	}
 
 	/* Nav Bar Sizes Desktop */
@@ -211,7 +230,7 @@ table {
 		top: 100vh;
 	}
 
-	/* Color Theme Toggle */
+	/* Color Theme Toggle Desktop */
 	.tog-label {
 		width: 6rem;
 		height: 3rem;
@@ -242,9 +261,16 @@ table {
 
 	/* About Styles Desktop  */
 	.about-container {
-		max-width: 60rem;
-		height: 85vh;
+		max-width: 100rem;
 		padding: 5rem;
+	}
+
+	.about-content-all {
+		flex-direction: row;
+	}
+
+	.about-content-left {
+		width: 60%;
 	}
 
 	.skill-container {
@@ -261,18 +287,37 @@ table {
 	}
 
 	.project-header {
-		min-width: 60rem;
-		padding-bottom: 2rem;
-		padding-top: 5rem;
+		display: flex;
+		width: 100%;
+		max-width: 100rem;
+		/* padding-bottom: 2rem;
+		padding-top: 5rem; */
+	}
+
+	.project-header div {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		align-items: center;
+
 	}
 
 	div[id*="project-item"]{
 		flex-direction: row;
 	}
 
-	.project-img {
-		height: 60vh;
-		width: 60vh;
+	img[class*="project-img"] {
+		width: 50vw;
+		max-width: 1100px;
+		border-radius: 0.5rem;
+	}
+
+	.project-item-a img {
+		box-shadow: -1rem 1rem 0rem var(--text-a);
+	}
+
+	.project-item-b img {
+		box-shadow: 1rem 1rem 0px var(--text-a);
 	}
 
 	/* Contact styles */

@@ -1,3 +1,4 @@
+import {useState, useEffect, useRef} from "react";
 
 import '../styles/About.css';
 
@@ -21,31 +22,101 @@ import wpImg from "../images/webpack.png";
 import ghImg from "../images/github.png";
 import npmImg from "../images/npm.png";
 import jestImg from "../images/jest.png";
+// import zachImg from "../images/zach.jpeg"
+
+//GSAP
+import gsap from "gsap";
+import {ScrollTrigger, TimelineLite} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 function About() {
 
+  let vw = window.screen.width;
+  useEffect(() => {
+    //Title Slide on Scroll Animation
+
+    // if (vw > 800) {
+    //   gsap.to(".bio-image",{
+    //     scrollTrigger: {
+    //       trigger: "#about",
+    //       start: "top center",
+    //       end: "bottom top",
+    //       markers: true,
+    //       // scrub: 1,
+    //     },
+    //     duration: 1.5,
+    //     y: 0,
+    //     ease: "bounce.out",
+    //   });
+    // }
+
+
+    // gsap.to(".bio-image",{
+    //   scrollTrigger: {
+    //     trigger: "#about",
+    //     start: "top center",
+    //     end: "bottom top",
+    //     markers: true,
+    //     scrub: 1,
+    //   },
+    //   x: 0,
+    //   ease: "none",
+    //   duration: 1.5,
+    // });
+
+
+
+
+
+
+  },[]);
+
+
+
+
   return (
     <div id="about" className="about">
-        <div id="section-inc-1" className='inc-1'>1</div>
         <div id="about-container" className="about-container"> 
-          <div className='section-header'>
-            <p className="about-title">About</p>
-            <div className="section-break"></div>
+
+          <div className="about-content-all">
+
+            <div className="about-content-left">
+
+              <div className='section-header'>
+                <p className="about-title">About</p>
+                <div className="section-break"></div>
+              </div>
+              <p className="about-bio">
+                Hi there! I'm Zach Flegle, a self taught software engineer
+                with experience in front end development.
+              </p>
+              <p className="about-bio">
+              I began my career solving technical problems at Gulfstream Aerospace and Procter 
+              & Gamble in a series of progressive roles. Despite finding success as a Mechanical 
+              Engineer, I missed the creative challenges from my programming coursework at Georgia 
+              Tech. This inspired me to reconnect with my passion by teaching myself web development. 
+              Currently, I'm focused on improving my back end skill set through the Odin Project's 
+              Full Stack JavaScript curriculum.
+              </p>
+              <p className="about-bio">
+              I am actively looking for front end development positions. Please take a look at my projects and feel free to reach out using my contact info below. 
+              </p>
+            </div>
+
+            <div className="about-content-right">
+              <div className="bio-image"></div>
+            </div>
+
           </div>
-          <p className="about-bio">
-          I am Zach Flegle, a self-taught software developer who studied 
-          Mechanical Engineering at the Georgia Institute of Technology. 
-          See my work below and send a message to get in touch. 
-          </p>
 
           <div className='section-header'>
             <p className="skills-title">{"Tools & Skills"}</p>
             <div className="section-break"></div>
           </div>
 
-
           <p className="skill-label">Front End</p>
+
           <div className="skill-container">
 
             <div className="skill-item">
@@ -78,10 +149,10 @@ function About() {
               <p className="skill-title">Sass</p>
             </div>
 
-            {/* <div className="skill-item">
+            <div className="skill-item">
               <img src={gsapImg} alt="html logo"></img>
-              <p className="skill-title">gsap</p>
-            </div> */}
+              <p className="skill-title">GSAP</p>
+            </div>
           </div>
 
 

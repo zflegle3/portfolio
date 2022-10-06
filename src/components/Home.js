@@ -9,6 +9,8 @@ import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
+import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
+
 
 //GSAP
 import gsap from "gsap";
@@ -17,21 +19,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
 
+  // let vh = window.screen.height;
+  let vw = window.screen.width;
+  // console.log(vw,vh);
+
 
   useEffect(() => {
 
-    // ScrollTrigger.create({
-    //     trigger: "#home",
-    //     start: "top center",
-    //     end: "bottom center",
-    //     // id: "about-section",
-    //     // markers: true,
-    //     onEnter: () => selectLink("home"),
-    //     onLeave: () => resetLink("home"),
-    //     onEnterBack: () => selectLink("home"),
-    //     onLeaveBack: () => resetLink("home"),
-    // })
-
+    //Title Text Animation
     gsap.timeline({repeat:-1, repeatDelay: 0})
       .from(".v-slides", {y:0, duration:1, ease:"back", delay: 2})
       .to(".v-slides", {y:-100, duration:1, ease:"back", delay: 2})
@@ -44,11 +39,10 @@ function Home() {
 
 
   useEffect(() => {
-    console.log("links in");
-    // gsap.timeline()
-    // gsap.from(".link-svg-home svg", {y:160, stagger:0.1, duration:0.8, ease:"back"})
+    //Title Link Animation
     gsap.to(".link-svg-home svg", {
       y:0, 
+      rotation: 0.01,
       duration:0.5, 
       delay: 1,
       stagger: {
@@ -56,6 +50,41 @@ function Home() {
       }
     })
 
+  },[]);
+
+
+  useEffect(() => {
+    //Title Slide on Scroll Animation
+
+    if (vw > 800) {
+      gsap.to("#cloud-background",{
+        scrollTrigger: {
+          trigger: "#home",
+          start: "60% center",
+          end: "bottom top",
+          // markers: true,
+          scrub: 1,
+        },
+        x: 500,
+        // rotation: 360,
+        ease: "none",
+        duration: 3,
+      });
+  
+      gsap.to(".home-content",{
+        scrollTrigger: {
+          trigger: "#home",
+          start: "60% center",
+          end: "bottom top",
+          // markers: true,
+          scrub: 1,
+        },
+        x: 500,
+        // rotation: 360,
+        ease: "none",
+        duration: 3,
+      })
+    }
   },[]);
 
 
@@ -67,13 +96,13 @@ function Home() {
 
             <div id="banner-name" className="slide-container">
 
-              <ul class="v-slides">
+              <ul className="v-slides">
 
-                <li class="v-slide">Hi, I'm Zach Flegle</li>
-                <li class="v-slide">I'm a Software Engineer</li>
-                <li class="v-slide">Checkout my links below!</li>
-                <li class="v-slide">Scroll down to learn more!</li>
-                <li class="v-slide">Hi, I'm Zach Flegle</li>
+                <li className="v-slide">Hi, I'm Zach Flegle</li>
+                <li className="v-slide">I am a software engineer</li>
+                <li className="v-slide">Check out my links below</li>
+                <li className="v-slide">Scroll down to learn more!</li>
+                <li className="v-slide">Hi, I'm Zach Flegle</li>
 
               </ul>
 
@@ -103,7 +132,7 @@ function Home() {
                 </a>
               </address>
 
-              <a href="https://www.linkedin.com/in/zach-flegle-185341a0/" className="link-item-home">
+              <a href={CvPdf} className="link-item-home">
                 <div className="link-svg-home">
                   <CvSvg />
                 </div>

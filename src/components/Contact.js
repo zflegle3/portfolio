@@ -3,6 +3,7 @@ import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
+import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
 
 
 function Contact() {
@@ -15,25 +16,6 @@ function Contact() {
           <p className="contact-title">Contact</p>
           <div className="section-break"></div>
         </div>
-
-        <address>
-          <a href="mailto:zflegle3@gmail.com" className="link-item">
-            <div className="link-svg">
-              <EmailSvg />
-            </div>
-            <p>Email:</p>
-            <p>zflegle3@gmail.com</p>
-          </a>
-        </address>
-
-        {/* <a href={resumePdf} className="link-item">
-          <div className="link-svg">
-            <CvSvg />
-          </div>
-          <p>Resume:</p>
-          <p>z_flegle_resume.pdf</p>
-        </a> */}
-
 
         <a href="https://github.com/zflegle3" className="link-item">
           <div className="link-svg">
@@ -49,6 +31,24 @@ function Contact() {
           </div>
           <p>LinkedIn:</p>
           <p>linkedin.com/in/zach-flegle-185341a0/</p>
+        </a>
+
+        <address>
+          <a href="mailto:zflegle3@gmail.com" className="link-item">
+            <div className="link-svg">
+              <EmailSvg />
+            </div>
+            <p>Email:</p>
+            <p>zflegle3@gmail.com</p>
+          </a>
+        </address>
+
+        <a href={CvPdf} className="link-item">
+          <div className="link-svg">
+            <CvSvg />
+          </div>
+          <p>Resume:</p>
+          <p>z_flegle_resume.pdf</p>
         </a>
 
       </div>

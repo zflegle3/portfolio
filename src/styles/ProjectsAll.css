@@ -7,13 +7,21 @@
     background-color: var(--bg-1);
 }
 
-.project-header {
+div[class*="project-header"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.project-section-title {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
-
 
 div[id*="project-item"]{
     position: relative;
@@ -25,17 +33,17 @@ div[id*="project-item"]{
     padding: var(--proj-pad);
 }
 
-img[class*="project-img"] {
+/* img[class*="project-img"] {
     width: 50vw;
     max-width: 1100px;
     border-radius: 0.5rem;
-}
+} */
 
 .project-item-a img {
     /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(-100vw);
-    box-shadow: -1rem 1rem 0rem var(--text-a);
 }
+
 .project-item-a div[class*="project-header"] {
     /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(100vw);
@@ -44,7 +52,6 @@ img[class*="project-img"] {
 .project-item-b img {
     /* INITIAL CONDITION FOR ANIMATION */
     transform: translate(100vw);
-    box-shadow: 1rem 1rem 0px var(--text-a);
 }
 
 .project-item-b div[class*="project-header"] {
@@ -102,9 +109,8 @@ p[class*="project-title"] {
 .tech-list {
     width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .tech-list p {
@@ -114,108 +120,77 @@ p[class*="project-title"] {
 }
 
 .project-links {
+    width: 50%;
     display: flex;
-    flex-direction: row;
+    /* flex-direction: column; */
     gap: 1rem;
     /* visibility: hidden; */
     padding: 1rem;
 }
 
 .project-btn {
-    z-index: 101;
+    position: relative;
+    /* z-index: 101;
     will-change: transform; 
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     /* background-color: var(--sh-dk); */
-    padding: 1rem;
-    border-radius: 5rem;
+    /* padding: 1rem;
+    border-radius: 5rem; */
     /* box-shadow: 3px 3px 5px var(--sdw-a); */
-    transition: transform 0.3s;
-    border: 1px solid var(--text-a);
+    /* transition: transform 0.3s;
+    border: 1px solid var(--text-a); */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 10rem;
+    padding-right: 2rem;
 }
 
 .project-btn p {
+    will-change: transform, opacity;
     font-size: var(--font-xs);
-    color: var(--text-a)
+    white-space: nowrap;
+    position: absolute;
+    left: 1rem;
+    color: var(--text-hl);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
 }
 
-.project-btn:hover {
-    background-color: var(--text-hl);
-    border: 1px solid var(--text-hl);
-    box-shadow: 3px 3px 5px var(--sdw-a);
-    transform: scale(1.1);
-    transition: transform box-shadow 0.3s;
+.link-svg-proj {
+	height: 3.5rem;
+	width: 3.5rem;
+}
 
+.link-svg-proj svg {
+    fill: var(--text-b);
+	height: 100%;
+	width: 100%;
 }
 
 .project-btn:hover p {
-    color: var(--text-hl-a);
-}
-
-
-
-/* Project Listeners */
-
-.pt {
-    height: 100px;
-    width: 100%;
-    position: fixed;
-    top: 45vh;
-    border: 1px solid orchid;
-}
-
-
-/* Project Animations */
-
-/* div[id*="project-item"].display .project-img {
     opacity: 1;
-    transition: all 0.5s;
-} */
-
-/* div[id*="project-item"].display .project-links  {
-    visibility: visible;
-	animation: fadeIn 1s ease-in;
-}
-
-div[id*="project-item"].display .project-tech  {
-    visibility: visible;
-	animation: fadeIn 1s ease-in;
-}
-
-div[id*="project-item"].display .project-desc  {
-    visibility: visible;
-	animation: fadeIn 1s ease-in;
-}
-
-div[id*="project-item"].display img  {
+    transform: translate(3rem, 0rem);
+    transition: transform 0.5s, opacity 0.5s;
 
 }
 
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-    50% {
-        opacity: 0;
-    }
-	100% {
-		opacity: 1;
-	}
-} */
-/* 
-div[id*="project-item"].display img {
-    transform: translate(0vw);
-    transition: transform 0.5s;
+.project-btn:hover svg {
+    fill: var(--text-hl)
 }
 
-div[id*="project-item"].display .project-title {
-    transform: translate(0vw);
-    transition: transform 0.5s;
-} */
+.project-btn:hover {
+    /* border: 1px solid var(--text-hl) */
+}
 
-
+.project-break {
+    padding-left: var(--proj-pad);
+    padding-right: var(--proj-pad);
+}
 
 
 
