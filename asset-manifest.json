@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/portfolio-22/static/css/main.f2a734dd.css",
-    "main.js": "/portfolio-22/static/js/main.c35d7075.js",
+    "main.css": "/portfolio-22/static/css/main.a6eb2e09.css",
+    "main.js": "/portfolio-22/static/js/main.6affd7d0.js",
+    "static/media/waldo.png": "/portfolio-22/static/media/waldo.9b628650665fc4f54581.png",
     "static/media/bg-alt-3.jpeg": "/portfolio-22/static/media/bg-alt-3.bd05ca65d39c28d13797.jpeg",
-    "static/media/waldo.png": "/portfolio-22/static/media/waldo.93fe7884edcf848ace2c.png",
     "static/media/background.jpeg": "/portfolio-22/static/media/background.b9c669af5e3e60b0d094.jpeg",
+    "static/media/zach.jpeg": "/portfolio-22/static/media/zach.a64b3c409d94b78eed44.jpeg",
+    "static/media/to-do-app.png": "/portfolio-22/static/media/to-do-app.8c6fdc5f76f4b729ac46.png",
+    "static/media/Zach_Flegle_Resume_2022.pdf": "/portfolio-22/static/media/Zach_Flegle_Resume_2022.a04434e538ed6b58bf60.pdf",
+    "static/media/bs.png": "/portfolio-22/static/media/bs.5e9955f9ddb09aaa8d57.png",
+    "static/media/weather-app.png": "/portfolio-22/static/media/weather-app.75481bd4a2e63249a739.png",
     "static/media/bootstrap.png": "/portfolio-22/static/media/bootstrap.74639664fdc9d7968597.png",
-    "static/media/to-do-app.png": "/portfolio-22/static/media/to-do-app.2322018680cb5c2ac170.png",
-    "static/media/weather-app.png": "/portfolio-22/static/media/weather-app.a5046161d0c4a5c51095.png",
     "static/media/gsap.png": "/portfolio-22/static/media/gsap.f1e3e34a737bc395dcaa.png",
-    "static/media/bs.png": "/portfolio-22/static/media/bs.01c7fc0badc7cfd75d5d.png",
     "static/media/react.png": "/portfolio-22/static/media/react.6ab7e2e9a04e78b4e9c6.png",
     "static/media/firebase.png": "/portfolio-22/static/media/firebase.88fcc3e3af2263815629.png",
     "static/media/mongo.png": "/portfolio-22/static/media/mongo.7a16fc61d457c9e340e2.png",
@@ -27,15 +29,17 @@
     "static/media/cv.svg": "/portfolio-22/static/media/cv.0a39cce348bc7ffdec326530536aaa12.svg",
     "static/media/dark-out.svg": "/portfolio-22/static/media/dark-out.3dc4a5a5c6adc24159bbf3b154131ba9.svg",
     "static/media/github.svg": "/portfolio-22/static/media/github.197212f02efa31cf1fd6ce8f39191593.svg",
+    "static/media/github2.svg": "/portfolio-22/static/media/github2.550985caaa8859d4b95ffb977ce9d9af.svg",
     "static/media/next.svg": "/portfolio-22/static/media/next.a4f5b9cd208622d21ccc97f5601f6cc3.svg",
     "index.html": "/portfolio-22/index.html",
     "static/media/javascript.svg": "/portfolio-22/static/media/javascript.b879f838faf1cb951d1c2230fd933a39.svg",
     "static/media/linkedin.svg": "/portfolio-22/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
-    "main.f2a734dd.css.map": "/portfolio-22/static/css/main.f2a734dd.css.map",
-    "main.c35d7075.js.map": "/portfolio-22/static/js/main.c35d7075.js.map"
+    "static/media/link.svg": "/portfolio-22/static/media/link.0b5c954d0a17c16ba4d7d037d06fb603.svg",
+    "main.a6eb2e09.css.map": "/portfolio-22/static/css/main.a6eb2e09.css.map",
+    "main.6affd7d0.js.map": "/portfolio-22/static/js/main.6affd7d0.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2a734dd.css",
-    "static/js/main.c35d7075.js"
+    "static/css/main.a6eb2e09.css",
+    "static/js/main.6affd7d0.js"
   ]
 }
