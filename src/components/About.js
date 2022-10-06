@@ -6,23 +6,42 @@ import { ReactComponent as GithubSvg } from "../images/gh.svg";
 import { ReactComponent as CssSvg } from "../images/css.svg";
 import { ReactComponent as JestSvg } from "../images/javascript.svg";
 
-import htmlImg from "../images/html.png";
-import cssImg from "../images/css.png";
-import jsImg from "../images/javascript.png";
-import sassImg from "../images/sass.png";
-import reactImg from "../images/react.png";
-import bsImg from "../images/bootstrap.png";
-import gsapImg from "../images/gsap.png";
-import nodeImg from "../images/nodejs.png";
-import mongoImg from "../images/mongo.png";
-import exImg from "../images/express.png";
-import fbImg from "../images/firebase.png";
-import gitImg from "../images/git.png";
-import wpImg from "../images/webpack.png";
-import ghImg from "../images/github.png";
-import npmImg from "../images/npm.png";
-import jestImg from "../images/jest.png";
+// PNGs
+// import htmlImg from "../images/html.png";
+// import cssImg from "../images/css.png";
+// import jsImg from "../images/javascript.png";
+// import sassImg from "../images/sass.png";
+// import reactImg from "../images/react.png";
+// import bsImg from "../images/bootstrap.png";
+// import gsapImg from "../images/gsap.png";
+// import nodeImg from "../images/nodejs.png";
+// import mongoImg from "../images/mongo.png";
+// import exImg from "../images/express.png";
+// import fbImg from "../images/firebase.png";
+// import gitImg from "../images/git.png";
+// import wpImg from "../images/webpack.png";
+// import ghImg from "../images/github.png";
+// import npmImg from "../images/npm.png";
+// import jestImg from "../images/jest.png";
 // import zachImg from "../images/zach.jpeg"
+
+//WebPs
+import htmlImg from "../images/webps/html.webp";
+import cssImg from "../images/webps/css.webp";
+import jsImg from "../images/webps/javascript.webp";
+import sassImg from "../images/webps/sass.webp";
+import reactImg from "../images/webps/react.webp";
+import bsImg from "../images/webps/bootstrap.webp";
+import gsapImg from "../images/webps/gsap.webp";
+import nodeImg from "../images/webps/nodejs.webp";
+import mongoImg from "../images/webps/mongo.webp";
+import exImg from "../images/webps/express.webp";
+import fbImg from "../images/webps/firebase.webp";
+import gitImg from "../images/webps/git.webp";
+import wpImg from "../images/webps/webpack.webp";
+import ghImg from "../images/webps/github.webp";
+import npmImg from "../images/webps/npm.webp";
+import jestImg from "../images/webps/jest.webp";
 
 //GSAP
 import gsap from "gsap";
@@ -64,11 +83,6 @@ function About() {
     //   ease: "none",
     //   duration: 1.5,
     // });
-
-
-
-
-
 
   },[]);
 

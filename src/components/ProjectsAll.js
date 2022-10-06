@@ -2,10 +2,17 @@ import {useState, useEffect} from "react";
 
 import Project from "./Project";
 
-import weatherAppImg from "../images/project-images/weather-app.png"
-import battleshipAppImg from "../images/project-images/bs.png"
-import todoAppImg from "../images/project-images/to-do-app.png"
-import waldoImg from "../images/project-images/waldo.png"
+// PNGs
+// import weatherAppImg from "../images/project-images/weather-app.png"
+// import battleshipAppImg from "../images/project-images/bs.png"
+// import todoAppImg from "../images/project-images/to-do-app.png"
+// import waldoImg from "../images/project-images/waldo.png"
+
+//WebPs
+import weatherAppImg from "../images/webps/weather-app.webp"
+import battleshipAppImg from "../images/webps/bs.webp"
+import todoAppImg from "../images/webps/to-do-app.webp"
+import waldoImg from "../images/webps/waldo.webp"
 
 function ProjectsAll(props) {
     const [projectDataAll, setProjectDataAll] = useState([

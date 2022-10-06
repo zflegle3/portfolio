@@ -326,14 +326,20 @@ table {
 	} 
 
 	.App #home {
+		/* PNG */
 		background-image: url(../images/background.jpeg);
+		/* WebP*/
+		background-image: url(../images/webps/background.webp);
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 	}
 
 	.App.darkMode #home {
+		/* PNG */
 		background-image: url(../images/bg-alt-3.jpeg);
+		/* WebP*/
+		background-image: url(../images/webps/bg-alt-3.webp);
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
