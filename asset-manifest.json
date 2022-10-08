@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio-22/static/css/main.b9b0ec34.css",
-    "main.js": "/portfolio-22/static/js/main.d1a2b9e2.js",
+    "main.css": "/portfolio-22/static/css/main.9e6ca11a.css",
+    "main.js": "/portfolio-22/static/js/main.e46ba00c.js",
     "static/js/787.28a6522c.chunk.js": "/portfolio-22/static/js/787.28a6522c.chunk.js",
     "static/media/bg-alt-3.webp": "/portfolio-22/static/media/bg-alt-3.da1b0b52864329d2b1ef.webp",
     "static/media/background.webp": "/portfolio-22/static/media/background.624f1f23317112e63cd5.webp",
     "static/media/zach.webp": "/portfolio-22/static/media/zach.d9b89a8cc260ee40b0e1.webp",
+    "static/media/cloud-test-2.png": "/portfolio-22/static/media/cloud-test-2.9b2af061b94e3e2136ba.png",
     "static/media/waldo.webp": "/portfolio-22/static/media/waldo.0f20b1cec0d66a903aeb.webp",
     "static/media/Zach_Flegle_Resume_2022.pdf": "/portfolio-22/static/media/Zach_Flegle_Resume_2022.a04434e538ed6b58bf60.pdf",
     "static/media/to-do-app.webp": "/portfolio-22/static/media/to-do-app.c3b5cfc246cd265e4eee.webp",
@@ -37,12 +38,12 @@
     "static/media/next.svg": "/portfolio-22/static/media/next.a4f5b9cd208622d21ccc97f5601f6cc3.svg",
     "static/media/linkedin.svg": "/portfolio-22/static/media/linkedin.27a3f479ca1bbb0ceef19e395081fb94.svg",
     "static/media/link.svg": "/portfolio-22/static/media/link.0b5c954d0a17c16ba4d7d037d06fb603.svg",
-    "main.b9b0ec34.css.map": "/portfolio-22/static/css/main.b9b0ec34.css.map",
-    "main.d1a2b9e2.js.map": "/portfolio-22/static/js/main.d1a2b9e2.js.map",
+    "main.9e6ca11a.css.map": "/portfolio-22/static/css/main.9e6ca11a.css.map",
+    "main.e46ba00c.js.map": "/portfolio-22/static/js/main.e46ba00c.js.map",
     "787.28a6522c.chunk.js.map": "/portfolio-22/static/js/787.28a6522c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b9b0ec34.css",
-    "static/js/main.d1a2b9e2.js"
+    "static/css/main.9e6ca11a.css",
+    "static/js/main.e46ba00c.js"
   ]
 }
