@@ -60,6 +60,7 @@ img[class*="project-img"] {
 div[class*="project-details"] {
     /* INITIAL CONDITION FOR ANIMATION */
     opacity: 0;
+    padding: 1rem;
 }
 
 
@@ -92,7 +93,7 @@ p[class*="project-title"] {
     font-size: var(--font-s);
     line-height: 2.5rem;
     color: var(--text-b);
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
     max-width: 60rem;
     /* visibility: hidden; */
 }
@@ -104,17 +105,106 @@ p[class*="project-title"] {
     align-items: center;
 }
 
+.project-tech .skills-title {
+    padding: 1rem 0rem 1rem 0rem;
+}
+
 .tech-list {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: 1rem;
     /* align-items: center; */
 }
 
+.tech-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10rem;
+    /* border: 1px solid black; */
+    overflow: hidden;
+}
+
+.tech-logo {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: var(--font-s);
+    height: var(--font-s);;
+    background-color: var(--sh-lt);
+    border-radius: 10rem;
+    padding: 0.5rem;
+}
+
+.tech-item svg {
+    width: var(--font-s);
+    fill: white;
+}
+
 .tech-list p {
-     font-size: var(--font-s);
-     color: var(--text-b);
-     padding: 1rem;
+    font-size: var(--font-xs);
+    color: black;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+}
+
+.tech-item.html {
+    color: black;
+    background-color: #f06529;
+}
+
+.tech-item.javascript {
+    color: black;
+    background-color: #FFFF00;
+}
+
+.tech-item.css {
+    color: black;
+    background-color: #3C99DC;
+}
+
+.tech-item.sass {
+    color: black;
+    background-color: #cc6699;
+}
+
+.tech-item.webpack {
+    color: black;
+    background-color: #8ED5FA;
+    /* background-color: #1C78C0; */
+}
+
+.tech-item.npm {
+    color: black;
+    background-color: #cc3534;
+}
+
+.tech-item.jest {
+    color: black;
+    background-color: #c63d14;
+    
+}
+
+.tech-item.api {
+    color: black;
+    background-color: #eb6d4a;
+}
+
+.tech-item.react {
+    color: black;
+    background-color: #61DBFB
+}
+
+.tech-item.firebase {
+    color: black;
+    background-color: #FFCB2B;
+    /* background-color: #F5820D; */
+    /* background-color: #FFA611; */
 }
 
 .project-links {

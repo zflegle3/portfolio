@@ -1,6 +1,0 @@
-<svg width="200" height="100"> 
-    <filter>
-        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" seed="1000" />     
-        <feDisplacementMap  in="SourceGraphic" scale="250" />
-    </filter>
-</svg>

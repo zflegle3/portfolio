@@ -24,7 +24,7 @@ function ProjectsAll() {
       demoUrl: "https://zflegle3.github.io/to-do-list/",
       imgSrc: todoAppImg,
       imgAlt: "to do project demo image",
-      tech: ["React", "Firebase Authentication", "Firebase Cloud Firestore","SASS" ]
+      tech: [["React","react"], ["SASS","sass"],["Firebase Authentication","firebase"], ["Firebase Cloud Firestore","firebase"] ]
       },
       { id: "1",
       // imgId: "project-img-3",
@@ -35,7 +35,7 @@ function ProjectsAll() {
       demoUrl: "https://zflegle3.github.io/where-is-waldo/",
       imgSrc: waldoImg,
       imgAlt: "where's waldo project demo image",
-      tech: ["React","React Router", "Firebase Cloud Firestore", "CSS" ]
+      tech: [["React","react"], ["React Router","react"], ["CSS","css"], ["Firebase Cloud Firestore","firebase"] ]
       },
       { id: "2",
       // imgId: "project-img-0",
@@ -46,7 +46,7 @@ function ProjectsAll() {
       demoUrl: "https://zflegle3.github.io/weather-app/",
       imgSrc: weatherAppImg,
       imgAlt: "weather app project demo image",
-      tech: ["JavaScript", "CSS", "HTML","Open Weather API" ]
+      tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Open Weather API","api"] ]
     },
       { id: "3",
       // imgId: "project-img-1",
@@ -57,7 +57,7 @@ function ProjectsAll() {
       demoUrl: "https://zflegle3.github.io/battleship/",
       imgSrc: battleshipAppImg,
       imgAlt: "battleship project demo image",
-      tech: ["JavaScript", "HTML", "CSS","SASS","Npm","Webpack","Jest"]
+      tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Npm","npm"],["Webpack","webpack"],["Jest","jest"]]
     },
     ]);
 
