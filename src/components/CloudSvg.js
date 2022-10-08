@@ -7,10 +7,10 @@ function CloudSvg(props) {
     //props.leftVal
     //props.topVal
 
-    const hideCloud = (e) => {
-        e.target.classList.add("hide-cloud");
-        let revealCloud = setTimeout(function(){e.target.classList.remove("hide-cloud")},5000);
-    };
+    // const hideCloud = (e) => {
+    //     e.target.classList.add("hide-cloud");
+    //     let revealCloud = setTimeout(function(){e.target.classList.remove("hide-cloud")},5000);
+    // };
 
     let totWidth = window.screen.width; //check support for safari/Firefox/mobile
     let totHeight = window.screen.height; //check support for safari/Firefox/mobile
@@ -22,7 +22,8 @@ function CloudSvg(props) {
    
     return (
         //Cloud Container DIV
-        <div onMouseEnter={hideCloud} id="cloud-container-single" className={`svg-cloud-${props.n}`} style={{ top:`${props.topVal}%`, left:`${-props.widthVal-offset}%`, height : `${props.heightVal}%`, width : `${props.widthVal}%`}} >
+        // onMouseEnter={hideCloud}
+        <div id="cloud-container-single" className={`svg-cloud-${props.n}`} style={{ top:`${props.topVal}%`, left:`${-props.widthVal-offset}%`, height : `${props.heightVal}%`, width : `${props.widthVal}%`}} >
 
             <div className="base-layer" style={{top: `-${((props.heightVal+offset)/100)*totHeight}px`, left:`-${((props.widthVal+offset)/100)*totWidth}px`}}>
                 <div className="cloud" id="cloud-base" style={{ filter: `url(#filter-base-${props.n})`, boxShadow: `${((props.widthVal+offset)/100)*totWidth}px ${((props.heightVal+offset)/100)*totHeight}px 100px 0px rgba(255, 255, 255, 1)`}}></div>

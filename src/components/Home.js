@@ -1,7 +1,7 @@
 // React
 import { useEffect } from "react";
 // Styles
-import '../styles/Home.css';
+// import '../styles/Home.css';import '../styles/Home.css';
 // Components
 import CloudsAll from "./CloudsAll";
 //Images & Svgs
@@ -11,14 +11,14 @@ import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
 import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
+// import bgImgA from "../images/webps/background.webp"
+// import bgImgB from "../images/webps/bg-alt-3.webp"
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Home() {
-
-  let vw = window.screen.width;
 
   useEffect(() => {
     //Title Text Animation
@@ -37,8 +37,9 @@ function Home() {
       rotation: 0.01,
       duration:0.5, 
       delay: 1,
+      ease: "elastic",
       stagger: {
-        each: 0.2
+        each: 0.2,
       }
     })
   },[]);
@@ -46,7 +47,7 @@ function Home() {
 
   useEffect(() => {
     //Title Slide on Scroll Animation
-    if (vw > 800) {
+    // if (vw > 800) {
       gsap.to("#cloud-background",{
         scrollTrigger: {
           trigger: "#home",
@@ -74,7 +75,7 @@ function Home() {
         ease: "none",
         duration: 3,
       })
-    }
+    // }
   },[]);
 
 
@@ -141,6 +142,7 @@ function Home() {
         </a>
 
         <CloudsAll />
+        {/* <img src={bgImgA} alt="background test" /> */}
     </div>
   );
 }

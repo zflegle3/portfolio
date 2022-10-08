@@ -1,5 +1,5 @@
 //Styles
-import '../styles/Contact.css';
+// import '../styles/Contact.css';
 //Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";

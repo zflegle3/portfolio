@@ -1,5 +1,5 @@
 // Styles
-import '../styles/About.css';
+// import '../styles/About.css';
 // PNGs
 // import htmlImg from "../images/html.png";
 // import cssImg from "../images/css.png";
@@ -41,6 +41,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 function About() {
+
+  const skillStagger = () => {
+    gsap.to(".skill-item", {
+      duration: 0.5,
+      y: 1.5,
+      ease: "power1.inOut",
+      stagger: {
+        grid: [1,16],
+        from: 1,
+        axis: "x",
+        ease: "power1.inOut",
+        amount: 1.5
+      }
+    });
+  }
+
+
+
 
   return (
     <div id="about" className="about">
@@ -87,7 +105,7 @@ function About() {
 
           <div className="skill-container">
 
-            <div className="skill-item">
+            <div className="skill-item" onClick={skillStagger}>
               <img src={htmlImg} alt="html logo"></img>
               <p className="skill-title">Html</p>
             </div>

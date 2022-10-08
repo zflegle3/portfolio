@@ -45,7 +45,7 @@ table {
 
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+/* Preloaded in Html */
 /* font-family: 'Cabin', sans-serif; */
 
 @media only screen and (max-width: 800px) {
@@ -59,7 +59,6 @@ table {
 		--font-ms: 2rem;
 		--font-s: 1.6rem;
 		--font-xs: 1.5rem;
-
 		--proj-pad: 0rem;
 		--nav-gap: 1rem;
 		--skill-pad: 0rem;
@@ -149,7 +148,7 @@ table {
 	}
 
 	img[class*="project-img"] {
-		width: 100vw;
+		width: 90vw;
 	}
 
 	div[id*="project-item"]{
@@ -279,7 +278,8 @@ table {
 
 	/* Project styles */
 	#projects {
-		width: 100vw;
+		/* width: 100vw; */
+		padding: 5rem;
 	} 
 
 	.project-content-container {
@@ -307,8 +307,8 @@ table {
 	}
 
 	img[class*="project-img"] {
-		width: 50vw;
-		max-width: 1100px;
+		max-width: 40vw;
+		/* max-width: 1100px; */
 		border-radius: 0.5rem;
 	}
 
@@ -327,9 +327,10 @@ table {
 
 	.App #home {
 		/* PNG */
-		background-image: url(../images/background.jpeg);
+		/* background-image: url(../images/background.jpeg); */
 		/* WebP*/
 		background-image: url(../images/webps/background.webp);
+		/* background: linear-gradient(#4BB3FD,#ffffff); */
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -337,7 +338,7 @@ table {
 
 	.App.darkMode #home {
 		/* PNG */
-		background-image: url(../images/bg-alt-3.jpeg);
+		/* background-image: url(../images/bg-alt-3.jpeg); */
 		/* WebP*/
 		background-image: url(../images/webps/bg-alt-3.webp);
 		background-position: center;

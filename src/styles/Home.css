@@ -157,20 +157,9 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
 }
 
 
-.load-bg {
-	height: 0%;
-	width: 0%;
-	opacity: 0%;
-	background-color: #fff;
-	z-index: 1;
-	position: absolute;
-	top: 0px;
-	left: 0px;
-}
-
 
 /* Page Load Animations */
-.App {
+/* .App {
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -183,7 +172,7 @@ ul.v-slides li:nth-child(1), li:nth-child(5) {
     100% {
         opacity: 1;
      }
-}
+} */
 
 
 #banner-link-next {

@@ -28,7 +28,7 @@
   
   /* Animations */
   /* Adjust duration & delay  to create natural variation & feel*/
-  .svg-cloud-1 {
+  /* .svg-cloud-1 {
     animation: float 30s linear 0s infinite;
   }
   .svg-cloud-2 {
@@ -48,7 +48,7 @@
   }
   .svg-cloud-7 {
     animation: float 40s linear 10s infinite;
-  }
+  } */
 
   @keyframes float {
     from {
@@ -148,6 +148,7 @@
 
 
   #cloud-background {
+    will-change: transform;
     position: absolute;
     /* z-index: 1; */
     width: 500px;

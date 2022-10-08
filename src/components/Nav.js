@@ -3,7 +3,7 @@ import {useEffect} from "react";
 //UUID
 import { v4 as uuidv4 } from 'uuid';
 //Styles
-import '../styles/Nav.css';
+// import '../styles/Nav.css';
 //Components
 import { ReactComponent as LightOutSvg } from "../images/light-fill.svg";
 import { ReactComponent as DarkOutSvg } from "../images/dark-out.svg";
