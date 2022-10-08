@@ -45,38 +45,38 @@ function Home() {
   },[]);
 
 
-  useEffect(() => {
-    //Title Slide on Scroll Animation
-    // if (vw > 800) {
-      gsap.to("#cloud-background",{
-        scrollTrigger: {
-          trigger: "#home",
-          start: "60% center",
-          end: "bottom top",
-          // markers: true,
-          scrub: 1,
-        },
-        x: 500,
-        // rotation: 360,
-        ease: "none",
-        duration: 3,
-      });
+  // useEffect(() => {
+  //   //Title Slide on Scroll Animation
+  //   // if (vw > 800) {
+  //     gsap.to("#cloud-background",{
+  //       scrollTrigger: {
+  //         trigger: "#home",
+  //         start: "60% center",
+  //         end: "bottom top",
+  //         // markers: true,
+  //         scrub: 1,
+  //       },
+  //       x: 500,
+  //       // rotation: 360,
+  //       ease: "none",
+  //       duration: 3,
+  //     });
   
-      gsap.to(".home-content",{
-        scrollTrigger: {
-          trigger: "#home",
-          start: "60% center",
-          end: "bottom top",
-          // markers: true,
-          scrub: 1,
-        },
-        x: 500,
-        // rotation: 360,
-        ease: "none",
-        duration: 3,
-      })
-    // }
-  },[]);
+  //     gsap.to(".home-content",{
+  //       scrollTrigger: {
+  //         trigger: "#home",
+  //         start: "60% center",
+  //         end: "bottom top",
+  //         // markers: true,
+  //         scrub: 1,
+  //       },
+  //       x: 500,
+  //       // rotation: 360,
+  //       ease: "none",
+  //       duration: 3,
+  //     })
+  //   // }
+  // },[]);
 
 
   return (

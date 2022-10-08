@@ -84,13 +84,13 @@ function CloudsAll() {
 
     return (
         <div className='cloud-container'>
-            {/* <CloudSvg n={1} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={20} widthVal={35*mobileW} leftVal={50} topVal={0} />
-            <CloudSvg n={2} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={35} widthVal={45*mobileW} leftVal={0} topVal={10} />
-            <CloudSvg n={3} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={40} widthVal={25*mobileW} leftVal={0} topVal={20} />
-            <CloudSvg n={4} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={35} widthVal={35*mobileW} leftVal={0} topVal={30} />
-            <CloudSvg n={5} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={25*mobileW} leftVal={0} topVal={40} />
-            <CloudSvg n={6} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={50} />
-            <CloudSvg n={7} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={60} /> */}
+            {/* <CloudSvg n={1} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={20} widthVal={35*mobileW} leftVal={60} topVal={15} />
+            <CloudSvg n={2} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={35} widthVal={45*mobileW} leftVal={10} topVal={10} />
+            <CloudSvg n={3} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={35*mobileW} leftVal={10} topVal={55} />
+            <CloudSvg n={4} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={45} widthVal={40*mobileW} leftVal={55} topVal={40} /> */}
+            {/* <CloudSvg n={5} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={25*mobileW} leftVal={0} topVal={40} /> */}
+            {/* <CloudSvg n={6} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={50} /> */}
+            {/* <CloudSvg n={7} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={60} /> */}
             {/* {titleBg} */}
             <CloudsBackSvg />
         </div>

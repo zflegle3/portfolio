@@ -11,11 +11,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
   }
   
   #cloud-container-single {
     will-change: opacity; 
-    will-change: transform;
+    /* will-change: transform; */
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -23,6 +24,7 @@
     align-items: center;
     opacity: 1;
     transition: opacity 3s;
+    /* border: 1px solid red; */
     /* border: 1px solid black; */
   }
   
@@ -50,17 +52,17 @@
     animation: float 40s linear 10s infinite;
   } */
 
-  @keyframes float {
+  /* @keyframes float {
     from {
       transform: translateX(0vw);
     }
     to {
       transform: translateX(150vw);
     }
-  }
+  } */
   
 
-  @media only screen and (max-width: 800px) {
+  /* @media only screen and (max-width: 800px) {
     @keyframes float {
       from {
         transform: translateX(0vw);
@@ -69,7 +71,7 @@
         transform: translateX(250vw);
       }
     }
-  }
+  } */
 
 
   

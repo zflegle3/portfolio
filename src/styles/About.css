@@ -1,6 +1,6 @@
 .about {
     position: relative;
-    /* height: 85vh; */
+    /* height: 200vh; */
     background-color: var(--bg-1);
     display: flex;
     flex-direction: row;
@@ -15,7 +15,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-
 }
 
 .about-content-all {
@@ -41,7 +40,6 @@
     background-size: cover;
     background-position: center;
     border-radius: 1000rem;
-
 }
 
 
@@ -85,8 +83,6 @@
 
 .skill-container {
     width: 100%;
-    /* padding: 1rem; */
-    /* margin: 0rem 1rem 0rem 1rem; */
     background-color: var(--sh-dk);
     border-radius: 2rem;
     display: flex;
@@ -95,24 +91,39 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-shadow: inset 3px 3px 5px var(--sdw-a);
+    overflow: hidden;
 }
 
+.front .skill-item  {
+    transform: translateX(100vw);
+}
+
+.back .skill-item  {
+    transform: translateX(-100vw);
+}
+
+.misc .skill-item  {
+    transform: translateX(100vw);
+}
+
+
 .skill-item {
-    margin: 1rem;;
+
+    margin: 1rem;
     z-index: 101;
-    will-change: transform; 
+    /* will-change: transform;  */
     padding: var(--skill-pad);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s;
+    /* transition: transform 0.3s; */
 }
 
-.skill-item:hover {
+/* .skill-item:hover {
     transform: translate(0rem, -0.5rem);
     transition: transform 0.3s;
-}
+} */
 
 .skill-item:hover .skill-title {
     /* color: var(--text-hl-a);

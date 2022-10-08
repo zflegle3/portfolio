@@ -1,3 +1,5 @@
+// React
+import { useEffect } from "react";
 // Styles
 // import '../styles/About.css';
 // PNGs
@@ -42,20 +44,123 @@ gsap.registerPlugin(ScrollTrigger);
 
 function About() {
 
-  const skillStagger = () => {
-    gsap.to(".skill-item", {
-      duration: 0.5,
-      y: 1.5,
-      ease: "power1.inOut",
-      stagger: {
-        grid: [1,16],
-        from: 1,
-        axis: "x",
-        ease: "power1.inOut",
-        amount: 1.5
-      }
-    });
-  }
+
+  let vw = window.screen.width;
+  console.log(vw);
+  // const skillStagger = () => {
+  //   gsap.to(".skill-item", {
+  //     duration: 0.5,
+  //     y: 1.5,
+  //     ease: "power1.inOut",
+  //     stagger: {
+  //       grid: [1,16],
+  //       from: 1,
+  //       axis: "x",
+  //       ease: "power1.inOut",
+  //       amount: 1.5
+  //     }
+  //   });
+  // }
+
+  useEffect(() => {
+    if (vw > 800) {//FOR DESKTOP
+      gsap.to(".front .skill-item",{
+        scrollTrigger: {
+          trigger: "#about",
+          start: "15% center",
+          end: "15% 25%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: 360,
+        ease: "none",
+        duration: 3,
+      });
+
+      gsap.to(".back .skill-item",{
+        scrollTrigger: {
+          trigger: "#about",
+          start: "25% center",
+          end: "25% 25%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: -360,
+        ease: "none",
+        duration: 3,
+      });
+
+      gsap.to(".misc .skill-item",{
+        scrollTrigger: {
+          trigger: "#about",
+          start: "35% center",
+          end: "35% 25%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: 360,
+        ease: "none",
+        duration: 3,
+      });
+
+    } else {//FOR MOBILE
+      gsap.to(".front .skill-item",{
+        scrollTrigger: {
+          trigger: ".bio-image",
+          start: "25% center",
+          end: "25% 30%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: 360,
+        ease: "none",
+        duration: 3,
+      });
+
+      gsap.to(".back .skill-item",{
+        scrollTrigger: {
+          trigger: ".bio-image",
+          start: "75% center",
+          end: "75% 30%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: -360,
+        ease: "none",
+        duration: 3,
+      });
+
+      gsap.to(".misc .skill-item",{
+        scrollTrigger: {
+          trigger: ".bio-image",
+          start: "125% center",
+          end: "125% 30%",
+          markers: true,
+          scrub: 1,
+        },
+        x: 0,
+        stagger: 0.2,
+        rotation: 360,
+        ease: "none",
+        duration: 3,
+      });
+    }
+
+
+  },[]);
+
+
+
 
 
 
@@ -103,9 +208,8 @@ function About() {
 
           <p className="skill-label">Front End</p>
 
-          <div className="skill-container">
-
-            <div className="skill-item" onClick={skillStagger}>
+          <div className="skill-container front">
+            <div className="skill-item">
               <img src={htmlImg} alt="html logo"></img>
               <p className="skill-title">Html</p>
             </div>
@@ -141,8 +245,9 @@ function About() {
             </div>
           </div>
 
+
           <p className="skill-label">Back End</p>
-          <div className="skill-container">
+          <div className="skill-container back">
 
 
             <div className="skill-item">
@@ -168,8 +273,8 @@ function About() {
           </div>
 
           <p className="skill-label">Miscellaneous</p>
-          <div className="skill-container">
 
+          <div className="skill-container misc">
 
             <div className="skill-item">
                 <img src={gitImg} alt="html logo"></img>
@@ -196,8 +301,8 @@ function About() {
                 <p className="skill-title">Jest</p>
             </div>
 
-
           </div>
+
         </div>
     </div>
 
