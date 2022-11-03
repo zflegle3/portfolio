@@ -60,9 +60,9 @@ function Nav(props) {
         e.target.classList.add("selected");
         let app = document.querySelector(".App");
         if (e.target.id === "light") {
-            app.classList.remove("darkMode");
+            app.classList.remove("lightMode");
         } else {
-            app.classList.add("darkMode")
+            app.classList.add("lightMode")
         }
     }
 

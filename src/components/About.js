@@ -46,7 +46,6 @@ function About() {
 
 
   let vw = window.screen.width;
-  console.log(vw);
   // const skillStagger = () => {
   //   gsap.to(".skill-item", {
   //     duration: 0.5,
@@ -70,43 +69,43 @@ function About() {
           start: "15% center",
           end: "15% 25%",
           markers: true,
-          scrub: 1,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,
         rotation: 360,
         ease: "none",
-        duration: 3,
+        duration: 1,
       });
 
       gsap.to(".back .skill-item",{
         scrollTrigger: {
           trigger: "#about",
-          start: "25% center",
-          end: "25% 25%",
+          start: "40% center",
+          end: "40% 25%",
           markers: true,
-          scrub: 1,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,
         rotation: -360,
         ease: "none",
-        duration: 3,
+        duration: 1,
       });
 
       gsap.to(".misc .skill-item",{
         scrollTrigger: {
           trigger: "#about",
-          start: "35% center",
-          end: "35% 25%",
+          start: "60% center",
+          end: "60% 25%",
           markers: true,
-          scrub: 1,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,
         rotation: 360,
         ease: "none",
-        duration: 3,
+        duration: 1,
       });
 
     } else {//FOR MOBILE
@@ -115,8 +114,8 @@ function About() {
           trigger: ".bio-image",
           start: "25% center",
           end: "25% 30%",
-          markers: true,
-          scrub: 1,
+          // markers: true,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,
@@ -130,8 +129,8 @@ function About() {
           trigger: ".bio-image",
           start: "75% center",
           end: "75% 30%",
-          markers: true,
-          scrub: 1,
+          // markers: true,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,
@@ -145,8 +144,8 @@ function About() {
           trigger: ".bio-image",
           start: "125% center",
           end: "125% 30%",
-          markers: true,
-          scrub: 1,
+          // markers: true,
+          // scrub: 1,
         },
         x: 0,
         stagger: 0.2,

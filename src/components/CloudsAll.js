@@ -91,8 +91,8 @@ function CloudsAll() {
             {/* <CloudSvg n={5} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={25} widthVal={25*mobileW} leftVal={0} topVal={40} /> */}
             {/* <CloudSvg n={6} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={50} /> */}
             {/* <CloudSvg n={7} seedVal={Math.floor(Math.random() * (10000 - 0 + 1))} heightVal={30} widthVal={25*mobileW} leftVal={0} topVal={60} /> */}
-            {/* {titleBg} */}
-            <CloudsBackSvg />
+            {titleBg}
+            {/* <CloudsBackSvg /> */}
         </div>
       );
 }

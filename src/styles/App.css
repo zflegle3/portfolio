@@ -188,7 +188,7 @@ table {
 		--font-m: 3rem;
 		--font-ms: 2.5rem;
 		--font-s: 2rem;
-		--font-xs: 1.6rem;
+		--font-xs: 1.25rem;
 		--pad-ab: 2rem;
 		--nav-gap: 2rem;
 		--proj-pad: 3rem;
@@ -249,7 +249,7 @@ table {
 	/* Home Styles Desktop  */
 	.home-content {
 		/* padding: 5rem 3rem 3rem 3rem; */
-		background-color: #ffffff;
+		/* background-color: #ffffff; */
 	}
 
 	/* About Styles Desktop  */
@@ -273,8 +273,13 @@ table {
 	/* Project styles */
 	#projects {
 		/* width: 100vw; */
-		padding: 5rem;
+		/* padding: 5rem; */
+		width: 100%;
 	} 
+
+	.project-container {
+		width: 80%;
+	}
 
 	.project-content-container {
 		padding: 2rem;
@@ -282,8 +287,8 @@ table {
 
 	.project-header {
 		display: flex;
-		width: 100%;
-		max-width: 100rem;
+		width: 80%;
+		/* max-width: 100rem; */
 		/* padding-bottom: 2rem;
 		padding-top: 5rem; */
 	}
@@ -301,18 +306,18 @@ table {
 	}
 
 	img[class*="project-img"] {
-		max-width: 40vw;
+		/* max-width: 40vw; */
 		/* max-width: 1100px; */
 		border-radius: 0.5rem;
 	}
 
-	.project-item-a img {
+	/* .project-item-a img {
 		box-shadow: -1rem 1rem 0rem var(--text-a);
 	}
 
 	.project-item-b img {
 		box-shadow: 1rem 1rem 0px var(--text-a);
-	}
+	} */
 
 	/* Contact styles */
 	#contact {
@@ -321,23 +326,26 @@ table {
 
 	.App #home {
 		/* PNG */
-		/* background-image: url(../images/background.jpeg); */
-		/* WebP*/
-		background-image: url(../images/webps/background.webp);
-		/* background: linear-gradient(#4BB3FD,#ffffff); */
-		background-position: center;
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-
-	.App.darkMode #home {
-		/* PNG */
 		/* background-image: url(../images/bg-alt-3.jpeg); */
 		/* WebP*/
-		background-image: url(../images/webps/bg-alt-3.webp);
+		background-image: url(../images/svgs/layered-peaks-haikei.svg);
+		/* background: linear-gradient(#0A192F,#1f1f1f); */
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
+		transition: background-image 0.3s;
+	}
+
+	.App.lightMode #home {
+		/* PNG */
+		/* background-image: url(../images/background.jpeg); */
+		/* WebP*/
+		background-image: url(../images/svgs/layered-peaks-haikei-lt.svg);
+		/* background: linear-gradient(#ffffff,#ecf0f1); */
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: background-image 0.3s;
 	}
 }
 
@@ -347,69 +355,68 @@ table {
 	scroll-behavior: smooth;
 	font-size: 10px;
 	font-family: 'Cabin', sans-serif;
-	/* ~~~~~~~~~~~~~
-	******Colors*****
-	~~~~~~~~~~~~~~~~*/
-	/* Blue */
-	--bl8: #4BB3FD;
-	--bl7: #A2BCE0;
-	--bl6: #7EA8BE;
-	--bl5: #478aa1;
-	--bl4: #B4C5E4;
-	--bl3: #3D52D5;
-	--bl2: #086788;
-	--bl1: #102B3F;
-	/* Grey (black to white) */
-	--bw99: #ffffff;
-	--bw95: #f1f1f1;;
-	--bw96: #ecf0f1;
-	--bw90:#bdbbb7;
-	--bw85: #FBF0DF;
-	--bw10: #313131;
-	--bw5: #969593;;
-	--bw4: rgb(153, 165, 182);
-	--bw3: #D6D9CE;
-	--bw2: #596475;
-	--bw1-5: #2e2e2e;
-	--bw1: black;
-	--bw0: #2C1A1D;
-	--bw0-5: #1f1f1f;
-	/* Brown  */
-	--br1: #645244;
-	--br2: #cbb89d;
-	/* Orange */
-	--o3: #FA9500;
-	--o2: #EB6424;
-	/*Green */
-	--g1: #45ffbc;;
-	--g2: #AABA9E;
-	--g3: #639A88;
-	--g4: #7CB518;
-	--g5: #2b3d38;
-	--g6: #064420;
-	/*Red */
-	--r1: #684756;
-	/*Brown */
-	--b1: #96705B;
-	/* Yellow */
-	--y1: #FBB02D;
+	/* color: #1b488b; */
 }
 
-.App{
-	/* Light Theme */
+.App {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	overflow-x: hidden;
+	position: relative;
+
+
+	/* Dark Theme */
 	/* Backgrounds */
-	--bg-1: var(--bw96);
-	--bg-2: var(--bw85); 
+	--bg-1: #1f1f1f;
+	--bg-2: #001220; 
 	--bg-3: rgb(59, 70, 120); 
 	--bg-4: rgb(76, 90, 155); 
 	/* Main Titles & Headers */
-	--text: var(--bl1);
+	--text: #64ffda;
 	/* Sub Titles & Headers */
-	--text-a: var(--bl2); 
+	--text-a: #64ffda;
 	/* Content Text and small titles & headers */
-	--text-b: var(--bw10);
+	--text-b: #969593;
 	/* Highlight clickable */
-	--text-hl: var(--o2); 
+	--text-hl: #64ffda;
+	/* Highlight display only */
+	--text-hl-a: #ffffff;
+	/* Alerts & Notifications */
+	--al-rd: black;
+	--al-gr: black;
+	--al-yl: black;
+	--al-bl: black;
+	/* Shades */
+	--sh-dk: rgba(174, 174, 174, 0.15);
+	--sh-lt: rgba(124, 124, 124, 0.45);
+	--sdw-a: rgba(0,0,0,0.55);
+	--sh-mobile: rgba(49, 49, 49,0.95);
+	/* Element Specific */
+	--nextLink-a: #ffffff;
+	/* background-image: url(../images/bg-alt-3.jpeg);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat; */
+}
+
+.App.lightMode {
+
+	/* Light Theme */
+	/* Backgrounds */
+	--bg-1: #ffffff;
+	--bg-2: #FBF0DF; 
+	--bg-3: rgb(59, 70, 120); 
+	--bg-4: rgb(76, 90, 155); 
+	/* Main Titles & Headers */
+	--text: #0A192F;
+	/* Sub Titles & Headers */
+	--text-a: #0A192F;
+	/* Content Text and small titles & headers */
+	--text-b: #313131;
+	/* Highlight clickable */
+	--text-hl: #0A192F;
 	/* Highlight display only */
 	--text-hl-a: black; 
 	/* Alerts & Notifications */
@@ -423,7 +430,7 @@ table {
 	--sdw-a: rgba(0,0,0,0.55);
 	--sh-mobile: rgba(124, 124, 124, 0.95);
 	/* Element Specific */
-	--nextLink-a: var(--bw99);
+	--nextLink-a: #ffffff;
 	/* background-image: url(../images/background.jpeg); */
 	/* background-attachment: fixed; */
 	/* background-position: center; */
@@ -431,51 +438,6 @@ table {
 	background-repeat: no-repeat; */
 }
 
-
-
-.App.darkMode {
-	/* Dark Theme */
-	/* Backgrounds */
-	--bg-1: var(--bw0-5);
-	--bg-2: var(--bw1-5); 
-	--bg-3: rgb(59, 70, 120); 
-	--bg-4: rgb(76, 90, 155); 
-	/* Main Titles & Headers */
-	--text: var(--g6);
-	/* Sub Titles & Headers */
-	--text-a: var(--g3); 
-	/* Content Text and small titles & headers */
-	--text-b: var(--bw5);
-	/* Highlight clickable */
-	--text-hl: var(--y1); 
-	/* Highlight display only */
-	--text-hl-a: var(--bw99);
-	/* Alerts & Notifications */
-	--al-rd: black;
-	--al-gr: black;
-	--al-yl: black;
-	--al-bl: black;
-	/* Shades */
-	--sh-dk: rgba(174, 174, 174, 0.15);
-	--sh-lt: rgba(124, 124, 124, 0.45);
-	--sdw-a: rgba(0,0,0,0.55);
-	--sh-mobile: rgba(49, 49, 49,0.95);
-	/* Element Specific */
-	--nextLink-a: var(--bw99);
-	/* background-image: url(../images/bg-alt-3.jpeg);
-	background-attachment: fixed;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat; */
-}
-
-.App {
-	display: flex;
-	flex-direction: column;
-	width: 100vw;
-	overflow-x: hidden;
-	position: relative;
-}
 
 
 

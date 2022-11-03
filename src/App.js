@@ -38,7 +38,7 @@ function App() {
 
   const switchTheme = (e) => {
     let app = document.querySelector(".App");
-    app.classList.toggle("darkMode");
+    app.classList.toggle("lightMode");
   }
 
   return (

@@ -140,16 +140,33 @@ function Project(props) {
 
     if (props.projectData.class === "project-item-a") {
         return (
-            <div>
+            <div className="project-container">
                 <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
-                    <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
 
-                    <div className="project-content">
-                        <div className="project-content-container">
+                    <div className="project-image">
+                        <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
+                    </div>
 
-                            <div className={`project-header-${props.projectData.id}`}>
-                                <p className={`project-title-${props.projectData.id}`}>{props.projectData.title}</p>
-                                <div className="project-links">
+
+                    <div className="project-content-container">
+
+                        <div className={`project-header-${props.projectData.id}`}>
+                            <p className={`project-title-${props.projectData.id}`}>{props.projectData.title}</p>
+                        </div>
+
+                        <div className={`project-details-${props.projectData.id}`}>
+                            <p className="project-desc">{props.projectData.desc}</p>
+                            {/* <div className="project-tech"> */}
+                                {/* <div className='section-header'>
+                                    <p className="skills-title">Technologies</p>
+                                </div> */}
+                                <div className="tech-list">
+                                    {projTech}
+                                </div>
+                            {/* </div> */}
+
+
+                            <div className="project-links">
                                     <a className="project-btn" href={props.projectData.demoUrl}>
                                         <div className="link-svg-proj">
                                             <LinkSvg />
@@ -162,30 +179,18 @@ function Project(props) {
                                         </div>
                                         <p>See Code</p>
                                     </a>
-                                </div>
                             </div>
-
-                            <div className={`project-details-${props.projectData.id}`}>
-                                <p className="project-desc">{props.projectData.desc}</p>
-                                <div className="project-tech">
-                                    <div className='section-header'>
-                                        <p className="skills-title">Technologies</p>
-                                    </div>
-                                    <div className="tech-list">
-                                        {projTech}
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </div>
+
+
+
                     </div>
 
                 </div>
 
-                <div className="project-break">
+                {/* <div className="project-break">
                     <div className="section-break"></div>
-                </div>
+                </div> */}
 
             </div>
 
@@ -193,54 +198,8 @@ function Project(props) {
         );
     } else {
         return (
-            <div>
-                <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
-                    <div className="project-content">
-                        <div className="project-content-container">
-
-                            <div className={`project-header-${props.projectData.id}`}>
-                                <p className={`project-title-${props.projectData.id}`}>{props.projectData.title}</p>
-                                <div className="project-links">
-                                    <a className="project-btn" href={props.projectData.demoUrl}>
-                                        <div className="link-svg-proj">
-                                            <LinkSvg />
-                                        </div>
-                                        <p>Live Demo</p>
-                                    </a>
-                                    <a className="project-btn" href={props.projectData.codeUrl}>
-                                        <div className="link-svg-proj">
-                                            <GithubSvg />
-                                        </div>
-                                        <p>See Code</p>
-                                    </a>
-                                </div>
-                            </div>
-
-
-                            <div className={`project-details-${props.projectData.id}`}>
-                                <p className="project-desc">{props.projectData.desc}</p>
-                                <div className="project-tech">
-                                    <div className='section-header'>
-                                        <p className="skills-title">Technologies</p>
-                                    </div>
-                                    <div className="tech-list">
-                                        {projTech}
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
-
-                </div>
-
-                <div className="project-break">
-                    <div className="section-break"></div>
-                </div>
-
+            <div className="project-container">
+   
             </div>
         );
     }

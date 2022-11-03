@@ -141,7 +141,7 @@ function Home() {
           </div>
         </a>
 
-        <CloudsAll />
+        {/* <CloudsAll /> */}
         {/* <img src={bgImgA} alt="background test" /> */}
     </div>
   );
