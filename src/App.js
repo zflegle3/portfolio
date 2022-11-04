@@ -1,13 +1,18 @@
 //React
 import {useState} from "react";
 //Styles
-import './styles/App.css';
-import './styles/About.css';
-import './styles/Home.css';
-import './styles/Clouds.css';
+import "./styles/reset.scss";
+import './styles/App.scss';
+import './styles/Mobile.scss';
+
+
+// import './styles/App.css';
+// import './styles/About.css';
+// import './styles/Home.css';
+// import './styles/Clouds.css';
 import './styles/ProjectsAll.css';
-import './styles/Contact.css';
-import './styles/Nav.css';
+// import './styles/Contact.css';
+// import './styles/Nav.css';
 //Components
 import Nav from "./components/Nav";
 import Home from "./components/Home";

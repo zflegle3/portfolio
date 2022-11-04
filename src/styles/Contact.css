@@ -1,4 +1,4 @@
-.contact {
+/* .contact {
     position: relative;
     background-color: var(--bg-1);
     display: flex;
@@ -18,9 +18,9 @@
     font-size: var(--font-l);
     color: var(--text-a);
     padding: 1rem;
-}
+} */
 
-.link-item {
+/* .link-item {
 
     display: flex;
     flex-direction: row;
@@ -34,17 +34,17 @@
     padding-left: 0.5rem;
     color: var(--text-b);
     transition: color 0.3s;
-}   
+}    */
 
-.link-item p:nth-child(3) {
+/* .link-item p:nth-child(3) {
     will-change: transform;
     font-size: var(--font-s);
     padding-left: 1rem;
     color: var(--text-b);
     transition: transform 0.3s;
-}   
+}    */
 
-.link-svg {
+/* .link-svg {
     height: 3rem;
     width: 3rem;
 }
@@ -54,9 +54,9 @@
     height: 100%;
     fill: var(--text-b);
     transition: fill 0.3s;
-}
+} */
 
-.link-item:hover svg {
+/* .link-item:hover svg {
     fill: var(--text-hl);
     transition: fill 0.3s;
 }
@@ -67,7 +67,6 @@
 }
 
 .link-item:hover p:nth-child(3)  {
-    /* color: var(--text-hl-a); */
     transform: translate(0.75rem);
     transition: transform 0.3s;
-}
+} */

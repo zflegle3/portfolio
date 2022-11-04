@@ -12,7 +12,6 @@ function Contact() {
 
   return (
     <div id="contact" className="contact">
-      <div id="section-inc-3" className='inc-3'>3</div>
       <div id="contact-container" className="contact-container"> 
         <div className='section-header'>
           <p className="contact-title">Contact</p>

@@ -144,7 +144,9 @@ function Project(props) {
                 <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
 
                     <div className="project-image">
+                        <div className="image-bg"></div>
                         <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
+
                     </div>
 
 

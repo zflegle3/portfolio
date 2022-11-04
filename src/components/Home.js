@@ -81,7 +81,6 @@ function Home() {
 
   return (
     <div id="home" className="home">
-        <div id="section-inc-0" className='inc-0'>0</div>
         <div className="home-content">
 
             <div id="banner-name" className="slide-container">
