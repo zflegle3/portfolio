@@ -1,5 +1,5 @@
-//Styles
-// import '../styles/Contact.css';
+//React
+import {useState, useEffect} from "react";
 //Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
@@ -7,8 +7,30 @@ import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 //Docs
 import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
+//GSAP
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 
 function Contact() {
+
+  useEffect(() => {
+    //section Fade In
+    gsap.to(".contact-container", {
+        scrollTrigger: {
+            trigger: "#contact",
+            start: "-10% center",
+            end: "bottom top",
+            markers: true,
+            toggleActions: "play none none none",
+        },
+        duration: 1,
+        y: 0,
+        opacity: 1,
+    });
+
+  },[]);
 
   return (
     <div id="contact" className="contact">

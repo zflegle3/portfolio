@@ -36,6 +36,7 @@ import wpImg from "../images/webps/webpack.webp";
 import ghImg from "../images/webps/github.webp";
 import npmImg from "../images/webps/npm.webp";
 import jestImg from "../images/webps/jest.webp";
+import BioImg from "../images/webps/zach.webp";
 //GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -68,7 +69,7 @@ function About() {
           trigger: "#about",
           start: "15% center",
           end: "15% 25%",
-          markers: true,
+          // markers: true,
           // scrub: 1,
         },
         x: 0,
@@ -83,7 +84,7 @@ function About() {
           trigger: "#about",
           start: "40% center",
           end: "40% 25%",
-          markers: true,
+          // markers: true,
           // scrub: 1,
         },
         x: 0,
@@ -98,7 +99,7 @@ function About() {
           trigger: "#about",
           start: "60% center",
           end: "60% 25%",
-          markers: true,
+          // markers: true,
           // scrub: 1,
         },
         x: 0,
@@ -158,6 +159,23 @@ function About() {
 
   },[]);
 
+  useEffect(() => {
+    //section Fade In
+    gsap.to(".about-container", {
+        scrollTrigger: {
+            trigger: "#about",
+            start: "-10% center",
+            end: "bottom top",
+            // markers: true,
+            toggleActions: "play none none none",
+        },
+        duration: 1,
+        y: 0,
+        opacity: 1,
+    });
+
+  },[]);
+
 
 
 
@@ -194,9 +212,18 @@ function About() {
               </p>
             </div>
 
-            <div className="about-content-right">
-              <div className="bio-image"></div>
-            </div>
+            <a className="about-content-right" href={"https://github.com/zflegle3"}>
+
+              <div className="bio-wrapper">
+                <div className="img-filter"></div>
+                <div className="bio-image">
+                  <img src={BioImg}></img>
+                </div>
+              </div>
+
+              <div className="img-bg"></div>
+
+            </a>
 
           </div>
 

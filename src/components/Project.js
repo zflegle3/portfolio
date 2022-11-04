@@ -95,7 +95,7 @@ function Project(props) {
 
     useEffect(() => {
         //image slide in
-        gsap.to(`.project-img-${props.projectData.id}`, {
+        gsap.to(`#project-image-container-${props.projectData.id}`, {
             scrollTrigger: {
                 trigger: `#project-item-${props.projectData.id}`,
                 start: "top center",
@@ -143,11 +143,23 @@ function Project(props) {
             <div className="project-container">
                 <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
 
-                    <div className="project-image">
+                    {/* <div className="project-image">
                         <div className="image-bg"></div>
                         <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
 
-                    </div>
+                    </div> */}
+
+                    <a id={`project-image-container-${props.projectData.id}`} className="project-image" href={props.projectData.demoUrl}>
+
+                        <div className="img-wrapper">
+                            <div className="img-filter"></div>
+                                <div className="proj-image">
+                                    <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
+                                </div>
+                            </div>
+
+                        <div className="img-bg"></div>
+                    </a>
 
 
                     <div className="project-content-container">
@@ -201,8 +213,68 @@ function Project(props) {
     } else {
         return (
             <div className="project-container">
-   
+                <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
+
+
+                <a id={`project-image-container-${props.projectData.id}`} className="project-image" href={props.projectData.demoUrl}>
+
+                    <div className="img-wrapper">
+                        <div className="img-filter"></div>
+                            <div className="proj-image">
+                                <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
+                            </div>
+                        </div>
+
+                    <div className="img-bg"></div>
+                </a>
+
+
+                    <div className="project-content-container">
+
+                        <div className={`project-header-${props.projectData.id}`}>
+                            <p className={`project-title-${props.projectData.id}`}>{props.projectData.title}</p>
+                        </div>
+
+                        <div className={`project-details-${props.projectData.id}`}>
+                            <p className="project-desc">{props.projectData.desc}</p>
+                            {/* <div className="project-tech"> */}
+                                {/* <div className='section-header'>
+                                    <p className="skills-title">Technologies</p>
+                                </div> */}
+                                <div className="tech-list">
+                                    {projTech}
+                                </div>
+                            {/* </div> */}
+
+
+                            <div className="project-links">
+                                    <a className="project-btn" href={props.projectData.demoUrl}>
+                                        <div className="link-svg-proj">
+                                            <LinkSvg />
+                                        </div>
+                                        <p>Live Demo</p>
+                                    </a>
+                                    <a className="project-btn" href={props.projectData.codeUrl}>
+                                        <div className="link-svg-proj">
+                                            <GithubSvg />
+                                        </div>
+                                        <p>See Code</p>
+                                    </a>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+                {/* <div className="project-break">
+                    <div className="section-break"></div>
+                </div> */}
+
             </div>
+
         );
     }
 }

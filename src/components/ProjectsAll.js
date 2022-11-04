@@ -1,5 +1,5 @@
 //React
-import {useState} from "react";
+import {useState, useEffect} from "react";
 //Components
 import Project from "./Project";
 // PNGs
@@ -12,6 +12,10 @@ import weatherAppImg from "../images/webps/weather-app.webp"
 import battleshipAppImg from "../images/webps/bs.webp"
 import todoAppImg from "../images/webps/to-do-app.webp"
 import waldoImg from "../images/webps/waldo.webp"
+//GSAP
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function ProjectsAll() {
     const [projectDataAll, setProjectDataAll] = useState([
@@ -60,6 +64,23 @@ function ProjectsAll() {
       tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Npm","npm"],["Webpack","webpack"],["Jest","jest"]]
     },
     ]);
+
+    useEffect(() => {
+      //section Fade In
+      gsap.to(".project-header", {
+          scrollTrigger: {
+              trigger: "#projects",
+              start: "-10% center",
+              end: "bottom top",
+              markers: true,
+              toggleActions: "play none none none",
+          },
+          duration: 1,
+          y: 0,
+          opacity: 1,
+      });
+  
+    },[]);
 
     return (
         <div id="projects">
