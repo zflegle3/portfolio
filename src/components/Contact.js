@@ -22,7 +22,7 @@ function Contact() {
             trigger: "#contact",
             start: "-10% center",
             end: "bottom top",
-            markers: true,
+            // markers: true,
             toggleActions: "play none none none",
         },
         duration: 1,

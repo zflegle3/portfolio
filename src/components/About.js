@@ -1,5 +1,7 @@
 // React
 import { useEffect } from "react";
+
+import InfiniteLoopSlider from "./InfiniteLoopSlider";
 // Styles
 // import '../styles/About.css';
 // PNGs
@@ -42,122 +44,33 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-
 function About() {
 
+  const frontSkills = [
+    {text:"HTML5", image: htmlImg},
+    {text:"CSS3", image: cssImg},
+    {text:"SASS", image: sassImg},
+    {text:"Bootstrap", image: bsImg},
+    {text:"JavaScript", image: jsImg},
+    {text:"React", image: reactImg},
+    {text:"GSAP", image: gsapImg},
+  ];
 
-  let vw = window.screen.width;
-  // const skillStagger = () => {
-  //   gsap.to(".skill-item", {
-  //     duration: 0.5,
-  //     y: 1.5,
-  //     ease: "power1.inOut",
-  //     stagger: {
-  //       grid: [1,16],
-  //       from: 1,
-  //       axis: "x",
-  //       ease: "power1.inOut",
-  //       amount: 1.5
-  //     }
-  //   });
-  // }
+  const backSkills = [
+    {text:"Firebase", image: fbImg},
+    {text:"NodeJs", image: nodeImg},
+    {text:"MongoDB", image: mongoImg},
+    {text:"Express", image: exImg},
+  ];
 
-  useEffect(() => {
-    if (vw > 800) {//FOR DESKTOP
-      gsap.to(".front .skill-item",{
-        scrollTrigger: {
-          trigger: "#about",
-          start: "15% center",
-          end: "15% 25%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: 360,
-        ease: "none",
-        duration: 1,
-      });
-
-      gsap.to(".back .skill-item",{
-        scrollTrigger: {
-          trigger: "#about",
-          start: "40% center",
-          end: "40% 25%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: -360,
-        ease: "none",
-        duration: 1,
-      });
-
-      gsap.to(".misc .skill-item",{
-        scrollTrigger: {
-          trigger: "#about",
-          start: "60% center",
-          end: "60% 25%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: 360,
-        ease: "none",
-        duration: 1,
-      });
-
-    } else {//FOR MOBILE
-      gsap.to(".front .skill-item",{
-        scrollTrigger: {
-          trigger: ".bio-image",
-          start: "25% center",
-          end: "25% 30%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: 360,
-        ease: "none",
-        duration: 3,
-      });
-
-      gsap.to(".back .skill-item",{
-        scrollTrigger: {
-          trigger: ".bio-image",
-          start: "75% center",
-          end: "75% 30%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: -360,
-        ease: "none",
-        duration: 3,
-      });
-
-      gsap.to(".misc .skill-item",{
-        scrollTrigger: {
-          trigger: ".bio-image",
-          start: "125% center",
-          end: "125% 30%",
-          // markers: true,
-          // scrub: 1,
-        },
-        x: 0,
-        stagger: 0.2,
-        rotation: 360,
-        ease: "none",
-        duration: 3,
-      });
-    }
-
-
-  },[]);
+  const devSkills = [
+    {text:"Git", image: gitImg},
+    {text:"Github", image: ghImg},
+    {text:"Npm", image: npmImg},
+    {text:"Webpack", image: wpImg},
+    {text:"Jest", image: jestImg},
+    {text:"Figma", image: reactImg},
+  ];
 
   useEffect(() => {
     //section Fade In
@@ -175,11 +88,6 @@ function About() {
     });
 
   },[]);
-
-
-
-
-
 
 
   return (
@@ -217,12 +125,11 @@ function About() {
               <div className="bio-wrapper">
                 <div className="img-filter"></div>
                 <div className="bio-image">
-                  <img src={BioImg}></img>
+                  <img src={BioImg} alt="Zach Flegle headshot"></img>
                 </div>
               </div>
 
               <div className="img-bg"></div>
-
             </a>
 
           </div>
@@ -234,100 +141,15 @@ function About() {
 
           <p className="skill-label">Front End</p>
 
-          <div className="skill-container front">
-            <div className="skill-item">
-              <img src={htmlImg} alt="html logo"></img>
-              <p className="skill-title">Html</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={cssImg} alt="html logo"></img>
-              <p className="skill-title">CSS</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={jsImg} alt="html logo"></img>
-              <p className="skill-title">JavaScript</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={reactImg} alt="html logo"></img>
-              <p className="skill-title">React</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={bsImg} alt="html logo"></img>
-              <p className="skill-title">Bootstrap</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={sassImg} alt="html logo"></img>
-              <p className="skill-title">Sass</p>
-            </div>
-
-            <div className="skill-item">
-              <img src={gsapImg} alt="html logo"></img>
-              <p className="skill-title">GSAP</p>
-            </div>
-          </div>
-
+          <InfiniteLoopSlider type="front" children={frontSkills}/>
 
           <p className="skill-label">Back End</p>
-          <div className="skill-container back">
 
+          <InfiniteLoopSlider type="back" children={backSkills}/>
 
-            <div className="skill-item">
-                <img src={nodeImg} alt="html logo"></img>
-                <p className="skill-title">NodeJs</p>
-            </div>
+          <p className="skill-label">Dev Tools</p>
 
-            <div className="skill-item">
-                <img src={mongoImg} alt="html logo"></img>
-                <p className="skill-title">MongoDB</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={exImg} alt="html logo"></img>
-                <p className="skill-title">Express</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={fbImg} alt="html logo"></img>
-                <p className="skill-title">Firebase</p>
-            </div>
-
-          </div>
-
-          <p className="skill-label">Miscellaneous</p>
-
-          <div className="skill-container misc">
-
-            <div className="skill-item">
-                <img src={gitImg} alt="html logo"></img>
-                <p className="skill-title">git</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={ghImg} alt="html logo"></img>
-                <p className="skill-title">Github</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={npmImg} alt="html logo"></img>
-                <p className="skill-title">Npm</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={wpImg} alt="html logo"></img>
-                <p className="skill-title">Webpack</p>
-            </div>
-
-            <div className="skill-item">
-                <img src={jestImg} alt="html logo"></img>
-                <p className="skill-title">Jest</p>
-            </div>
-
-          </div>
+          <InfiniteLoopSlider type="dev" children={devSkills}/>
 
         </div>
     </div>

@@ -20,6 +20,7 @@ import About from "./components/About";
 import ProjectsAll from "./components/ProjectsAll";
 import Contact from "./components/Contact";
 import React from 'react';
+import ParticlesBg from "./components/ParticlesBg"
 
 function App() {
   const [links, setLinks] = useState([
@@ -48,6 +49,7 @@ function App() {
 
   return (
     <div className="App">
+      <ParticlesBg />
       <Nav links={links} switchTheme={switchTheme}/>
       <Home />
       <About />

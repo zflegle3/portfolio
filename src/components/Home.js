@@ -4,6 +4,7 @@ import { useEffect } from "react";
 // import '../styles/Home.css';import '../styles/Home.css';
 // Components
 import CloudsAll from "./CloudsAll";
+import ParticlesBg from "./ParticlesBg"
 //Images & Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
@@ -81,6 +82,10 @@ function Home() {
 
   return (
     <div id="home" className="home">
+      {/* <ParticlesBg /> */}
+
+
+
         <div className="home-content">
 
             <div id="banner-name" className="slide-container">
