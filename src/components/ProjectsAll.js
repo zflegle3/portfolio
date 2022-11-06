@@ -8,10 +8,12 @@ import Project from "./Project";
 // import todoAppImg from "../images/project-images/to-do-app.png"
 // import waldoImg from "../images/project-images/waldo.png"
 //WebPs
-import weatherAppImg from "../images/webps/weather-app.webp"
-import battleshipAppImg from "../images/webps/bs.webp"
-import todoAppImg from "../images/webps/to-do-app.webp"
-import waldoImg from "../images/webps/waldo.webp"
+import weatherAppImg from "../images/project-images/weather.png"
+// import battleshipAppImg from "../images/project-images/bs.webp";
+import todoAppImg from "../images/project-images/to_do.png";
+import waldoImg from "../images/project-images/waldo2.png";
+import rpsImg from "../images/project-images/rps.png";
+import landingImg from "../images/project-images/landing.png";
 //GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,10 +22,9 @@ gsap.registerPlugin(ScrollTrigger);
 function ProjectsAll() {
     const [projectDataAll, setProjectDataAll] = useState([
       { id: "0",
-      // imgId: "project-img-2",
       class: "project-item-a",
       title: "To Do Task Tracker",
-      desc: "To Do Tracker is a task tracking application that allows users to sign in using their google account, create new tasks, organize tasks by project, and to update tasks as they are completed. It was built in order to practice OOP (SOLID Principles) but was extended to also practice react hooks and  interfacing with a BaaS.",
+      desc: "A full-stack to-do list application to manage tasks and projects. Sign in using your google account to create new tasks, visualize your upcoming projects, and more.",
       codeUrl: "https://github.com/zflegle3/to-do-list",
       demoUrl: "https://zflegle3.github.io/to-do-list/",
       imgSrc: todoAppImg,
@@ -31,38 +32,48 @@ function ProjectsAll() {
       tech: [["React","react"], ["SASS","sass"],["Firebase Authentication","firebase"], ["Firebase Cloud Firestore","firebase"] ]
       },
       { id: "1",
-      // imgId: "project-img-3",
       class: "project-item-b",
-      title: "Where's Waldo Photo Tagging Game",
-      desc: "This web application allows users to play the classic Where's Waldo game by selecting locations on a photo where they think the three hidden characters are located. The project was built in order to practice using Google Firebase to store data like user high scores and character coordinates.",
-      codeUrl: "https://github.com/zflegle3/where-is-waldo",
-      demoUrl: "https://zflegle3.github.io/where-is-waldo/",
-      imgSrc: waldoImg,
-      imgAlt: "where's waldo project demo image",
-      tech: [["React","react"], ["React Router","react"], ["CSS","css"], ["Firebase Cloud Firestore","firebase"] ]
+      title: "Bookmark Landing Page Challenge",
+      desc: "An animated and fully responsive template for a company landing page. Built as part of a challenge to match a design file as closely as possible.",
+      codeUrl: "https://github.com/zflegle3/landing-page",
+      demoUrl: "https://zflegle3.github.io/landing-page",
+      imgSrc: landingImg,
+      imgAlt: "landing page project demo image",
+      tech: [["React","react"], ["React Router","react"], ["SASS","sass"] ]
       },
       { id: "2",
       // imgId: "project-img-0",
       class: "project-item-a",
-      title: "Live Weather Widget",
-      desc: "The Live Weather Widget displays the current weather conditions at the location searched by the user.  Users can also toggle between metric and imperial units. It was developed using Open Weather API in order to practice asynchronous code, fetching data from APIs, and OOP (SOLID) principles.",
-      codeUrl: "https://github.com/zflegle3/weather-app",
-      demoUrl: "https://zflegle3.github.io/weather-app/",
-      imgSrc: weatherAppImg,
-      imgAlt: "weather app project demo image",
-      tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Open Weather API","api"] ]
+      title: "Where's Waldo Game App",
+      desc: "A full-stack web application to play Where's Waldo and compare high scores. Built as part of The Odin Project Fullstack JavaScript curriculum to practice using a BaaS to store data.",
+      codeUrl: "https://github.com/zflegle3/where-is-waldo",
+      demoUrl: "https://zflegle3.github.io/where-is-waldo/",
+      imgSrc: waldoImg,
+      imgAlt: "where's waldo game app project demo image",
+      tech: [["React","react"], ["React Router","react"], ["CSS","css"],["Firebase Cloud Firestore","firebase"]]
     },
-      { id: "3",
-      // imgId: "project-img-1",
-      class: "project-item-b",
-      title: "Battleship Game vs Computer AI",
-      desc: "The game application lets users test their skills in playing battleship versus a computer AI. The project was built in order to practice Test Driven Development (TDD) using jest.",
-      codeUrl: "https://github.com/zflegle3/battleship",
-      demoUrl: "https://zflegle3.github.io/battleship/",
-      imgSrc: battleshipAppImg,
-      imgAlt: "battleship project demo image",
-      tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Npm","npm"],["Webpack","webpack"],["Jest","jest"]]
+    { id: "3",
+    // imgId: "project-img-1",
+    class: "project-item-b",
+    title: "Live Weather Widget",
+    desc: "A live weather application to display the current weather conditions at the location searched. Users can easily switch color themes and display units.",
+    codeUrl: "https://github.com/zflegle3/weather-app",
+    demoUrl: "https://zflegle3.github.io/weather-app/",
+    imgSrc: weatherAppImg,
+    imgAlt: "live weather app demo image",
+    tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Npm","npm"],["Webpack","webpack"],["OpenWeather API","api"]]
     },
+    { id: "4",
+    // imgId: "project-img-1",
+    class: "project-item-a",
+    title: "Rock Paper Scissors Game App",
+    desc: "An animated and fully responsive Rock Paper Scissors game application. Built as part of a challenge to match a design file as closely as possible.",
+    codeUrl: "https://github.com/zflegle3/rock-paper-scissors-game",
+    demoUrl: "https://zflegle3.github.io/rock-paper-scissors-game/",
+    imgSrc: rpsImg,
+    imgAlt: "rock paper scissors game app demo image",
+    tech: [["React","react"], ["React Router","react"], ["SASS","sass"]]
+  },
     ]);
 
     useEffect(() => {
@@ -72,7 +83,7 @@ function ProjectsAll() {
               trigger: "#projects",
               start: "-10% center",
               end: "bottom top",
-              markers: true,
+              // markers: true,
               toggleActions: "play none none none",
           },
           duration: 1,
@@ -94,6 +105,7 @@ function ProjectsAll() {
             <Project projectData={projectDataAll[1]}/>
             <Project projectData={projectDataAll[2]}/>
             <Project projectData={projectDataAll[3]}/>
+            <Project projectData={projectDataAll[4]}/>
         </div>
 
     );

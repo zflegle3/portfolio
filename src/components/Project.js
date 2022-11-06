@@ -98,31 +98,33 @@ function Project(props) {
         gsap.to(`#project-image-container-${props.projectData.id}`, {
             scrollTrigger: {
                 trigger: `#project-item-${props.projectData.id}`,
-                start: "top center",
+                start: "top 66%",
                 end: "bottom top",
                 // markers: true,
                 toggleActions: "play none none none",
             },
             duration: 0.5,
             x: 0,
+            opacity: 1,
         });
         //title slide in
         gsap.to(`.project-header-${props.projectData.id}`, {
             scrollTrigger: {
                 trigger: `#project-item-${props.projectData.id}`,
-                start: "top center",
+                start: "top 66%",
                 end: "bottom top",
                 // markers: true,
                 toggleActions: "play none none none",
             },
             duration: 0.5,
             x: 0,
+            opacity: 1,
         });
         //content fade in
         gsap.to(`.project-details-${props.projectData.id}`, {
             scrollTrigger: {
                 trigger: `#project-item-${props.projectData.id}`,
-                start: "top center",
+                start: "top 66%",
                 end: "bottom top",
                 // markers: true,
                 toggleActions: "play none none none",

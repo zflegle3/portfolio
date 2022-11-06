@@ -3,7 +3,6 @@ function InfiniteLoopSlider(props) {
     //{children, duration, reverse = false}
     //props.children
 
-    console.log(props.children);
     const children = props.children.map((skill) =>
         <div className="skill-item">
             <img src={skill.image} alt="html logo"></img>

@@ -36,7 +36,7 @@ function Contact() {
     <div id="contact" className="contact">
       <div id="contact-container" className="contact-container"> 
         <div className='section-header'>
-          <p className="contact-title">Contact</p>
+          <p className="contact-title">Contact Me</p>
           <div className="section-break"></div>
         </div>
 
@@ -74,6 +74,12 @@ function Contact() {
           <p>z_flegle_resume.pdf</p>
         </a>
 
+      </div>
+
+      <div class="custom-shape-divider-top-1667697529">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
       </div>
     </div>
 

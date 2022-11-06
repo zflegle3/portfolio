@@ -1,7 +1,5 @@
 // React
 import { useEffect } from "react";
-// Styles
-// import '../styles/Home.css';import '../styles/Home.css';
 // Components
 import CloudsAll from "./CloudsAll";
 import ParticlesBg from "./ParticlesBg"
@@ -12,8 +10,6 @@ import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
 import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
-// import bgImgA from "../images/webps/background.webp"
-// import bgImgB from "../images/webps/bg-alt-3.webp"
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -45,39 +41,31 @@ function Home() {
     })
   },[]);
 
+  useEffect(() => {
+    //Title Link Animation
+    gsap.to(".home-next-link", {
+      delay: 3,
+      // ease: "elastic",
+      duration: 1,
+      y: 0,
+      opacity: 1,
+    })
+  },[]);
 
-  // useEffect(() => {
-  //   //Title Slide on Scroll Animation
-  //   // if (vw > 800) {
-  //     gsap.to("#cloud-background",{
-  //       scrollTrigger: {
-  //         trigger: "#home",
-  //         start: "60% center",
-  //         end: "bottom top",
-  //         // markers: true,
-  //         scrub: 1,
-  //       },
-  //       x: 500,
-  //       // rotation: 360,
-  //       ease: "none",
-  //       duration: 3,
-  //     });
-  
-  //     gsap.to(".home-content",{
-  //       scrollTrigger: {
-  //         trigger: "#home",
-  //         start: "60% center",
-  //         end: "bottom top",
-  //         // markers: true,
-  //         scrub: 1,
-  //       },
-  //       x: 500,
-  //       // rotation: 360,
-  //       ease: "none",
-  //       duration: 3,
-  //     })
-  //   // }
-  // },[]);
+
+  useEffect(() => {
+      gsap.to(".home-content",{
+        scrollTrigger: {
+          trigger: "#home",
+          start: "55% center",
+          end: "100% top",
+          scrub: 1,
+        },
+        x: 1000,
+        ease: "none",
+        duration: 1,
+      })
+  },[]);
 
 
   return (
@@ -147,6 +135,7 @@ function Home() {
 
         {/* <CloudsAll /> */}
         {/* <img src={bgImgA} alt="background test" /> */}
+
     </div>
   );
 }

@@ -38,6 +38,7 @@ import wpImg from "../images/webps/webpack.webp";
 import ghImg from "../images/webps/github.webp";
 import npmImg from "../images/webps/npm.webp";
 import jestImg from "../images/webps/jest.webp";
+import figmaImg from "../images/webps/figma.webp";
 import BioImg from "../images/webps/zach.webp";
 //GSAP
 import gsap from "gsap";
@@ -69,7 +70,7 @@ function About() {
     {text:"Npm", image: npmImg},
     {text:"Webpack", image: wpImg},
     {text:"Jest", image: jestImg},
-    {text:"Figma", image: reactImg},
+    {text:"Figma", image: figmaImg},
   ];
 
   useEffect(() => {
@@ -79,10 +80,9 @@ function About() {
             trigger: "#about",
             start: "-10% center",
             end: "bottom top",
-            // markers: true,
             toggleActions: "play none none none",
         },
-        duration: 1,
+        duration: 2,
         y: 0,
         opacity: 1,
     });
