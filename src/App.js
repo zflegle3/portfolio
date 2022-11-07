@@ -23,6 +23,10 @@ import React from 'react';
 import ParticlesBg from "./components/ParticlesBg"
 
 function App() {
+  const [colorMode, setColorMode] = useState();
+  const [particleColor, setParticleColor] = useState("#64ffda");
+  const [bgColor, setBgColor] = useState("#1F1F1F");
+
   const [links, setLinks] = useState([
     { id: "nav-link-home",
       text: "home",
@@ -44,19 +48,29 @@ function App() {
 
   const switchTheme = (e) => {
     let app = document.querySelector(".App");
-    app.classList.toggle("lightMode");
+    if (colorMode) {
+      console.log("dark mode");
+      setColorMode();
+      setParticleColor("#64ffda");
+      setBgColor("#1F1F1F");
+    } else {
+      console.log("light mode");
+      setColorMode("lightMode");
+      setParticleColor("#D2B537");
+      setBgColor("#ffffff");
+    }
   }
 
   return (
-    <div className="App">
-      <ParticlesBg />
-      <Nav links={links} switchTheme={switchTheme}/>
+    <div className={`App ${colorMode}`}>
+      <ParticlesBg color={particleColor}/>
+      <Nav links={links} switchTheme={switchTheme} colorMode={colorMode}/>
       <Home />
 
       <div className="section-break">
         <div class="section-break-bottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} class="shape-fill"></path>
           </svg>
         </div>
       </div>
@@ -67,7 +81,7 @@ function App() {
       <div class="section-break">
         <div className="section-break-top"> 
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} class="shape-fill"></path>
           </svg>
         </div>
       </div>

@@ -98,7 +98,7 @@ function Home() {
                 <p>GitHub</p>
               </a>
 
-              <a href="https://www.linkedin.com/in/zach-flegle-185341a0/" className="link-item-home">
+              <a href="www.linkedin.com/in/zach-flegle" className="link-item-home">
                 <div className="link-svg-home">
                   <LinkedInSvg />
                 </div>

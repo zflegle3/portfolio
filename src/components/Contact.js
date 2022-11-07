@@ -48,12 +48,12 @@ function Contact() {
           <p>github.com/zflegle3</p>
         </a>
 
-        <a href="https://www.linkedin.com/in/zach-flegle-185341a0/" className="link-item">
+        <a href="www.linkedin.com/in/zach-flegle" className="link-item">
           <div className="link-svg">
             <LinkedInSvg />
           </div>
           <p>LinkedIn:</p>
-          <p>linkedin.com/in/zach-flegle-185341a0/</p>
+          <p>www.linkedin.com/in/zach-flegle</p>
         </a>
 
         <address>

@@ -2,7 +2,10 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const ParticlesBg = () => {
+const ParticlesBg = (props) => {
+    //props.color
+    console.log(props.color);
+
     const particlesInit = useCallback(async engine => {
         await loadFull(engine);
     }, []);
@@ -47,10 +50,10 @@ const ParticlesBg = () => {
                 },
                 particles: {
                     color: {
-                        value: "#64ffda",
+                        value: props.color,
                     },
                     links: {
-                        color: "#64ffda",
+                        color: props.color,
                         distance: 150,
                         enable: true,
                         opacity: 0.5,

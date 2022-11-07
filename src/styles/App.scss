@@ -5,20 +5,20 @@
 	font-size: 10px;
 	// font-family: 'Cabin', sans-serif;
     font-family: 'Rajdhani', sans-serif;
-
-    /* Font Sizes Desktop */
-    --font-xl: 6rem;
-    --font-l: 5rem;
-    --font-ml: 3.5rem;
-    --font-m: 3rem;
-    --font-ms: 2.5rem;
-    --font-s: 2rem;
-    --font-xs: 1.25rem;
-    --pad-ab: 2rem;
-    --nav-gap: 2rem;
-    --proj-pad: 3rem;
-    --skill-pad: 1rem;
 }
+
+/* Font Sizes Desktop */
+$fontXl: 6rem;
+$fontL: 5rem;
+$fontMl: 3.5rem;
+$fontM: 3rem;
+$fontMs: 2.5rem;
+$fontS: 2rem;
+$fontXs: 1.5rem;
+$padAb: 2rem;
+$navGap: 2rem;
+$projPad: 3rem;
+$skillPad: 1rem;
 
 .App {
 	display: flex;
@@ -26,87 +26,67 @@
 	width: 100vw;
 	overflow: hidden;
 	position: relative;
+    background: radial-gradient(at top, #1d2251, #001220);
 
-	/* Dark Theme */
+	/* Dark Theme Colors */
 	/* Backgrounds */
 	--bg-1: #1f1f1f;
 	--bg-2: #001220; 
-	--bg-3: rgb(59, 70, 120); 
-	--bg-4: rgb(76, 90, 155); 
 	/* Main Titles & Headers */
 	--text: #64ffda;
 	/* Sub Titles & Headers */
 	--text-a: #ffffff;
 	/* Content Text and small titles & headers */
-	// --text-b: #969593;
     --text-b: #8892b0;
+    --text-b-alt: #8892b0;
 	/* Highlight clickable */
 	--text-hl: #64ffda;
 	/* Highlight display only */
 	--text-hl-a: #ffffff;
-	/* Alerts & Notifications */
-	--al-rd: black;
-	--al-gr: black;
-	--al-yl: black;
-	--al-bl: black;
 	/* Shades */
+    --img-sh: rgba(100, 255, 218,0.4);
 	--sh-dk: rgba(174, 174, 174, 0.15);
 	--sh-lt: rgba(124, 124, 124, 0.45);
 	--sdw-a: rgba(0,0,0,0.55);
 	--sh-mobile: rgba(49, 49, 49,0.95);
 	--sh-img: rgba(100, 255, 218,1);
+
+    --container-sh-a: rgba(0, 0, 0,0.2);
+    --container-sh-b: rgba(0, 0, 0,0.4);
 	/* Element Specific */
 	--nextLink-a: #ffffff;
-
-    background: radial-gradient(at top, #1d2251, #001220);
-
-    #home {
-        // background-image: url(../images/svgs/layered-peaks-haikei.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.3s;
-    }
 }
 
 .App.lightMode {
+    // background: radial-gradient(at top, #1d2251, #003057);
 
 	/* Light Theme */
 	/* Backgrounds */
 	--bg-1: #ffffff;
-	--bg-2: #FBF0DF; 
-	--bg-3: rgb(59, 70, 120); 
-	--bg-4: rgb(76, 90, 155); 
+	--bg-2: #FFF9EC;
 	/* Main Titles & Headers */
-	--text: #0A192F;
+	--text: #D2B537;
 	/* Sub Titles & Headers */
-	--text-a: #0A192F;
+	--text-a: #003057;
 	/* Content Text and small titles & headers */
-	--text-b: #313131;
+	--text-b: #292929;
+    --text-b-alt: #ffffff;
 	/* Highlight clickable */
-	--text-hl: #0A192F;
+	--text-hl: #D2B537;
 	/* Highlight display only */
 	--text-hl-a: black; 
 	/* Alerts & Notifications */
-	--al-rd: black;
-	--al-gr: black;
-	--al-yl: black;
-	--al-bl: black;
 	/* Shades */
+    --img-sh: rgba(210, 182, 55, 0.407);
 	--sh-dk: rgba(49, 49, 49,0.20);
 	--sh-lt: rgba(124, 124, 124, 0.35);
 	--sdw-a: rgba(0,0,0,0.55);
 	--sh-mobile: rgba(124, 124, 124, 0.95);
+
+    --container-sh-a: rgba(255, 255, 255,0.2);
+    --container-sh-b: rgba(255, 255, 255,0.4);
 	/* Element Specific */
 	--nextLink-a: #ffffff;
-
-    #home {
-        // background-image: url(../images/svgs/layered-peaks-haikei-lt.svg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        transition: background-image 0.3s;
-    }
 }
 
 a {
@@ -123,8 +103,10 @@ a {
     left: 0rem;
 }
 
+
+
 /* Nav Bar Sizes Desktop */
-#nav-bar {
+.nav-bar {
     top: 0px;
     padding: 0.5rem 0rem 0.5rem 0rem;
     justify-content: space-between;
@@ -146,7 +128,7 @@ a {
         align-items: center;
         display: flex;
         flex-direction: row;
-        gap: var(--nav-gap);
+        gap: $navGap;
         justify-content: flex-start;
 
         .nav-btn {
@@ -156,8 +138,7 @@ a {
 
             svg {
                 pointer-events: none;
-                /* fill: var(--text-hl) !important; */
-                height: var(--font-s);
+                height: $fontS;
                 fill: var(--text);
                 cursor: pointer;
             }
@@ -179,12 +160,12 @@ a {
         padding-right: 8rem;
 
         a {
-            font-size: var(--font-s);
+            font-size: $fontS;
             text-decoration: none;
             padding: 0.5rem;
             display:inline-block;
             position: relative;
-            color: var(--text-b);
+            color: var(--text-b-alt);
             transition: background-size 0.5s ease-in;
             transition: color 0.3s;
         }
@@ -195,9 +176,9 @@ a {
         }
 
         a.selected {
-            color: var(--text-a);
+            color: var(--text);
             text-decoration: none;
-            background-image: linear-gradient(var(--text-a), var(--text-a));
+            background-image: linear-gradient(var(--text), var(--text));
             background-size: 100% 2px, 0 2px;
             background-position: 0px 100%, 100% 100%;
             background-repeat: no-repeat;
@@ -209,21 +190,34 @@ a {
 
 }
 
-#nav-bar.contrast {
+.nav-bar.contrast {
     border: none;
     border-bottom: 1px solid var(--sh-lt);
-    // background-color: rgba(255,255,255,0.15);
+    background-color: var(--container-sh-a);
     backdrop-filter: blur(0.5rem);
-    transition: background-color 0.5s ease-in;
+    transition: 0.5s ease-in;
 
-    background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+    .nav-bar-list {
+
+        a {
+            color: var(--text-b);
+        }
+
+        a:hover {
+            color: var(--text-hl);
+        }
+
+        a.selected {
+            color: var(--text);
+        }
+    } 
 }
 
-#nav-bar.hidden {
-    background-color: transparent;
-    border: none;
-    transition: background-color 0.5s ease-in;
-}
+// #nav-bar.hidden {
+//     background-color: transparent;
+//     border: none;
+//     transition: background-color 0.5s ease-in;
+// }
 
 
 #home {
@@ -244,7 +238,7 @@ a {
         align-items: center;
         border-radius: 0.3rem;
         // background: linear-gradient(rgba(0, 0, 0,0.2), rgba(0, 0, 0,0.4));
-        background: radial-gradient(rgba(0, 0, 0,0.2), rgba(0, 0, 0,0.4));
+        background: radial-gradient(var(--container-sh-a), var(--container-sh-b));
         backdrop-filter: blur(0.5rem);
 
         // #banner-name {
@@ -258,7 +252,7 @@ a {
             height: 100px;
             overflow: hidden;
             text-align: center;
-            font-size: var(--font-xl);
+            font-size: $fontXl;
             color: var(--text);
             z-index: 2;
 
@@ -268,14 +262,14 @@ a {
                 margin: 0;
 
                 .v-slide {
-                    font-size: var(--font-ml);
+                    font-size: $fontMl;
                     line-height: 100px;
                     color: var(--text-a)
                 }
 
                 li:nth-child(1), li:nth-child(5) {
                     color: var(--text);
-                    font-size: var(--font-l);
+                    font-size: $fontL;
                 }
             }
         }
@@ -318,7 +312,7 @@ a {
                     will-change: transform, opacity;
                     position: absolute;
                     bottom: 0rem;
-                    font-size: var(--font-xs);
+                    font-size: $fontXs;
                     color: var(--text-hl);
                     opacity: 0;
                     transition: transform 0.5s, opacity 0.5s;
@@ -362,7 +356,7 @@ a {
 
         p {
             color: var(--nextLink-a);
-            font-size: var(--font-s);
+            font-size: $fontS;
             padding-bottom: 1rem;
             transition: color 0.3s;
         }
@@ -450,7 +444,7 @@ a {
                     width: 100%;
                     height: 100%;
                     border-radius: 0.4rem;
-                    background-color: rgba(100, 255, 218, 0.4);
+                    background-color: var(--img-sh);
                     z-index: 3;
                     transition: opacity 0.3s;
                 }
@@ -523,13 +517,13 @@ a {
         align-items: center;
 
         .about-title {
-            font-size: var(--font-l);
+            font-size: $fontL;
             color: var(--text-a);
             padding: 1rem;
         }
 
         .skills-title {
-            font-size: var(--font-ms);
+            font-size: $fontMs;
             color: var(--text-a);
             padding: 1rem;
         }
@@ -543,14 +537,14 @@ a {
     }
 
     .about-bio {
-        font-size: var(--font-s);
+        font-size: $fontS;
         color: var(--text-b);
         padding: 1rem;
         line-height: 2.5rem;
     }
 
     .skill-label {
-        font-size: var(--font-s);
+        font-size: $fontS;
         padding: 1rem;
         color: var(--text-b);
     }
@@ -603,14 +597,14 @@ a {
                 margin-right: 3rem;
                 // z-index: 101;
 
-                padding: var(--skill-pad);
+                padding: var($skillPad);
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
     
                 img {
-                    height: var(--font-xl);
+                    height: $fontXl;
                     padding-bottom: 0.3rem;
                 }
     
@@ -619,7 +613,7 @@ a {
                 }
     
                 .skill-title {
-                    font-size: var(--font-xs);
+                    font-size: $fontXs;
                     padding: 0.3rem;
                     color: var(--text-b);
                 }
@@ -673,13 +667,13 @@ a {
             align-items: center;
     
             .about-title {
-                font-size: var(--font-l);
+                font-size: $fontL;
                 color: var(--text-a);
                 padding: 1rem 1rem 1rem 0rem;
             }
     
             .skills-title {
-                font-size: var(--font-ms);
+                font-size: $fontMs;
                 color: var(--text-a);
                 padding: 1rem;
             }
@@ -727,7 +721,7 @@ a {
                         width: 100%;
                         height: 100%;
                         border-radius: 0.4rem;
-                        background-color: rgba(100, 255, 218, 0.4);
+                        background-color: var(--img-sh);
                         z-index: 3;
                         transition: opacity 0.3s;
                     }
@@ -810,7 +804,7 @@ a {
                     opacity: 0;
 
                     p[class*="project-title"] {
-                        font-size: var(--font-ml);
+                        font-size: $fontMl;
                         color: var(--text-a);
                         padding: 1rem 0rem;
                         max-width: 70%;
@@ -823,9 +817,9 @@ a {
                     padding: 1rem 0rem;
 
                     .project-desc {
-                        font-size: var(--font-s);
+                        font-size: $fontS;
                         line-height: 2.5rem;
-                        color: var(--text-b);
+                        color: var(--text-b-alt);
                         padding: 2.5rem;
                         max-width: 60rem;
                         // background-color: var(--bg-2);
@@ -860,13 +854,13 @@ a {
                                 padding: 0.2rem;
 
                                 svg {
-                                    width: var(--font-s);
+                                    width: $fontS;
                                     fill: white;
                                 }
                             }
 
                             p {
-                                font-size: var(--font-xs);
+                                font-size: $fontXs;
                                 color: black;
                                 padding: 0.5rem 1rem;
                                 white-space: nowrap;
@@ -946,7 +940,7 @@ a {
 
                             p {
                                 will-change: transform, opacity;
-                                font-size: var(--font-xs);
+                                font-size: $fontXs;
                                 white-space: nowrap;
                                 position: absolute;
                                 left: 1rem;
@@ -963,9 +957,8 @@ a {
                                     fill: var(--text-b);
                                     height: 100%;
                                     width: 100%;
+                                    transition: fill 0.5s;
                                 }
-
-
                             }
                         }
 
@@ -974,7 +967,8 @@ a {
                             .link-svg-proj {
 
                                 svg {
-                                    fill: var(--text-hl)
+                                    fill: var(--text-hl);
+                                    transition: fill 0.5s;
                                 }
                             }
 
@@ -1139,9 +1133,10 @@ a {
         opacity: 0;
         transform: translateY(10rem);
 
-        background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
+        background: radial-gradient(var(--container-sh-a), var(--container-sh-b));
         backdrop-filter: blur(0.5rem);
         padding: 4.1rem;
+        border-radius: 0.4rem;
 
         .section-header {
             display: flex;
@@ -1150,7 +1145,7 @@ a {
             width: 100%;
 
             .contact-title {
-                font-size: var(--font-l);
+                font-size: $fontL;
                 color: var(--text-a);
                 padding: 1rem;
             }
@@ -1170,7 +1165,7 @@ a {
             padding: 1rem;
 
             p:nth-child(2) {
-                font-size: var(--font-s);
+                font-size: $fontS;
                 padding-left: 0.5rem;
                 color: var(--text-b);
                 transition: color 0.3s;
@@ -1178,7 +1173,7 @@ a {
 
             p:nth-child(3) {
                 will-change: transform;
-                font-size: var(--font-s);
+                font-size: $fontS;
                 padding-left: 1rem;
                 color: var(--text-b);
                 transition: transform 0.3s;
@@ -1192,7 +1187,7 @@ a {
                     width: 100%;
                     height: 100%;
                     fill: var(--text-b);
-                    transition: fill 0.3s;
+                    transition: fill 0.5s;
                 }
             }
         }
@@ -1201,7 +1196,7 @@ a {
 
             svg {
                 fill: var(--text-hl);
-                transition: fill 0.3s;
+                transition: fill 0.5s;
             }
 
             p:nth-child(2)  {
@@ -1243,7 +1238,7 @@ a {
         }
 
         .shape-fill {
-            fill: #1F1F1F;
+            // fill: #1F1F1F;
         }
     }
 
@@ -1266,7 +1261,7 @@ a {
         }
 
         .shape-fill {
-            fill: #1F1F1F;
+            // fill: #1F1F1F;
         }
     }
 

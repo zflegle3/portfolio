@@ -2,6 +2,7 @@
 import {useState, useEffect} from "react";
 //Components
 import Project from "./Project";
+import ProjectMobile from "./ProjectMobile";
 // PNGs
 // import weatherAppImg from "../images/project-images/weather-app.png"
 // import battleshipAppImg from "../images/project-images/bs.png"
@@ -93,7 +94,10 @@ function ProjectsAll() {
   
     },[]);
 
-    return (
+
+    let vw = window.innerWidth;
+    if (vw > 480) {
+      return (
         <div id="projects">
             <div className="project-header">
               <div className="project-section-title">
@@ -107,8 +111,24 @@ function ProjectsAll() {
             <Project projectData={projectDataAll[3]}/>
             <Project projectData={projectDataAll[4]}/>
         </div>
-
-    );
+      );
+    } else {
+      return (
+        <div id="projects">
+            <div className="project-header">
+              <div className="project-section-title">
+                <p className="about-title">Projects</p>
+                <div className="section-break"></div>
+              </div>
+            </div>
+            <ProjectMobile projectData={projectDataAll[0]}/>
+            <ProjectMobile projectData={projectDataAll[1]}/>
+            <ProjectMobile projectData={projectDataAll[2]}/>
+            <ProjectMobile projectData={projectDataAll[3]}/>
+            <ProjectMobile projectData={projectDataAll[4]}/>
+        </div>
+      );
+    }
 }
 
 export default ProjectsAll;
