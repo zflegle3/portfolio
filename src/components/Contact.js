@@ -6,7 +6,7 @@ import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 //Docs
-import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
+import CvPdf from "../documents/ZFlegle_Resume_2022.pdf";
 //GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,7 +22,6 @@ function Contact() {
             trigger: "#contact",
             start: "-10% center",
             end: "bottom top",
-            // markers: true,
             toggleActions: "play none none none",
         },
         duration: 1,
@@ -76,11 +75,6 @@ function Contact() {
 
       </div>
 
-      <div class="custom-shape-divider-top-1667697529">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
-        </svg>
-      </div>
     </div>
 
 

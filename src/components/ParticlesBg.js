@@ -4,7 +4,6 @@ import { loadFull } from "tsparticles";
 
 const ParticlesBg = (props) => {
     //props.color
-    console.log(props.color);
 
     const particlesInit = useCallback(async engine => {
         await loadFull(engine);

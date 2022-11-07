@@ -2,25 +2,6 @@
 import { useEffect } from "react";
 
 import InfiniteLoopSlider from "./InfiniteLoopSlider";
-// Styles
-// import '../styles/About.css';
-// PNGs
-// import htmlImg from "../images/html.png";
-// import cssImg from "../images/css.png";
-// import jsImg from "../images/javascript.png";
-// import sassImg from "../images/sass.png";
-// import reactImg from "../images/react.png";
-// import bsImg from "../images/bootstrap.png";
-// import gsapImg from "../images/gsap.png";
-// import nodeImg from "../images/nodejs.png";
-// import mongoImg from "../images/mongo.png";
-// import exImg from "../images/express.png";
-// import fbImg from "../images/firebase.png";
-// import gitImg from "../images/git.png";
-// import wpImg from "../images/webpack.png";
-// import ghImg from "../images/github.png";
-// import npmImg from "../images/npm.png";
-// import jestImg from "../images/jest.png";
 //WebPs
 import htmlImg from "../images/webps/html.webp";
 import cssImg from "../images/webps/css.webp";

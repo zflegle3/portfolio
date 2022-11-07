@@ -89,10 +89,6 @@ function Project(props) {
 
     );
 
-
-
-    
-
     useEffect(() => {
         //image slide in
         gsap.to(`#project-image-container-${props.projectData.id}`, {
@@ -136,20 +132,10 @@ function Project(props) {
 
     },[]);
 
-
-
-
-
-    if (props.projectData.class === "project-item-a") {
+    if (props.projectData.classTitle === "project-item-a") {
         return (
             <div className="project-container">
-                <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
-
-                    {/* <div className="project-image">
-                        <div className="image-bg"></div>
-                        <img className={`project-img-${props.projectData.id}`} src={props.projectData.imgSrc} alt={props.projectData.imgAlt}></img>
-
-                    </div> */}
+                <div id={`project-item-${props.projectData.id}`} className={props.projectData.classTitle}>
 
                     <a id={`project-image-container-${props.projectData.id}`} className="project-image" href={props.projectData.demoUrl}>
 
@@ -172,15 +158,10 @@ function Project(props) {
 
                         <div className={`project-details-${props.projectData.id}`}>
                             <p className="project-desc">{props.projectData.desc}</p>
-                            {/* <div className="project-tech"> */}
-                                {/* <div className='section-header'>
-                                    <p className="skills-title">Technologies</p>
-                                </div> */}
-                                <div className="tech-list">
-                                    {projTech}
-                                </div>
-                            {/* </div> */}
 
+                            <div className="tech-list">
+                                {projTech}
+                            </div>
 
                             <div className="project-links">
                                     <a className="project-btn" href={props.projectData.demoUrl}>
@@ -204,10 +185,6 @@ function Project(props) {
 
                 </div>
 
-                {/* <div className="project-break">
-                    <div className="section-break"></div>
-                </div> */}
-
             </div>
 
 
@@ -215,7 +192,7 @@ function Project(props) {
     } else {
         return (
             <div className="project-container">
-                <div id={`project-item-${props.projectData.id}`} className={props.projectData.class}>
+                <div id={`project-item-${props.projectData.id}`} className={props.projectData.classTitle}>
 
 
                 <a id={`project-image-container-${props.projectData.id}`} className="project-image" href={props.projectData.demoUrl}>
@@ -239,15 +216,10 @@ function Project(props) {
 
                         <div className={`project-details-${props.projectData.id}`}>
                             <p className="project-desc">{props.projectData.desc}</p>
-                            {/* <div className="project-tech"> */}
-                                {/* <div className='section-header'>
-                                    <p className="skills-title">Technologies</p>
-                                </div> */}
-                                <div className="tech-list">
-                                    {projTech}
-                                </div>
-                            {/* </div> */}
 
+                            <div className="tech-list">
+                                {projTech}
+                            </div>
 
                             <div className="project-links">
                                     <a className="project-btn" href={props.projectData.demoUrl}>
@@ -270,11 +242,6 @@ function Project(props) {
                     </div>
 
                 </div>
-
-                {/* <div className="project-break">
-                    <div className="section-break"></div>
-                </div> */}
-
             </div>
 
         );

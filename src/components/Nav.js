@@ -2,8 +2,6 @@
 import {useState, useEffect} from "react";
 //UUID
 import { v4 as uuidv4 } from 'uuid';
-//Styles
-// import '../styles/Nav.css';
 //Components
 import { ReactComponent as LightOutSvg } from "../images/light-fill.svg";
 import { ReactComponent as DarkOutSvg } from "../images/dark-out.svg";
@@ -54,19 +52,7 @@ function Nav(props) {
         document.getElementById("nav-bar").classList.add("contrast")
     }
 
-    const switchTheme = (e) => {
-        // let themeBtns = document.querySelectorAll(".nav-btn");
-        // for (let i=0; i< themeBtns.length; i++) {
-        //     let selected = themeBtns[i];
-        //     selected.classList.remove("selected");
-        // };;
-        // e.target.classList.add("selected");
-        // let app = document.querySelector(".App");
-        // if (e.target.id === "light") {
-        //     app.classList.remove("lightMode");
-        // } else {
-        //     app.classList.add("lightMode")
-        // }
+    const switchTheme = () => {
         props.switchTheme();
     }
 
@@ -225,6 +211,20 @@ function Nav(props) {
         });
 
     }
+
+    useEffect(() => {
+        //Nav Bar Fade Down
+        let vwNow = window.innerWidth;
+        if (vwNow > 480) {
+            gsap.to(".nav-bar", {
+                delay: 3,
+                // ease: "elastic",
+                duration: 1,
+                y: 0,
+                opacity: 1,
+              })
+        }
+      },[]);
 
 
     let colorSvg = <DarkOutSvg id="dark" className="dark-svg" fill='red' onClick={e=> e.stopPropagation()}/>;

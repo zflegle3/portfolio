@@ -1,15 +1,12 @@
 // React
 import { useEffect } from "react";
-// Components
-import CloudsAll from "./CloudsAll";
-import ParticlesBg from "./ParticlesBg"
 //Images & Svgs
 import { ReactComponent as GithubSvg } from "../images/github.svg";
 import { ReactComponent as LinkedInSvg } from "../images/linkedin.svg";
 import { ReactComponent as EmailSvg } from "../images/email.svg";
 import { ReactComponent as CvSvg } from "../images/cv.svg";
 import { ReactComponent as NextSvg } from "../images/next.svg";
-import CvPdf from "../documents/Zach_Flegle_Resume_2022.pdf";
+import CvPdf from "../documents/ZFlegle_Resume_2022.pdf";
 //GSAP
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -28,7 +25,14 @@ function Home() {
   },[]);
 
   useEffect(() => {
-    //Title Link Animation
+    //Title Link Icons Animation
+    gsap.to(".home-content", {
+      x:0, 
+      duration:1, 
+      delay: 0,
+    })
+
+    //Title Link Icons Animation
     gsap.to(".link-svg-home svg", {
       y:0, 
       rotation: 0.01,
@@ -39,10 +43,8 @@ function Home() {
         each: 0.2,
       }
     })
-  },[]);
 
-  useEffect(() => {
-    //Title Link Animation
+    //Learn More Link Fade Up
     gsap.to(".home-next-link", {
       delay: 3,
       // ease: "elastic",
@@ -50,29 +52,28 @@ function Home() {
       y: 0,
       opacity: 1,
     })
+    
   },[]);
 
 
-  useEffect(() => {
-      gsap.to(".home-content",{
-        scrollTrigger: {
-          trigger: "#home",
-          start: "55% center",
-          end: "100% top",
-          scrub: 1,
-        },
-        x: 1000,
-        ease: "none",
-        duration: 1,
-      })
-  },[]);
+  // useEffect(() => {
+  //     gsap.to(".home-content",{
+  //       scrollTrigger: {
+  //         trigger: "#home",
+  //         start: "55% center",
+  //         end: "100% top",
+  //         scrub: 1,
+  //       },
+  //       x: 1000,
+  //       ease: "none",
+  //       duration: 1,
+  //     })
+  // },[]);
+
 
 
   return (
     <div id="home" className="home">
-      {/* <ParticlesBg /> */}
-
-
 
         <div className="home-content">
 
@@ -98,7 +99,7 @@ function Home() {
                 <p>GitHub</p>
               </a>
 
-              <a href="www.linkedin.com/in/zach-flegle" className="link-item-home">
+              <a href="https://www.linkedin.com/in/zach-flegle-185341a0/" className="link-item-home">
                 <div className="link-svg-home">
                   <LinkedInSvg />
                 </div>
@@ -132,9 +133,6 @@ function Home() {
             <NextSvg />
           </div>
         </a>
-
-        {/* <CloudsAll /> */}
-        {/* <img src={bgImgA} alt="background test" /> */}
 
     </div>
   );

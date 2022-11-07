@@ -3,11 +3,6 @@ import {useState, useEffect} from "react";
 //Components
 import Project from "./Project";
 import ProjectMobile from "./ProjectMobile";
-// PNGs
-// import weatherAppImg from "../images/project-images/weather-app.png"
-// import battleshipAppImg from "../images/project-images/bs.png"
-// import todoAppImg from "../images/project-images/to-do-app.png"
-// import waldoImg from "../images/project-images/waldo.png"
 //WebPs
 import weatherAppImg from "../images/project-images/weather.png"
 // import battleshipAppImg from "../images/project-images/bs.webp";
@@ -23,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger);
 function ProjectsAll() {
     const [projectDataAll, setProjectDataAll] = useState([
       { id: "0",
-      class: "project-item-a",
+      classTitle: "project-item-a",
       title: "To Do Task Tracker",
       desc: "A full-stack to-do list application to manage tasks and projects. Sign in using your google account to create new tasks, visualize your upcoming projects, and more.",
       codeUrl: "https://github.com/zflegle3/to-do-list",
@@ -33,7 +28,7 @@ function ProjectsAll() {
       tech: [["React","react"], ["SASS","sass"],["Firebase Authentication","firebase"], ["Firebase Cloud Firestore","firebase"] ]
       },
       { id: "1",
-      class: "project-item-b",
+      classTitle: "project-item-b",
       title: "Bookmark Landing Page Challenge",
       desc: "An animated and fully responsive template for a company landing page. Built as part of a challenge to match a design file as closely as possible.",
       codeUrl: "https://github.com/zflegle3/landing-page",
@@ -44,7 +39,7 @@ function ProjectsAll() {
       },
       { id: "2",
       // imgId: "project-img-0",
-      class: "project-item-a",
+      classTitle: "project-item-a",
       title: "Where's Waldo Game App",
       desc: "A full-stack web application to play Where's Waldo and compare high scores. Built as part of The Odin Project Fullstack JavaScript curriculum to practice using a BaaS to store data.",
       codeUrl: "https://github.com/zflegle3/where-is-waldo",
@@ -55,7 +50,7 @@ function ProjectsAll() {
     },
     { id: "3",
     // imgId: "project-img-1",
-    class: "project-item-b",
+    classTitle: "project-item-b",
     title: "Live Weather Widget",
     desc: "A live weather application to display the current weather conditions at the location searched. Users can easily switch color themes and display units.",
     codeUrl: "https://github.com/zflegle3/weather-app",
@@ -66,7 +61,7 @@ function ProjectsAll() {
     },
     { id: "4",
     // imgId: "project-img-1",
-    class: "project-item-a",
+    classTitle: "project-item-a",
     title: "Rock Paper Scissors Game App",
     desc: "An animated and fully responsive Rock Paper Scissors game application. Built as part of a challenge to match a design file as closely as possible.",
     codeUrl: "https://github.com/zflegle3/rock-paper-scissors-game",

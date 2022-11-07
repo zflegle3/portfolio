@@ -4,15 +4,6 @@ import {useState} from "react";
 import "./styles/reset.scss";
 import './styles/App.scss';
 import './styles/Mobile.scss';
-
-
-// import './styles/App.css';
-// import './styles/About.css';
-// import './styles/Home.css';
-// import './styles/Clouds.css';
-import './styles/ProjectsAll.css';
-// import './styles/Contact.css';
-// import './styles/Nav.css';
 //Components
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -49,12 +40,10 @@ function App() {
   const switchTheme = (e) => {
     let app = document.querySelector(".App");
     if (colorMode) {
-      console.log("dark mode");
       setColorMode();
       setParticleColor("#64ffda");
       setBgColor("#1F1F1F");
     } else {
-      console.log("light mode");
       setColorMode("lightMode");
       setParticleColor("#D2B537");
       setBgColor("#ffffff");
@@ -68,9 +57,9 @@ function App() {
       <Home />
 
       <div className="section-break">
-        <div class="section-break-bottom">
+        <div className="section-break-bottom">
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} class="shape-fill"></path>
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} className="shape-fill"></path>
           </svg>
         </div>
       </div>
@@ -78,10 +67,10 @@ function App() {
       <About />
       <ProjectsAll />
 
-      <div class="section-break">
+      <div className="section-break">
         <div className="section-break-top"> 
           <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} class="shape-fill"></path>
+              <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" fill={bgColor} className="shape-fill"></path>
           </svg>
         </div>
       </div>

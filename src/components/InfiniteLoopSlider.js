@@ -1,10 +1,12 @@
+//UUID
+import { v4 as uuidv4 } from 'uuid';
 
 function InfiniteLoopSlider(props) {
     //{children, duration, reverse = false}
     //props.children
 
     const children = props.children.map((skill) =>
-        <div className="skill-item">
+        <div key={uuidv4()} className="skill-item">
             <img src={skill.image} alt="html logo"></img>
             <p className="skill-title">{skill.text}</p>
       </div>

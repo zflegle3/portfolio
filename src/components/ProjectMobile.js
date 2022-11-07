@@ -88,10 +88,6 @@ function ProjectMobile(props) {
         </div>
     );
 
-
-
-    
-
     useEffect(() => {
         // Project Content Slide Up
         gsap.to(`.project-container-mobile-${props.projectData.id}`, {
@@ -108,10 +104,6 @@ function ProjectMobile(props) {
         });
     },[]);
 
-
-
-
-
     return (
         <div className={`project-container-mobile-${props.projectData.id}`}>
             <div className="project-content-container">
@@ -122,15 +114,10 @@ function ProjectMobile(props) {
 
                 <div className={`project-details-${props.projectData.id}`}>
                     <p className="project-desc">{props.projectData.desc}</p>
-                    {/* <div className="project-tech"> */}
-                        {/* <div className='section-header'>
-                            <p className="skills-title">Technologies</p>
-                        </div> */}
-                        <div className="tech-list">
-                            {projTech}
-                        </div>
-                    {/* </div> */}
-
+                    
+                    <div className="tech-list">
+                        {projTech}
+                    </div>
 
                     <div className="project-links">
                             <a className="project-btn" href={props.projectData.demoUrl}>
