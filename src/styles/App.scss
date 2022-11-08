@@ -4,7 +4,7 @@
 	scroll-behavior: smooth;
 	font-size: 10px;
     font-family: 'Rajdhani', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 /* Font Sizes Desktop */
@@ -37,8 +37,10 @@ $skillPad: 1rem;
 	/* Sub Titles & Headers */
 	--text-a: #ffffff;
 	/* Content Text and small titles & headers */
-    --text-b: #8892b0;
-    --text-b-alt: #8892b0;
+    // --text-b: #8892b0;
+    --text-b: #a7b3d9;
+    // --text-b-alt: #8892b0;
+    --text-b-alt: #a7b3d9;
 	/* Highlight clickable */
 	--text-hl: #64ffda;
 	/* Highlight display only */
@@ -58,7 +60,7 @@ $skillPad: 1rem;
 }
 
 .App.lightMode {
-    // background: radial-gradient(at top, #1d2251, #003057);
+    background: radial-gradient(at top,#003057, #00182b);
 
 	/* Light Theme */
 	/* Backgrounds */
@@ -67,9 +69,10 @@ $skillPad: 1rem;
 	/* Main Titles & Headers */
 	--text: #D2B537;
 	/* Sub Titles & Headers */
-	--text-a: #003057;
+	// --text-a: #003057;
+    --text-a: #00182b;
 	/* Content Text and small titles & headers */
-	--text-b: #292929;
+	--text-b: #003057;
     --text-b-alt: #ffffff;
 	/* Highlight clickable */
 	--text-hl: #D2B537;
@@ -83,8 +86,8 @@ $skillPad: 1rem;
 	--sdw-a: rgba(0,0,0,0.55);
 	--sh-mobile: rgba(124, 124, 124, 0.95);
 
-    --container-sh-a: rgba(255, 255, 255,0.2);
-    --container-sh-b: rgba(255, 255, 255,0.4);
+    --container-sh-a: rgba(255, 255, 255,0.3);
+    --container-sh-b: rgba(255, 255, 255,0.5);
 	/* Element Specific */
 	--nextLink-a: #ffffff;
 }
@@ -530,8 +533,8 @@ a {
         font-size: $fontS;
         padding: 1rem;
         color: var(--text-b);
-        font-family: 'Inter', sans-serif;
-        font-weight: 600;
+        // font-family: 'Inter', sans-serif;
+        // font-weight: 600;
     }
 
     @keyframes loop {
