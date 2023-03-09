@@ -15,6 +15,12 @@ import { ReactComponent as WebpSvg } from "../images/svgs/icons/webpack.svg";
 import { ReactComponent as ApiSvg } from "../images/svgs/icons/api.svg";
 import { ReactComponent as FbSvg } from "../images/svgs/icons/firebase.svg";
 import { ReactComponent as JestSvg } from "../images/svgs/icons/jest.svg";
+import { ReactComponent as MongoSvg } from "../images/svgs/icons/mongo.svg";
+import { ReactComponent as MapsSvg } from "../images/svgs/icons/maps.svg";
+import { ReactComponent as NodeSvg } from "../images/svgs/icons/node.svg";
+import { ReactComponent as ReduxSvg } from "../images/svgs/icons/redux.svg";
+import { ReactComponent as VercelSvg } from "../images/svgs/icons/vercel.svg";
+import jsImg from "../images/webps/javascript.webp";
 
 //GSAP
 import gsap from "gsap";
@@ -76,6 +82,36 @@ function Project(props) {
                 return(
                     <div className="tech-logo">
                         <ApiSvg />
+                    </div>);
+            case "node":
+                return(
+                    <div className="tech-logo">
+                        <NodeSvg />
+                    </div>);
+            case "mongo":
+                return(
+                    <div className="tech-logo">
+                        <MongoSvg />
+                    </div>);
+            case "maps":
+                return(
+                    <div className="tech-logo">
+                        <MapsSvg />
+                    </div>);
+            case "redux":
+                return(
+                    <div className="tech-logo">
+                        <ReduxSvg />
+                    </div>);
+            case "vercel":
+                return(
+                    <div className="tech-logo">
+                        <VercelSvg />
+                    </div>);
+            case "express":
+                return(
+                    <div className="tech-logo">
+                        <JSSvg />
                     </div>);
             default:
         }

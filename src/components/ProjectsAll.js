@@ -10,6 +10,7 @@ import todoAppImg from "../images/project-images/to_do.png";
 import waldoImg from "../images/project-images/waldo2.png";
 import rpsImg from "../images/project-images/rps.png";
 import landingImg from "../images/project-images/landing.png";
+import powderlyImg from "../images/project-images/powderly.png"
 //GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -19,27 +20,17 @@ function ProjectsAll() {
     const [projectDataAll, setProjectDataAll] = useState([
       { id: "0",
       classTitle: "project-item-a",
-      title: "To Do Task Tracker",
-      desc: "A full-stack to-do list application to manage tasks and projects. Sign in using your google account to create new tasks, visualize your upcoming projects, and more.",
-      codeUrl: "https://github.com/zflegle3/to-do-list",
-      demoUrl: "https://zflegle3.github.io/to-do-list/",
-      imgSrc: todoAppImg,
-      imgAlt: "to do project demo image",
-      tech: [["React","react"], ["SASS","sass"],["Firebase Authentication","firebase"], ["Firebase Cloud Firestore","firebase"] ]
+      title: "Powderly",
+      desc: "A cutting-edge winter weather scanning application that empowers users to optimize their skiing and snowboarding experiences by accessing real-time weather conditions at over 400 mountains across the United States.",
+      codeUrl: "https://github.com/zflegle3/powderly",
+      demoUrl: "https://zflegle3.github.io/powderly/",
+      imgSrc: powderlyImg,
+      imgAlt: "powderly demo image",
+      tech: [["React","react"],["Redux","redux"], ["SASS","sass"], ["Node.js","node"], ["Express","express"], ["MongoDB","mongo"], ["Vercel","vercel"], ["Google Maps API","maps"]]
       },
       { id: "1",
-      classTitle: "project-item-b",
-      title: "Bookmark Landing Page Challenge",
-      desc: "An animated and fully responsive template for a company landing page. Built as part of a challenge to match a design file as closely as possible.",
-      codeUrl: "https://github.com/zflegle3/landing-page",
-      demoUrl: "https://zflegle3.github.io/landing-page",
-      imgSrc: landingImg,
-      imgAlt: "landing page project demo image",
-      tech: [["React","react"], ["React Router","react"], ["SASS","sass"] ]
-      },
-      { id: "2",
       // imgId: "project-img-0",
-      classTitle: "project-item-a",
+      classTitle: "project-item-b",
       title: "Where's Waldo Game App",
       desc: "A full-stack web application to play Where's Waldo and compare high scores. Built as part of The Odin Project Fullstack JavaScript curriculum to practice using a BaaS to store data.",
       codeUrl: "https://github.com/zflegle3/where-is-waldo",
@@ -47,6 +38,17 @@ function ProjectsAll() {
       imgSrc: waldoImg,
       imgAlt: "where's waldo game app project demo image",
       tech: [["React","react"], ["React Router","react"], ["CSS","css"],["Firebase Cloud Firestore","firebase"]]
+    },
+    { id: "2",
+      // imgId: "project-img-1",
+      classTitle: "project-item-a",
+      title: "Rock Paper Scissors Game App",
+      desc: "An animated and fully responsive Rock Paper Scissors game application. Built as part of a challenge to match a design file as closely as possible.",
+      codeUrl: "https://github.com/zflegle3/rock-paper-scissors-game",
+      demoUrl: "https://zflegle3.github.io/rock-paper-scissors-game/",
+      imgSrc: rpsImg,
+      imgAlt: "rock paper scissors game app demo image",
+      tech: [["React","react"], ["React Router","react"], ["SASS","sass"]]
     },
     { id: "3",
     // imgId: "project-img-1",
@@ -60,16 +62,15 @@ function ProjectsAll() {
     tech: [["HTML","html"], ["CSS","css"], ["JavaScript","javascript"], ["Npm","npm"],["Webpack","webpack"],["OpenWeather API","api"]]
     },
     { id: "4",
-    // imgId: "project-img-1",
     classTitle: "project-item-a",
-    title: "Rock Paper Scissors Game App",
-    desc: "An animated and fully responsive Rock Paper Scissors game application. Built as part of a challenge to match a design file as closely as possible.",
-    codeUrl: "https://github.com/zflegle3/rock-paper-scissors-game",
-    demoUrl: "https://zflegle3.github.io/rock-paper-scissors-game/",
-    imgSrc: rpsImg,
-    imgAlt: "rock paper scissors game app demo image",
-    tech: [["React","react"], ["React Router","react"], ["SASS","sass"]]
-  },
+    title: "Bookmark Landing Page Challenge",
+    desc: "An animated and fully responsive template for a company landing page. Built as part of a challenge to match a design file as closely as possible.",
+    codeUrl: "https://github.com/zflegle3/landing-page",
+    demoUrl: "https://zflegle3.github.io/landing-page",
+    imgSrc: landingImg,
+    imgAlt: "landing page project demo image",
+    tech: [["React","react"], ["React Router","react"], ["SASS","sass"] ]
+    },
     ]);
 
     useEffect(() => {

@@ -53,8 +53,8 @@ $skillPad: 1rem;
 	--sh-mobile: rgba(49, 49, 49,0.95);
 	--sh-img: rgba(100, 255, 218,1);
 
-    --container-sh-a: rgba(0, 0, 0,0.2);
-    --container-sh-b: rgba(0, 0, 0,0.4);
+    --container-sh-a: rgba(0, 0, 0,0.3);
+    --container-sh-b: rgba(0, 0, 0,0.5);
 	/* Element Specific */
 	--nextLink-a: #ffffff;
 }
@@ -64,7 +64,7 @@ $skillPad: 1rem;
 
 	/* Light Theme */
 	/* Backgrounds */
-	--bg-1: #ffffff;
+	--bg-1: #f0f2ff;
 	--bg-2: #FFF9EC;
 	/* Main Titles & Headers */
 	--text: #D2B537;
@@ -86,8 +86,8 @@ $skillPad: 1rem;
 	--sdw-a: rgba(0,0,0,0.55);
 	--sh-mobile: rgba(124, 124, 124, 0.95);
 
-    --container-sh-a: rgba(255, 255, 255,0.3);
-    --container-sh-b: rgba(255, 255, 255,0.5);
+    --container-sh-a: rgba(240, 242, 255, 0.2);
+    --container-sh-b: rgba(240, 242, 255, 0.5);
 	/* Element Specific */
 	--nextLink-a: #ffffff;
 }
@@ -236,6 +236,8 @@ a {
         border-radius: 0.3rem;
         background: radial-gradient(var(--container-sh-a), var(--container-sh-b));
         backdrop-filter: blur(0.5rem);
+        // border: 1px solid var(--bg-1);
+        // box-shadow: 5px 5px 10px rgba(0,0,0,.25);
 
         .slide-container {
             height: 100px;
@@ -816,7 +818,7 @@ a {
                                 height: 100%;
                                 background-color: var(--sh-lt);
                                 border-radius: 0.4rem;
-                                padding: 0.2rem;
+                                padding: 0.25rem;
 
                                 svg {
                                     width: $fontS;
@@ -884,6 +886,39 @@ a {
                             background-color: #FFCB2B;
                             /* background-color: #F5820D; */
                             /* background-color: #FFA611; */
+                        }
+
+                        .tech-item.node {
+                            color: black;
+                            background-color: #339933;
+                        }
+
+                        .tech-item.redux {
+                            color: black;
+                            background-color: #764abc;
+                        }
+
+                        .tech-item.express {
+                            color: black;
+                            background-color: #ffffff;
+                        }
+
+                        .tech-item.maps {
+                            color: black;
+                            background-color: #ffffff;
+                        }
+
+                        .tech-item.mongo {
+                            color: black;
+                            background-color: #589636;
+                        }
+                        
+                        .tech-item.vercel {
+                            color: black;
+                            background-color: #ffffff;
+                            svg {
+                                fill: black;
+                            }
                         }
                     }
 
@@ -1180,7 +1215,11 @@ a {
             position: relative;
             display: block;
             width: 100%;
-            height: 100%
+            height: 100%;
+
+            path {
+                fill: var(--bg-1);
+            }
         }
     }
 
@@ -1199,7 +1238,11 @@ a {
             display: block;
             // width: calc(100% + 1.3px);
             width: 100%;
-            height: 100%
+            height: 100%;
+
+            path {
+                fill: var(--bg-1);
+            }
         }
     }
 }

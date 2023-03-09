@@ -21,6 +21,16 @@ import npmImg from "../images/webps/npm.webp";
 import jestImg from "../images/webps/jest.webp";
 import figmaImg from "../images/webps/figma.webp";
 import BioImg from "../images/webps/zach.webp";
+import reduxImg from "../images/webps/redux.png";
+import tsImg from "../images/webps/typescript.png";
+import pythonImg from "../images/webps/python.png";
+import matlabImg from "../images/webps/matlab.png";
+import mongooseImg from "../images/webps/mongoose.png";
+import postmanImg from "../images/webps/postman.png";
+import vercelImg from "../images/webps/vercel.png";
+import pugImg from "../images/webps/pug.png";
+
+
 //GSAP
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -54,6 +64,38 @@ function About() {
     {text:"Figma", image: figmaImg},
   ];
 
+  const languageSkills = [
+    {text:"HTML5", image: htmlImg},
+    {text:"CSS3", image: cssImg},
+    {text:"JavaScript", image: jsImg},
+    {text:"TypeScript", image: tsImg},
+    {text:"Python", image: pythonImg},
+    {text:"Matlab", image: matlabImg},
+  ];
+
+  const frameworkSkills = [
+    {text:"React.js", image: reactImg},
+    {text:"Node.js", image: nodeImg},
+    {text:"MongoDB", image: mongoImg},
+    {text:"Express", image: exImg},
+    {text:"SASS", image: sassImg},
+    {text:"Bootstrap", image: bsImg},
+    {text:"GSAP", image: gsapImg},
+  ];
+
+  const toolSkills = [
+    {text:"Git", image: gitImg},
+    {text:"Github", image: ghImg},
+    {text:"Npm", image: npmImg},
+    {text:"Webpack", image: wpImg},
+    {text:"Jest", image: jestImg},
+    {text:"Pug", image: pugImg},
+    {text:"Postman", image: postmanImg},
+    {text:"Google Firebase", image: fbImg},
+    {text:"Vercel", image: vercelImg},
+    // {text:"Figma", image: figmaImg},
+  ];
+
   useEffect(() => {
     //section Fade In
     gsap.to(".about-container", {
@@ -84,20 +126,13 @@ function About() {
                 <div className="section-break"></div>
               </div>
               <p className="about-bio">
-                Hi there! I'm Zach Flegle, a self taught software engineer
-                with experience in front end development.
+              Hi I'm Zach, a full-stack software engineer who thrives at solving complex challenges with innovative solutions. 
               </p>
               <p className="about-bio">
-              I began my career solving technical problems at Gulfstream Aerospace and Procter 
-              & Gamble in a series of progressive roles. Despite finding success as a Mechanical 
-              Engineer, I missed the creative challenges from my programming coursework at Georgia 
-              Tech. This inspired me to reconnect with my passion by teaching myself web development. 
-              Currently, I'm focused on improving my back end skill set through the Odin Project's 
-              Full Stack JavaScript curriculum.
+              I re-discovered my passion for programming after working as a mechanical engineer in a series of progressive roles with Proctor & Gamble and Gulfstream Aerospace. During my time as a mechanical engineer, I realized that I missed the creative challenges from my programming coursework at Georgia Tech. This led me to pursue self-studying and to gain proficiency in a diverse range of  languages, frameworks, and tools. With over 4 years of professional engineering experience, I bring a meticulous eye for detail to every project and a proven track record of solving complex technical problems.
               </p>
               <p className="about-bio">
-              I am actively looking for front end development positions. Please take a look at 
-              my projects and feel free to reach out using my contact info below. 
+              I invite you to take a look at my work and connect with me using my contact information below.
               </p>
             </div>
 
@@ -120,17 +155,17 @@ function About() {
             <div className="section-break"></div>
           </div>
 
-          <p className="skill-label">Front End</p>
+          <p className="skill-label">Languages</p>
 
-          <InfiniteLoopSlider type="front" children={frontSkills}/>
+          <InfiniteLoopSlider type="front" children={languageSkills}/>
 
-          <p className="skill-label">Back End</p>
+          <p className="skill-label">Frameworks, Libraries, & Databases</p>
 
-          <InfiniteLoopSlider type="back" children={backSkills}/>
+          <InfiniteLoopSlider type="back" children={frameworkSkills}/>
 
-          <p className="skill-label">Dev Tools</p>
+          <p className="skill-label">Tools & Miscellaneous</p>
 
-          <InfiniteLoopSlider type="dev" children={devSkills}/>
+          <InfiniteLoopSlider type="dev" children={toolSkills}/>
 
         </div>
     </div>
