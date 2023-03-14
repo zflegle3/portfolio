@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.be937c41.css",
-    "main.js": "/portfolio/static/js/main.16fa3895.js",
+    "main.js": "/portfolio/static/js/main.dd2bc8f6.js",
     "static/media/waldo2.png": "/portfolio/static/media/waldo2.0272908112e015698805.png",
     "static/media/weather.png": "/portfolio/static/media/weather.1677eea8d810a33abf71.png",
     "static/media/powderly.png": "/portfolio/static/media/powderly.e189fe7e0bfabcfd360e.png",
@@ -9,7 +9,7 @@
     "static/media/zach.webp": "/portfolio/static/media/zach.d9b89a8cc260ee40b0e1.webp",
     "static/media/landing.png": "/portfolio/static/media/landing.ea72b72370f6b8c938ec.png",
     "static/media/python.png": "/portfolio/static/media/python.82efb64f8698a267f8bf.png",
-    "static/media/Zach_Flegle_Resume.pdf": "/portfolio/static/media/Zach_Flegle_Resume.7d839c03168834ed8c06.pdf",
+    "static/media/Zach_Flegle_Resume.pdf": "/portfolio/static/media/Zach_Flegle_Resume.42a9342ee8662994a025.pdf",
     "static/media/to_do.png": "/portfolio/static/media/to_do.cf8f09b3d4e861121085.png",
     "static/media/matlab.png": "/portfolio/static/media/matlab.2b608e94f8e1c2c9cd8e.png",
     "static/media/mongoose.png": "/portfolio/static/media/mongoose.998152e4bc5fdd366c2c.png",
@@ -59,10 +59,10 @@
     "static/media/npm.svg": "/portfolio/static/media/npm.0d65720d6325ead67bb971931f1cc9ea.svg",
     "static/media/vercel.svg": "/portfolio/static/media/vercel.0cf2d1806be941f7e5d54f7fce19d8a5.svg",
     "main.be937c41.css.map": "/portfolio/static/css/main.be937c41.css.map",
-    "main.16fa3895.js.map": "/portfolio/static/js/main.16fa3895.js.map"
+    "main.dd2bc8f6.js.map": "/portfolio/static/js/main.dd2bc8f6.js.map"
   },
   "entrypoints": [
     "static/css/main.be937c41.css",
-    "static/js/main.16fa3895.js"
+    "static/js/main.dd2bc8f6.js"
   ]
 }
