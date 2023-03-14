@@ -129,7 +129,7 @@ function About() {
               Hi I'm Zach, a full-stack software engineer who thrives at solving complex challenges with innovative solutions. 
               </p>
               <p className="about-bio">
-              I re-discovered my passion for programming after working as a mechanical engineer in a series of progressive roles with Proctor & Gamble and Gulfstream Aerospace. During my time as a mechanical engineer, I realized that I missed the creative challenges from my programming coursework at Georgia Tech. This led me to pursue self-studying and to gain proficiency in a diverse range of  languages, frameworks, and tools. With over 4 years of professional engineering experience, I bring a meticulous eye for detail to every project and a proven track record of solving complex technical problems.
+              I re-discovered my passion for programming after working as a mechanical engineer in a series of progressive roles with Proctor & Gamble and Gulfstream Aerospace. During my time as a mechanical engineer, I realized that I missed the creative challenges from my programming coursework at Georgia Tech. This led me to pursue self-studying and to gain proficiency in a diverse range of  languages, frameworks, and tools. With over 4 years of professional engineering experience, I bring a meticulous eye for detail to every project and a proven track record of solving complex, technical problems.
               </p>
               <p className="about-bio">
               I invite you to take a look at my work and connect with me using my contact information below.
