@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.be937c41.css",
-    "main.js": "/portfolio/static/js/main.b99d6449.js",
+    "main.js": "/portfolio/static/js/main.43d557d1.js",
     "static/media/waldo2.png": "/portfolio/static/media/waldo2.0272908112e015698805.png",
     "static/media/weather.png": "/portfolio/static/media/weather.1677eea8d810a33abf71.png",
     "static/media/powderly.png": "/portfolio/static/media/powderly.e189fe7e0bfabcfd360e.png",
@@ -9,10 +9,10 @@
     "static/media/zach.webp": "/portfolio/static/media/zach.d9b89a8cc260ee40b0e1.webp",
     "static/media/landing.png": "/portfolio/static/media/landing.ea72b72370f6b8c938ec.png",
     "static/media/python.png": "/portfolio/static/media/python.82efb64f8698a267f8bf.png",
-    "static/media/Zach_Flegle_Resume.pdf": "/portfolio/static/media/Zach_Flegle_Resume.1a0a8e610cb036f76ea7.pdf",
+    "static/media/socket.png": "/portfolio/static/media/socket.3ac56d05b70bd112a21c.png",
+    "static/media/Zach_Flegle_Resume.pdf": "/portfolio/static/media/Zach_Flegle_Resume.983c4f0bab5dd4a9459e.pdf",
     "static/media/to_do.png": "/portfolio/static/media/to_do.cf8f09b3d4e861121085.png",
     "static/media/matlab.png": "/portfolio/static/media/matlab.2b608e94f8e1c2c9cd8e.png",
-    "static/media/mongoose.png": "/portfolio/static/media/mongoose.998152e4bc5fdd366c2c.png",
     "static/media/pug.png": "/portfolio/static/media/pug.1ed4f0828e2785367ffa.png",
     "static/media/figma.webp": "/portfolio/static/media/figma.6547b027f24b1d34cc29.webp",
     "static/media/typescript.png": "/portfolio/static/media/typescript.52ea0bc40ba11d507e7d.png",
@@ -28,6 +28,7 @@
     "static/media/express.webp": "/portfolio/static/media/express.c784a257464ee421f778.webp",
     "static/media/webpack.webp": "/portfolio/static/media/webpack.4bf68b616ee67e2df5b7.webp",
     "static/media/html.webp": "/portfolio/static/media/html.863dc3352b4ef6438539.webp",
+    "static/media/heroku.webp": "/portfolio/static/media/heroku.d917e6d647cde7a87e11.webp",
     "static/media/git.webp": "/portfolio/static/media/git.aefc23c67948609ce9ce.webp",
     "static/media/javascript.webp": "/portfolio/static/media/javascript.3463afaf40ab00544d95.webp",
     "static/media/github.webp": "/portfolio/static/media/github.be8408fc1ea198ce3b6b.webp",
@@ -59,10 +60,10 @@
     "static/media/npm.svg": "/portfolio/static/media/npm.0d65720d6325ead67bb971931f1cc9ea.svg",
     "static/media/vercel.svg": "/portfolio/static/media/vercel.0cf2d1806be941f7e5d54f7fce19d8a5.svg",
     "main.be937c41.css.map": "/portfolio/static/css/main.be937c41.css.map",
-    "main.b99d6449.js.map": "/portfolio/static/js/main.b99d6449.js.map"
+    "main.43d557d1.js.map": "/portfolio/static/js/main.43d557d1.js.map"
   },
   "entrypoints": [
     "static/css/main.be937c41.css",
-    "static/js/main.b99d6449.js"
+    "static/js/main.43d557d1.js"
   ]
 }
